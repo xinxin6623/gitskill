@@ -1,5 +1,8 @@
 # gitout · 项目搜索与吸收目录
 
+> 🚨 **装错地方调不出！** `/gitout` skill 必须放在 `~/.claude/skills/gitout/SKILL.md`。
+> 仅放在本仓库 `skills/gitout/` 下 Claude Code **不会**识别。安装方法见 `../skills/gitout/SKILL.md` 顶部"安装"节。
+
 > 由 `/gitout` skill 自动维护。本目录组织框架借鉴自 `radar-system-v1.2.md`。
 
 ## 目录结构

@@ -1,0 +1,80 @@
+# /gitout domain 词表 — 防止 LLM 跨轮命名漂移
+# 新建 domain 时 SKILL Step 2.5 强制 append 此文件
+# 字段：
+#   name     — kebab-case 目录名（唯一）
+#   cn       — 中文显示名
+#   aliases  — 触发别名（小写、英文/拼音都行），Step 2.5 查表用
+#   desc     — 一句话简介
+
+domains:
+  - name: cli-wrap
+    cn: CLI 包装
+    aliases: [cli, command-line, shell, terminal, agent-cli, llm-cli]
+    desc: 让 AI 调命令行，或把任意软件包装成 Agent 接口
+
+  - name: voice-pipeline
+    cn: 语音 pipeline
+    aliases: [voice, tts, asr, audio, audio-stream, speech, voice-agent, conversation-ai]
+    desc: 跟 AI 实时语音对话的底座
+
+  - name: claude-skills
+    cn: Claude Code 生态
+    aliases: [claude-code, claude, anthropic, skill, hooks, subagent]
+    desc: Claude Code skill / hook / subagent 入门资源
+
+  - name: im-export
+    cn: 聊天记录导出
+    aliases: [chat-export, wechat, imessage, discord, telegram, message-archive]
+    desc: 微信 / iMessage / Discord 历史导出与归档
+
+  - name: personal-kb
+    cn: 个人知识库
+    aliases: [knowledge-base, pkm, notes, wiki, obsidian-like, markdown-wiki]
+    desc: 本地优先的 Markdown 笔记 + 互链 + 可发布
+
+  - name: ai-avatar
+    cn: AI 虚拟角色
+    aliases: [vtuber, avatar, live2d, vrm, persona, character]
+    desc: 给 AI 套个皮：能动嘴、有表情、能聊天的形象
+
+  - name: server-ops
+    cn: 服务器管理面板
+    aliases: [server-panel, vps, admin-panel, ops, sysadmin, control-panel]
+    desc: Web 面板鼠标点点搞定服务器
+
+  - name: iot-platform
+    cn: 物联网平台
+    aliases: [iot, mqtt, thingsboard, device-management, smart-home-backend]
+    desc: MQTT + 规则引擎 + Dashboard 完整 IoT 后台
+
+  - name: personal-site
+    cn: 个人网站全栈模板
+    aliases: [portfolio, blog, digital-garden, personal-website, starter]
+    desc: 博客 + 项目展示 + Now 页一个 starter 搞定
+
+  - name: dev-productivity
+    cn: 开发者生产力
+    aliases: [productivity, dev-tools, developer-experience]
+    desc: 提升开发效率的工具集合（多子域）
+    subdomains:
+      - name: claude-workflow
+        cn: Claude Code 工作流工程化
+        aliases: [claude-harness, skill-factory, hook-sdk]
+        desc: skill 工厂 / hook SDK / 自学习 harness
+      - name: ai-coding-agent
+        cn: AI Coding Agent 框架
+        aliases: [coding-agent, autonomous-agent, swe-agent, code-assistant]
+        desc: Claude Code 之外的自主代码代理参考
+      - name: ide-augment
+        cn: IDE 增强
+        aliases: [ide, vscode, neovim, jetbrains, editor-ai, copilot-alt]
+        desc: VSCode / Neovim 里的 AI 编程插件
+      - name: personal-tools
+        cn: 开发者生产力工具（非 AI）
+        aliases: [terminal, dotfiles, cli-tools, tui]
+        desc: 不带 AI 也能让你 10x 的工具
+
+  - name: xiaozhi-ai
+    cn: xiaozhi 语音对话硬件
+    aliases: [xiaozhi, esp32-voice, ai-speaker, esp32-llm]
+    desc: ESP32 + LLM 端侧 AI 语音盒子生态

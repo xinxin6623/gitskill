@@ -11,6 +11,25 @@
 
 ---
 
+## 实施状态（2026-05-24）
+
+> **重要：本 v1.2 是完整蓝本，不是已实现规格。** 目前只有 Module 1+2 的**人工化轻量版**通过 `/gitout` skill 落地。
+> 三个月后回看本文档时务必先读本节，避免误以为整套系统已就绪。
+
+| 模块 | 状态 | 落地形式 |
+|---|---|---|
+| Module 1：信息源接入（RSS / GitHub trending / Awesome） | ⏸ 未启动 | `/gitout` 用 `gh search` 替代，按需触发，不做被动订阅 |
+| Module 2：粗筛 + deepdive | ✅ 已落地（人工化） | `/gitout` Step 3-5：query 多策略 + reject 两轮 + LLM 重排序 |
+| Module 3：Pattern 抽取与共性归纳 | ❌ 暂不做 | 评估后判定单人维护成本过高，靠手写 retro 替代 |
+| Module 4：events.jsonl 行为日志 | ⏸ 未启动 | 用 `gitout/raw/` 的 JSON 归档 + retros/ 复盘替代 |
+| Module 5：Trust Tier 信任分层 | ⏸ 未启动 | 用 INDEX.md ⭐ 首推 + entry frontmatter `status` 字段简化替代 |
+| Module 6：双引擎（本地 Qwen3 粗筛 + 远端 deepdive） | ❌ 暂不做 | Claude Code 一步到位，无需本地小模型粗筛 |
+| Module 7：自动 absorption 追踪 | ⏸ 未启动 | entry frontmatter 留 `absorption.{harvested,used,used_in}` 字段，手动维护 |
+
+**结论**：`/gitout` 是本蓝本 Module 1+2 的**人工化最小可用版**。后续如要扩到 Module 3-7，需评估单人维护成本，慎入。
+
+---
+
 ## 摘要
 
 本方案在前两版讨论基础上,把"技术雷达"从一个**通用 agentic 发现系统**,收缩为一个**面向个人开发者、带容量硬上限、以"吸收率"为核心指标的技术消化系统**。
