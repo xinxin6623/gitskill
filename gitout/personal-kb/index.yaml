@@ -1,0 +1,24 @@
+domain: personal-kb
+description: 个人知识库 / Markdown wiki
+entries:
+  - repo: logseq/logseq
+    file: entries/logseq__logseq.md
+    status: active
+    discovered: 2026-05-22
+  - repo: foambubble/foam
+    file: entries/foambubble__foam.md
+    status: active
+    discovered: 2026-05-22
+  - repo: jackyzha0/quartz
+    file: entries/jackyzha0__quartz.md
+    status: active
+    discovered: 2026-05-22
+  - repo: dendronhq/dendron
+    file: entries/dendronhq__dendron.md
+    status: archived-but-useful
+    discovered: 2026-05-22
+    note: 已停更，文件名层级思路仍可借鉴
+  - repo: silverbulletmd/silverbullet
+    file: entries/silverbulletmd__silverbullet.md
+    status: active
+    discovered: 2026-05-22

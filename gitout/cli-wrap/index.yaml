@@ -1,0 +1,23 @@
+domain: cli-wrap
+description: CLI 包装 / 把工具变成 AI 能用的命令
+entries:
+  - repo: openinterpreter/open-interpreter
+    file: entries/openinterpreter__open-interpreter.md
+    status: active
+    discovered: 2026-05-22
+  - repo: danielmiessler/Fabric
+    file: entries/danielmiessler__Fabric.md
+    status: active
+    discovered: 2026-05-22
+  - repo: simonw/llm
+    file: entries/simonw__llm.md
+    status: active
+    discovered: 2026-05-22
+  - repo: TheR1D/shell_gpt
+    file: entries/TheR1D__shell_gpt.md
+    status: active
+    discovered: 2026-05-22
+  - repo: kellyjonbrazil/jc
+    file: entries/kellyjonbrazil__jc.md
+    status: active
+    discovered: 2026-05-22

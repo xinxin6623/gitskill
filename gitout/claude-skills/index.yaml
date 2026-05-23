@@ -1,0 +1,23 @@
+domain: claude-skills
+description: Claude Code 生态 / Skill 和 Hooks 入门
+entries:
+  - repo: hesreallyhim/awesome-claude-code
+    file: entries/hesreallyhim__awesome-claude-code.md
+    status: active
+    discovered: 2026-05-22
+  - repo: disler/claude-code-hooks-mastery
+    file: entries/disler__claude-code-hooks-mastery.md
+    status: active
+    discovered: 2026-05-22
+  - repo: anthropics/claude-agent-sdk-python
+    file: entries/anthropics__claude-agent-sdk-python.md
+    status: active
+    discovered: 2026-05-22
+  - repo: VoltAgent/awesome-claude-code-subagents
+    file: entries/VoltAgent__awesome-claude-code-subagents.md
+    status: active
+    discovered: 2026-05-22
+  - repo: coleam00/claude-memory-compiler
+    file: entries/coleam00__claude-memory-compiler.md
+    status: active
+    discovered: 2026-05-22
