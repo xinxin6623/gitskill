@@ -1,0 +1,106 @@
+# JetLinks 物联网基础平台
+
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/jetlinks/jetlinks-community/maven.yml?branch=master)
+![Version](https://img.shields.io/badge/version-2.11-brightgreen)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/e8d527d692c24633aba4f869c1c5d6ad)](https://app.codacy.com/gh/jetlinks/jetlinks-community?utm_source=github.com&utm_medium=referral&utm_content=jetlinks/jetlinks-community&utm_campaign=Badge_Grade_Settings)
+[![OSCS Status](https://www.oscs1024.com/platform/badge/jetlinks/jetlinks-community.svg?size=small)](https://www.oscs1024.com/project/jetlinks/jetlinks-community?ref=badge_small)
+[![star](https://img.shields.io/github/stars/jetlinks/jetlinks-community?style=social)](https://github.com/jetlinks/jetlinks-community)
+[![star](https://gitee.com/jetlinks/jetlinks-community/badge/star.svg?theme=gvp)](https://gitee.com/jetlinks/jetlinks-community/stargazers)
+
+[![QQ③群647954464](https://img.shields.io/badge/QQ③群-647954464-brightgreen)](https://qm.qq.com/cgi-bin/qm/qr?k=K5m27CkhDn3B_Owr-g6rfiTBC5DKEY59&jump_from=webapi)
+[![QQ⑥群572077464](https://img.shields.io/badge/QQ⑥群(已满)-572077464-brightgreen)](https://qm.qq.com/q/kLT3trlXuE)
+[![QQ⑤群554591908](https://img.shields.io/badge/QQ⑤群(已满)-554591908-brightgreen)](https://qm.qq.com/cgi-bin/qm/qr?k=jiirLiyFUecy_gsankzVQ-cl6SrZCnv9&&jump_from=webapi)
+[![QQ④群780133058](https://img.shields.io/badge/QQ④群(已满)-780133058-brightgreen)](https://qm.qq.com/cgi-bin/qm/qr?k=Gj47w9kg7TlV5ceD5Bqew_M_O0PIjh_l&jump_from=webapi)
+[![QQ②群324606263](https://img.shields.io/badge/QQ②群(已满)-324606263-brightgreen)](https://qm.qq.com/cgi-bin/qm/qr?k=IMas2cH-TNsYxUcY8lRbsXqPnA2sGHYQ&jump_from=webapi)
+[![QQ①群2021514](https://img.shields.io/badge/QQ①群(已满)-2021514-brightgreen)](https://qm.qq.com/cgi-bin/qm/qr?k=LGf0OPQqvLGdJIZST3VTcypdVWhdfAOG&jump_from=webapi)
+
+JetLinks 2.1x 基于Java 17,Spring Boot 3.x,WebFlux,Netty,Vert.x,Reactor等开发,
+是一个开箱即用,可二次开发的企业级物联网基础平台。平台实现了物联网相关的众多基础功能,
+能帮助你快速建立物联网相关业务系统。
+
+## 核心特性
+
+#### 开放源代码
+
+全部源代码开放,可自由拓展功能,不再受制于人.前后端分离,接口全开放。
+
+#### 部署简单
+
+最小化运行仅需要`java 17`,`redis`,`timescaledb`即可，无需部署大量中间件。
+
+#### 统一设备接入,海量设备管理
+
+TCP/UDP/MQTT/HTTP、TLS/DTLS、不同厂商、不同设备、不同报文、统一接入，统一管理。
+
+#### 规则引擎
+
+灵活的规则模型配置,支持多种规则模型以及自定义规则模型. 设备告警,场景联动,均由统一的规则引擎管理。
+
+#### 数据权限控制
+
+灵活的非侵入数据权限控制。可实现菜单、按钮、数据三维维度的数据权限控制。可控制单条数据的操作权限。
+
+## 技术栈
+
+1. [Spring Boot 3.4.x](https://spring.io/projects/spring-boot)
+2. [Spring WebFlux](https://spring.io/) 响应式Web支持
+3. [R2DBC](https://r2dbc.io/) 响应式关系型数据库驱动
+4. [Project Reactor](https://projectreactor.io/) 响应式编程框架
+5. [Netty](https://netty.io/),[Vert.x](https://vertx.io/) 高性能网络编程框架
+6. [hsweb framework 4](https://github.com/hs-web) 业务功能基础框架
+7. [ElasticSearch](https://www.elastic.co/cn/products/enterprise-search) 全文检索，日志，时序数据存储 （可选）
+8. [TDengine](https://www.taosdata.com/) 设备时序数据存储（可选）
+9. [Redis](https://redis.io/) 缓存数据
+10. [TimescaleDB](https://www.timescale.com/) 时序数据存储（可选）
+11. [PostgreSQL](https://www.postgresql.org) 业务功能数据管理
+
+## 架构
+
+![platform](./platform.png)
+
+## 设备接入流程
+
+![device-flow](./device-flow.png)
+
+## 模块
+
+```bash
+--jetlinks-community
+------|----docker
+------|------|----dev-env       # 启动开发环境
+------|------|----run-all       # 启动全部,通过http://localhost:8848 访问系统.
+------|----jetlinks-components  # 公共组件模块
+------|-------|----common-component # 通用组件.
+------|-------|----configuration-component # 通用配置.
+------|-------|----dashboard-component # 仪表盘.
+------|-------|----datasource-component # 数据源.
+------|-------|----elasticsearch-component # elasticsearch集成.
+------|-------|----gateway-component # 网关组件,消息网关,设备接入.
+------|-------|----io-component # IO 组件,Excel导入导出等.
+------|-------|----logging-component # 日志组件
+------|-------|----network-component # 网络组件,MQTT,TCP,CoAP,UDP等
+------|-------|----notify-component # 通知组件,短信,右键等通知
+------|-------|----protocol-component # 协议组件
+------|-------|----relation-component # 关系组件
+------|-------|----rule-engine-component # 规则引擎
+------|-------|----script-component # 脚本组件
+------|-------|----timeseries-component # 时序数据组件
+------|-------|----tdengine-component # TDengine集成
+------|-------|----things-component # 物组件
+------|----jetlinks-manager     # 业务管理模块
+------|-------|----authentication-manager   # 用户,权限管理
+------|-------|----device-manager   # 设备管理
+------|-------|----logging-manager   # 日志管理
+------|-------|----network-manager   # 网络组件管理
+------|-------|----notify-manager   # 通知管理
+------|-------|----visualization-manager   # 数据可视化管理
+------|-------|----rule-engine-manager   # 规则引擎管理
+------|----jetlinks-standalone  # 服务启动模块
+------|----simulator            # 设备模拟器
+```
+
+## 服务支持
+
+我们提供了各种服务方式帮助您深入了解物联网平台和代码，通过产品文档、技术交流群、付费教学等方式，你将获得如下服务：
+
+| 服务项      | 服务内容                                                      | 服务收

@@ -1,0 +1,28 @@
+domain: server-ops
+description: 服务器搭建/管理/维护类工具（Web 面板、运维系统）
+entries:
+  - repo: acepanel/panel
+    file: entries/acepanel__panel.md
+    intent_matched: "单机/VPS 用的轻量中文 Web 面板"
+    status: active
+    discovered: 2026-05-23
+  - repo: 1Panel-dev/1Panel
+    file: entries/1Panel-dev__1Panel.md
+    intent_matched: "单机/VPS 用的开源中文 Web 面板"
+    status: active
+    discovered: 2026-05-23
+  - repo: IceWhaleTech/CasaOS
+    file: entries/IceWhaleTech__CasaOS.md
+    intent_matched: "单机/家用主机的轻量 Web 面板"
+    status: active
+    discovered: 2026-05-23
+  - repo: aaPanel/aaPanel
+    file: entries/aaPanel__aaPanel.md
+    intent_matched: "单机/VPS 用的开源中文 Web 面板"
+    status: active
+    discovered: 2026-05-23
+  - repo: webmin/webmin
+    file: entries/webmin__webmin.md
+    intent_matched: "单机/VPS 用的开源 Web 面板（老牌备选）"
+    status: active
+    discovered: 2026-05-23

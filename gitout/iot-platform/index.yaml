@@ -1,0 +1,23 @@
+domain: iot-platform
+description: 物联网平台（MQTT 接入 + 设备管理 + 规则引擎 + 前端 + 移动端）
+entries:
+  - repo: kerwincui/FastBee
+    file: entries/kerwincui__FastBee.md
+    intent_matched: "轻量易改的完整 IoT 平台（含 MQTT+设备+规则+UI+App）"
+    status: active
+    discovered: 2026-05-23
+  - repo: IoTSharp/IoTSharp
+    file: entries/IoTSharp__IoTSharp.md
+    intent_matched: "架构清晰、活跃的中型 IoT 平台"
+    status: active
+    discovered: 2026-05-23
+  - repo: seslabSJU/tinyIoT
+    file: entries/seslabSJU__tinyIoT.md
+    intent_matched: "极致轻量、架构清晰的 IoT 平台（学习用）"
+    status: active
+    discovered: 2026-05-23
+  - repo: jetlinks/jetlinks-community
+    file: entries/jetlinks__jetlinks-community.md
+    intent_matched: "架构最清晰的企业级 IoT 平台（参考向）"
+    status: active
+    discovered: 2026-05-23
