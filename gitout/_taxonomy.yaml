@@ -78,3 +78,8 @@ domains:
     cn: xiaozhi 语音对话硬件
     aliases: [xiaozhi, esp32-voice, ai-speaker, esp32-llm]
     desc: ESP32 + LLM 端侧 AI 语音盒子生态
+
+  - name: personality-test
+    cn: 性格/心理测试
+    aliases: [mbti, personality, quiz, psychology, 16-personalities, big-five, enneagram]
+    desc: MBTI / 大五 / 九型等心理测试的开源实现（webapp / 小程序 / 题库）

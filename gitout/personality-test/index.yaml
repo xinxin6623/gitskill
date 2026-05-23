@@ -1,0 +1,40 @@
+domain: personality-test
+cn: 性格 / 心理测试
+updated: 2026-05-24
+
+entries:
+  - repo: liyupi/yudada
+    file: entries/liyupi__yudada.md
+    stars: 385
+    language: Java
+    status: active
+    intent_matched: "MBTI 测试 webapp/小程序自部署"
+    pinned: true
+
+  - repo: zcw576020095/mbti-test
+    file: entries/zcw576020095__mbti-test.md
+    stars: 310
+    language: Python
+    status: active
+    intent_matched: "MBTI 测试 webapp 自部署，最快上线"
+
+  - repo: MskTmi/MBTI
+    file: entries/MskTmi__MBTI.md
+    stars: 161
+    language: JavaScript
+    status: active
+    intent_matched: "MBTI 测试静态 webapp，零部署"
+
+  - repo: SwapnilSoni1999/16personalities-api
+    file: entries/SwapnilSoni1999__16personalities-api.md
+    stars: 54
+    language: TypeScript
+    status: active
+    intent_matched: "MBTI 题库 API，前端只管 UI"
+
+  - repo: lilemy/mbti-mini
+    file: entries/lilemy__mbti-mini.md
+    stars: 1
+    language: TypeScript
+    status: watch
+    intent_matched: "MBTI 微信小程序参考实现"

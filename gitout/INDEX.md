@@ -1,11 +1,11 @@
 # gitout · 主题导航索引
 
 > 用 `/gitout` 累积的 GitHub 项目地图。每个 domain 一个目录，每条都有大白话简介 + 详细文档链接。
-> 最后更新：2026-05-23 · stars 数据快照于同日
+> 最后更新：2026-05-24 · stars 数据快照于同日
 
 ---
 
-## 🧭 14 个 domain 一览
+## 🧭 15 个 domain 一览
 
 | Domain | 一句话 | 项目数 | 首推 |
 | --- | --- | --- | --- |
@@ -23,8 +23,9 @@
 | [✏️ dev-productivity/ide-augment](#dev-productivityide-augment--ide-增强--编辑器-ai-集成) | VSCode/Neovim 里的 AI 编程插件 | 5 | continue (33.3k) |
 | [🧰 dev-productivity/personal-tools](#dev-productivitypersonal-tools--开发者生产力工具非-ai) | 不带 AI 也能让你 10x 的工具 | 5 | tuios (2.7k) |
 | [🗣️ xiaozhi-ai](#xiaozhi-ai--xiaozhi-语音对话硬件生态) | ESP32 + LLM 端侧 AI 语音盒子生态 | 5 | xiaozhi-esp32 (26.7k) |
+| [🧠 personality-test](#personality-test--性格-心理测试) | MBTI 等性格测试的开源实现（webapp / 小程序 / 题库 API） | 5 | yudada (385) |
 
-**合计 68 个项目**
+**合计 73 个项目**
 
 ---
 
@@ -250,9 +251,25 @@
 
 ---
 
+## personality-test — 性格 / 心理测试
+
+**解决什么：** 想给自己/团队/社群部署个 MBTI（或其他性格）测试，从"今晚挂个静态页"到"做个通用答题平台"全档位覆盖。
+
+**⭐ 首推 `yudada`（385）：** 鱼皮老师的 AI 答题平台教学项目，MBTI 是第一阶段，后续可扩展到任意题型——三件套（网页 + 小程序 + 通用题库）唯一全覆盖。零部署玩玩选 `MskTmi/MBTI`，要 Python 自部署选 `zcw576020095/mbti-test`，前端 only 调 `16personalities-api`，做小程序参考 `lilemy/mbti-mini`。
+
+| Repo | ⭐ | 大白话 | 详细文档 |
+| --- | ---: | --- | --- |
+| [liyupi/yudada](https://github.com/liyupi/yudada) | 385 | 鱼皮 AI 答题平台教学项目，MBTI 起步可扩展通用题库 | [📄](./personality-test/entries/liyupi__yudada.md) |
+| [zcw576020095/mbti-test](https://github.com/zcw576020095/mbti-test) | 310 | Django MBTI 系统 + PDF 导出，最快可上线 | [📄](./personality-test/entries/zcw576020095__mbti-test.md) |
+| [MskTmi/MBTI](https://github.com/MskTmi/MBTI) | 161 | 纯静态 93 题中文版，5 分钟挂 Pages | [📄](./personality-test/entries/MskTmi__MBTI.md) |
+| [SwapnilSoni1999/16personalities-api](https://github.com/SwapnilSoni1999/16personalities-api) | 54 | 16personalities.com 非官方 API，只写前端 | [📄](./personality-test/entries/SwapnilSoni1999__16personalities-api.md) |
+| [lilemy/mbti-mini](https://github.com/lilemy/mbti-mini) | 1 | TypeScript 微信小程序参考实现 | [📄](./personality-test/entries/lilemy__mbti-mini.md) |
+
+---
+
 ## 📊 整体统计
 
-- **总项目数**：68（cli-wrap 5 + voice-pipeline 5 + claude-skills 5 + im-export 5 + personal-kb 5 + ai-avatar 5 + server-ops 5 + iot-platform 4 + personal-site 4 + dev-productivity 20 + xiaozhi-ai 5）
+- **总项目数**：73（cli-wrap 5 + voice-pipeline 5 + claude-skills 5 + im-export 5 + personal-kb 5 + ai-avatar 5 + server-ops 5 + iot-platform 4 + personal-site 4 + dev-productivity 20 + xiaozhi-ai 5 + personality-test 5）
 - **stars 总和**：约 95 万⭐ · 单条最高 OpenHands 74.6k · 中位数约 3k
 - **已停更但仍收录**：3 个（WeChatMsg 41.5k、dendron 7.4k、DiscordChatExporter 维护模式）—— 思路或窗口期价值还在
 - **重型参考向（别整站 clone）**：jetlinks、kentcdodds.com、OpenHands —— 给你读架构的，不是拿来用的
@@ -287,3 +304,4 @@ gitout/
 *server-ops/iot-platform/personal-site 由 /gitout 自然语言模式生成 · 2026-05-23*
 *dev-productivity 四子域由 /gitout 多 agent 并行模式生成 · 2026-05-23*
 *xiaozhi-ai 由 /gitout 自然语言模式生成 · 2026-05-23*
+*personality-test 由 /gitout 自然语言模式生成 · 2026-05-24*

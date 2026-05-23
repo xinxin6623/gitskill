@@ -119,7 +119,7 @@ gitout/raw/**/*_empty.json
 gh search repos "<brand-word>" \
   --match name,description \
   --limit 20 \
-  --json fullName,description,stargazersCount,updatedAt,language,url,owner,license,archivedAt
+  --json fullName,description,stargazersCount,updatedAt,pushedAt,language,url,owner,license,isArchived
 ```
 
 - 返回 ≥ 15 条 → **不再扩 query**，直接进 Step 4
@@ -139,7 +139,7 @@ gh search repos "<brand-word>" \
 gh search repos "<query>" \
   --match name,description,readme \
   --limit 8 \
-  --json fullName,description,stargazersCount,updatedAt,language,url,owner,license,archivedAt
+  --json fullName,description,stargazersCount,updatedAt,pushedAt,language,url,owner,license,isArchived
 ```
 
 **关键 flag 规则：**
@@ -179,7 +179,7 @@ gh api repos/<owner/name>/readme --jq '.content' | base64 -d > /tmp/readme_<slug
 
 **停更状态扫描**（在抓取后立刻做）：
 
-- 扫前 500 字 + GitHub `archivedAt` 字段 + 关键词命中：
+- 扫前 500 字 + GitHub `isArchived` 字段 + 关键词命中：
   `deprecated | archived | outdated | maintenance only | no longer maintained | 不再更新 | 停更 | 删库 | sunset`
 - 命中 → 不 reject，降级为 watch，标记 `status: deprecated`
 - 小白文档头部**强制加 `⚠️ 已停更（最后更新 <date>）` 标记**
