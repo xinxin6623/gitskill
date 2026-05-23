@@ -1,0 +1,28 @@
+domain: dev-productivity/claude-workflow
+description: Claude Code / AI 工作流工程化（skill、hook、subagent、harness）
+entries:
+  - repo: alirezarezvani/claude-code-skill-factory
+    file: entries/alirezarezvani__claude-code-skill-factory.md
+    intent_matched: "把 skill / agent / hook / slash command 当成产品来批量生产的工程脚手架"
+    status: active
+    discovered: 2026-05-23
+  - repo: GowayLee/cchooks
+    file: entries/GowayLee__cchooks.md
+    intent_matched: "用 Python SDK 写 Claude Code hook，不用手撸 stdin JSON 解析"
+    status: active
+    discovered: 2026-05-23
+  - repo: parcadei/Continuous-Claude-v3
+    file: entries/parcadei__Continuous-Claude-v3.md
+    intent_matched: "把 skill / hook / agent / memory 拼成一个完整 harness 的参考架构"
+    status: active
+    discovered: 2026-05-23
+  - repo: BayramAnnakov/claude-reflect
+    file: entries/BayramAnnakov__claude-reflect.md
+    intent_matched: "把'纠错 Claude'这件事自动沉淀到 CLAUDE.md，再从历史会话挖出可复用 skill"
+    status: active
+    discovered: 2026-05-23
+  - repo: starbaser/ccproxy
+    file: entries/starbaser__ccproxy.md
+    intent_matched: "在网络层 hook Claude Code 请求，按规则 route 到不同模型"
+    status: active
+    discovered: 2026-05-23

@@ -1,0 +1,93 @@
+domain: dev-productivity/personal-tools
+direction: "个人开发者生产力工具（非 AI）"
+intent: "个人提效工具，skill ide codeing harness 工程"
+generated_at: 2026-05-23
+generator: /gitout sub-agent · personal-tools
+constraint: 非 AI · 跨平台优先 · 近一年活跃 · ≥100 stars · 排除已成事实标准的老朋友
+
+queries:
+  - "developer productivity"
+  - "terminal tool"
+  - "cli tool"
+  - "shell prompt"
+  - "tui app"
+  - "modern unix"
+  - "task manager cli"
+  - "git tui"
+  - "terminal multiplexer"
+  - "command launcher"
+  - "dotfiles manager"
+  - "file manager tui"
+  - "shell history search"
+  - "snippet manager terminal"
+
+funnel:
+  raw_candidates: ~210
+  after_freshness_filter: 38   # pushedAt > 2025-05-23
+  after_star_filter: 24        # stars >= 100
+  after_old_friends_dropped: 22  # 移除 fzf/zoxide/starship/rg/bat/fd/tmux 类
+  after_readme_review: 10
+  final_picks: 5
+
+picks:
+  - rank: 1
+    repo: Gaurav-Gosain/tuios
+    category: terminal-multiplexer
+    why: "现代化 tmux 替代，BSP + 命令面板 + Kitty 图形协议，Charm 栈优秀工程参考"
+    stars: 2655
+    cross_platform: true
+
+  - rank: 2
+    repo: fpgmaas/justx
+    category: task-runner-tui
+    why: "在 just 之上加 TUI，把零散别名/Makefile 统一为可发现的全局 recipe 库"
+    stars: 162
+    cross_platform: true
+
+  - rank: 3
+    repo: SuperCuber/dotter
+    category: dotfile-manager
+    why: "Rust + Handlebars 模板，跨机器配置差异管理的轻量方案，单二进制"
+    stars: 1965
+    cross_platform: true
+
+  - rank: 4
+    repo: abhixdd/ghgrab
+    category: github-utility
+    why: "不用 clone 就能挑文件下载，多 forge 支持（GitHub/GitLab/Codeberg/Gitea/Forgejo）"
+    stars: 996
+    cross_platform: true
+
+  - rank: 5
+    repo: alejandroqh/term39
+    category: terminal-multiplexer-retro
+    why: "复古 DOS 风全平台 multiplexer，含 lockscreen / framebuffer 模式，工程参考价值高"
+    stars: 191
+    cross_platform: true
+
+rejected_samples:
+  - repo: chshersh/github-tui
+    reason: "pre-alpha 阶段，README 自己写 '42% complete'"
+  - repo: Skxxtz/sherlock
+    reason: "Hyprland/Wayland 专用，跨平台差，作者自己提示可能在其他系统出错"
+  - repo: Mjoyufull/fsel
+    reason: "GNU/Linux + BSD only，macOS / Windows 不支持"
+  - repo: rockorager/prise
+    reason: "alpha + 需 Zig 编译 + 走 daemon 模型，门槛高于受众"
+  - repo: oknozor/toml-bombadil
+    reason: "与 dotter 同类，dotter 更主流且 README 更完整；保留作为替代参考"
+  - repo: yadm-dev/yadm
+    reason: "成熟知名工具，已属于 '老朋友'，无需再写小白文档"
+  - repo: ibraheemdev/modern-unix
+    reason: "awesome 列表，违反硬约束"
+
+health:
+  all_active_last_year: true
+  all_have_install_instructions: true
+  multi_lang_diversity:
+    Rust: 3
+    Go: 1
+    Python: 1
+  license_distribution:
+    MIT: 4
+    Unlicense: 1
