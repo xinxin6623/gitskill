@@ -1,0 +1,39 @@
+domain: rag-engine
+description: 本地优先的 RAG / 向量检索引擎（可作为个人知识库底层）
+last_updated: 2026-05-25
+entries:
+  - repo: PhilipJohnBasile/vecstore
+    file: entries/PhilipJohnBasile__vecstore.md
+    intent_matched: 本地能跑的 RAG / 嵌入式向量检索
+    stars: 14
+    language: Rust
+    license: Apache-2.0
+    discovered: 2026-05-25
+  - repo: hoffresearch/nest
+    file: entries/hoffresearch__nest.md
+    intent_matched: 单文件可分发的本地 RAG 容器
+    stars: 5
+    language: Rust
+    license: MIT
+    discovered: 2026-05-25
+  - repo: zaydmulani09/vecdb
+    file: entries/zaydmulani09__vecdb.md
+    intent_matched: 本地 hybrid search 向量数据库
+    stars: 7
+    language: Rust
+    license: Unknown
+    discovered: 2026-05-25
+  - repo: benmaster82/Kwipu
+    file: entries/benmaster82__Kwipu.md
+    intent_matched: 本地 Graph RAG 给 markdown 笔记用
+    stars: 83
+    language: Python
+    license: MIT
+    discovered: 2026-05-25
+  - repo: YASSERRMD/barq-vweb
+    file: entries/YASSERRMD__barq-vweb.md
+    intent_matched: 浏览器原生本地向量检索
+    stars: 19
+    language: Rust
+    license: MIT
+    discovered: 2026-05-25

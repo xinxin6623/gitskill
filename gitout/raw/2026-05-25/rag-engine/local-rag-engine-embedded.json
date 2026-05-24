@@ -1,0 +1,82 @@
+[
+  {
+    "fullName": "MultiX0/last-archive",
+    "description": "A local-first RAG engine for web archival and semantic search. Crawl, embed, and query your own knowledge base entirely offline.",
+    "stargazersCount": 26,
+    "updatedAt": "2026-04-17T10:02:10Z",
+    "pushedAt": "2026-01-31T04:51:56Z",
+    "language": "Go",
+    "url": "https://github.com/MultiX0/last-archive",
+    "license": "MIT"
+  },
+  {
+    "fullName": "memvector/ext-memvector",
+    "description": "MemVector: Local Vector API, Storage & Embedding Engine for PHP",
+    "stargazersCount": 23,
+    "updatedAt": "2026-04-28T23:06:00Z",
+    "pushedAt": "2026-03-02T19:49:36Z",
+    "language": "C++",
+    "url": "https://github.com/memvector/ext-memvector",
+    "license": "MIT"
+  },
+  {
+    "fullName": "krokozyab/Agent-Fusion",
+    "description": " Agent Fusion is a local RAG semantic search engine that gives AI agents instant access to your code, documentation (Markdown, Word, PDF). Query    your codebase from code agents without hallucinations. Runs 100% locally, includes a lightweight embedding model, and optional multi-agent task    orchestration. Deploy with a single JAR",
+    "stargazersCount": 66,
+    "updatedAt": "2026-05-22T02:45:24Z",
+    "pushedAt": "2026-04-07T08:09:06Z",
+    "language": "Kotlin",
+    "url": "https://github.com/krokozyab/Agent-Fusion",
+    "license": "MIT"
+  },
+  {
+    "fullName": "analyticsbynirmal/LocalRAG-Engine",
+    "description": "Lightweight RAG pipeline using SentenceTransformers, FAISS, and Ollama. Processes PDFs into vector embeddings and retrieves context to generate accurate answers locally.",
+    "stargazersCount": 0,
+    "updatedAt": "2026-04-24T10:27:09Z",
+    "pushedAt": "2026-04-24T10:27:06Z",
+    "language": "Python",
+    "url": "https://github.com/analyticsbynirmal/LocalRAG-Engine",
+    "license": "Apache-2.0"
+  },
+  {
+    "fullName": "Astarfalconer/RAG_ENGINE_SANDBOX",
+    "description": "A local sandbox for experimenting with LangChain vector storage, embeddings, FAISS indexing, and similarity-based retrieval.",
+    "stargazersCount": 0,
+    "updatedAt": "2026-02-02T10:42:54Z",
+    "pushedAt": "2026-02-02T10:42:50Z",
+    "language": "Python",
+    "url": "https://github.com/Astarfalconer/RAG_ENGINE_SANDBOX",
+    "license": null
+  },
+  {
+    "fullName": "MuskanSarraf/MiniRAG-Engine",
+    "description": "An end-to-end local RAG system demonstrating document ingestion, recursive chunking, embedding generation, and semantic retrieval.",
+    "stargazersCount": 0,
+    "updatedAt": "2026-04-05T06:54:46Z",
+    "pushedAt": "2026-04-05T06:54:42Z",
+    "language": "Jupyter Notebook",
+    "url": "https://github.com/MuskanSarraf/MiniRAG-Engine",
+    "license": null
+  },
+  {
+    "fullName": "tensoriz/multimodal-rag-engine",
+    "description": "Local prototype using hybrid search and multi-modal embeddings to retrieve text/images from PDFs on ~4GB GPUs.",
+    "stargazersCount": 0,
+    "updatedAt": "2026-01-20T22:55:27Z",
+    "pushedAt": "2026-01-16T22:30:13Z",
+    "language": "Python",
+    "url": "https://github.com/tensoriz/multimodal-rag-engine",
+    "license": null
+  },
+  {
+    "fullName": "ScatteredBuilds/context-engine",
+    "description": "Local RAG system over Obsidian notes using Python, embeddings, and source-grounded answers.",
+    "stargazersCount": 1,
+    "updatedAt": "2026-05-12T02:14:59Z",
+    "pushedAt": "2026-05-12T00:03:24Z",
+    "language": "Python",
+    "url": "https://github.com/ScatteredBuilds/context-engine",
+    "license": "MIT"
+  }
+]

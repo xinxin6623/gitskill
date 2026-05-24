@@ -1,0 +1,82 @@
+[
+  {
+    "fullName": "benmaster82/Kwipu",
+    "description": "Ask questions across your Markdown notes using a fully local Graph RAG engine. Built for Obsidian vaults, works with any folder of Markdown files. Extracts entity-relation triples from wikilinks & YAML frontmatter, retrieves answers via hybrid search (vector + BM25 + temporal). Multilingual. No cloud. Runs on Ollama.",
+    "stargazersCount": 83,
+    "updatedAt": "2026-05-24T07:48:05Z",
+    "pushedAt": "2026-05-18T14:20:43Z",
+    "language": "Python",
+    "url": "https://github.com/benmaster82/Kwipu",
+    "license": "MIT"
+  },
+  {
+    "fullName": "marswangyang/personal-ai-memory",
+    "description": "A local-first Chrome extension that passively captures ChatGPT, Gemini, Claude, Grok, Perplexity conversations into a private memory graph. Features in-browser Hybrid RAG (Vector + BM25), semantic search, and 100% privacy via WebAssembly and IndexedDB. No servers, no API keys.",
+    "stargazersCount": 43,
+    "updatedAt": "2026-05-22T13:41:18Z",
+    "pushedAt": "2026-03-24T23:47:26Z",
+    "language": "TypeScript",
+    "url": "https://github.com/marswangyang/personal-ai-memory",
+    "license": "Apache-2.0"
+  },
+  {
+    "fullName": "Lyzr-Cognis/cognis",
+    "description": "Lightweight, local-first memory for AI agents. Hybrid vector + BM25 search, LLM-powered fact extraction, zero infrastructure — just pip install.",
+    "stargazersCount": 52,
+    "updatedAt": "2026-05-09T05:48:52Z",
+    "pushedAt": "2026-04-02T09:29:03Z",
+    "language": "Python",
+    "url": "https://github.com/Lyzr-Cognis/cognis",
+    "license": "MIT"
+  },
+  {
+    "fullName": "ihatesea69/hybrid-bm25-vector-search-rag-vs-llm-only",
+    "description": "Local-first benchmark and demo for comparing Hybrid RAG and LLM-only QA with BM25 plus vector retrieval on nutrition-focused health questions.",
+    "stargazersCount": 1,
+    "updatedAt": "2026-04-07T04:42:37Z",
+    "pushedAt": "2026-04-07T04:42:33Z",
+    "language": "Python",
+    "url": "https://github.com/ihatesea69/hybrid-bm25-vector-search-rag-vs-llm-only",
+    "license": "MIT"
+  },
+  {
+    "fullName": "zaydmulani09/vecdb",
+    "description": "Local-first hybrid vector database. HNSW + BM25 + fusion search. Single binary, no cloud.",
+    "stargazersCount": 7,
+    "updatedAt": "2026-05-24T00:01:18Z",
+    "pushedAt": "2026-05-18T15:48:55Z",
+    "language": "Rust",
+    "url": "https://github.com/zaydmulani09/vecdb",
+    "license": null
+  },
+  {
+    "fullName": "erayaydn0/obsidian-vault-search",
+    "description": "Hybrid semantic search plugin for Obsidian. BM25 + on-device vector embeddings + fuzzy titles, fused with Reciprocal Rank Fusion.   Multilingual, zero-config, 100% local.",
+    "stargazersCount": 8,
+    "updatedAt": "2026-05-20T11:25:29Z",
+    "pushedAt": "2026-05-17T19:03:17Z",
+    "language": "TypeScript",
+    "url": "https://github.com/erayaydn0/obsidian-vault-search",
+    "license": "MIT"
+  },
+  {
+    "fullName": "Entrolution/causantic",
+    "description": "Local-first long-term memory for AI coding tools — causal graphs, hybrid BM25+vector search, 2.46x context augmentation",
+    "stargazersCount": 9,
+    "updatedAt": "2026-05-20T15:36:39Z",
+    "pushedAt": "2026-05-20T15:33:26Z",
+    "language": "TypeScript",
+    "url": "https://github.com/Entrolution/causantic",
+    "license": "MIT"
+  },
+  {
+    "fullName": "ambicuity/KINDX",
+    "description": "Local-first hybrid cli search engine (BM25 + Vector) for personal knowledge bases and agentic workflows. Runs entirely on-device via node-llama-cpp.",
+    "stargazersCount": 0,
+    "updatedAt": "2026-05-22T21:28:01Z",
+    "pushedAt": "2026-05-23T02:30:01Z",
+    "language": "TypeScript",
+    "url": "https://github.com/ambicuity/KINDX",
+    "license": "MIT"
+  }
+]

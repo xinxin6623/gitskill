@@ -1,0 +1,62 @@
+[
+  {
+    "fullName": "objectbox/objectbox-java",
+    "description": "Database for Android and JVM - first and fast, lightweight on-device vector database",
+    "stargazersCount": 4609,
+    "updatedAt": "2026-05-23T14:31:37Z",
+    "pushedAt": "2026-05-06T05:52:21Z",
+    "language": "Java",
+    "url": "https://github.com/objectbox/objectbox-java",
+    "license": "Apache-2.0"
+  },
+  {
+    "fullName": "fox4snce/storyvectordb",
+    "description": "A lightweight vector database implementation using SQLite.",
+    "stargazersCount": 0,
+    "updatedAt": "2026-03-11T04:39:46Z",
+    "pushedAt": "2026-01-25T18:15:02Z",
+    "language": "Python",
+    "url": "https://github.com/fox4snce/storyvectordb",
+    "license": "MIT"
+  },
+  {
+    "fullName": "MauricioPerera/php-vector-store",
+    "description": "Zero-dependency PHP vector database with Matryoshka search — lightweight alternative to sqlite-vec",
+    "stargazersCount": 1,
+    "updatedAt": "2026-03-29T09:42:28Z",
+    "pushedAt": "2026-03-28T00:34:38Z",
+    "language": "PHP",
+    "url": "https://github.com/MauricioPerera/php-vector-store",
+    "license": "MIT"
+  },
+  {
+    "fullName": "aquila-k/Multi-LLM-Agents-Orchestration",
+    "description": "Claude Code orchestrates multiple LLMs as agents. All agent memory and decisions are stored persistently in a lightweight SQLite database. Optional semantic vector search (via sqlite-vec) enhances memory retrieval with natural-language queries.",
+    "stargazersCount": 0,
+    "updatedAt": "2026-03-16T01:27:21Z",
+    "pushedAt": "2026-03-16T01:27:18Z",
+    "language": "Python",
+    "url": "https://github.com/aquila-k/Multi-LLM-Agents-Orchestration",
+    "license": "MIT"
+  },
+  {
+    "fullName": "qasem-talaee/python-mbtiles-server",
+    "description": "A lightweight Flask-based MBTiles server for serving vector tiles from MBTiles databases, with a Leaflet frontend for map visualization and custom zoom-dependent styles",
+    "stargazersCount": 0,
+    "updatedAt": "2025-08-09T06:35:15Z",
+    "pushedAt": "2025-08-09T06:35:11Z",
+    "language": "JavaScript",
+    "url": "https://github.com/qasem-talaee/python-mbtiles-server",
+    "license": null
+  },
+  {
+    "fullName": "VLVrishank/PocketVecDB",
+    "description": "PocketVec is a lightweight, local vector database built on PyTorch with novel adaptive search. It runs entirely on your machine using .pt and SQLite files, and includes a FastAPI wrapper for easy integration into scripts, notebooks, or small services",
+    "stargazersCount": 0,
+    "updatedAt": "2025-10-17T14:07:12Z",
+    "pushedAt": "2025-10-17T14:07:09Z",
+    "language": "Python",
+    "url": "https://github.com/VLVrishank/PocketVecDB",
+    "license": null
+  }
+]

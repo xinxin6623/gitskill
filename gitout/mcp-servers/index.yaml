@@ -1,0 +1,39 @@
+domain: mcp-servers
+description: MCP server 生态合集——给 Claude Code / Codex / Cursor 等 agent 提供工具能力的开源 MCP server（合集 + 单功能强 server）
+last_updated: 2026-05-25
+entries:
+  - repo: modelcontextprotocol/servers
+    stars: 86170
+    language: TypeScript
+    license: MIT
+    last_commit: 2026-05-21
+    intent_matched: "想找现成 MCP server 直接装上让 agent 多一堆工具"
+    file: entries/modelcontextprotocol__servers.md
+  - repo: appcypher/awesome-mcp-servers
+    stars: 5566
+    language: null
+    license: MIT
+    last_commit: 2026-05-06
+    intent_matched: "想按场景翻一份完整 MCP server 清单"
+    file: entries/appcypher__awesome-mcp-servers.md
+  - repo: hangwin/mcp-chrome
+    stars: 11707
+    language: TypeScript
+    license: MIT
+    last_commit: 2026-01-06
+    intent_matched: "让 agent 操作浏览器，但用我已登录的真实 Chrome"
+    file: entries/hangwin__mcp-chrome.md
+  - repo: haris-musa/excel-mcp-server
+    stars: 3861
+    language: Python
+    license: MIT
+    last_commit: 2026-04-12
+    intent_matched: "让 agent 直接读写 Excel，不用装 Office"
+    file: entries/haris-musa__excel-mcp-server.md
+  - repo: containers/kubernetes-mcp-server
+    stars: 1615
+    language: Go
+    license: Apache-2.0
+    last_commit: 2026-05-21
+    intent_matched: "让 agent 直接操作 K8s 集群，不要包 kubectl"
+    file: entries/containers__kubernetes-mcp-server.md

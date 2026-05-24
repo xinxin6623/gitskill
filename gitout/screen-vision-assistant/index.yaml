@@ -1,0 +1,39 @@
+domain: screen-vision-assistant
+description: Mac 桌面屏幕 OCR、截图理解、本地视觉助手
+last_updated: 2026-05-25
+entries:
+  - repo: amebalabs/TRex
+    file: entries/amebalabs__TRex.md
+    intent_matched: "Mac 屏幕选区 OCR 到剪贴板"
+    stars: 1812
+    language: Swift
+    license: mit
+    last_commit: 2026-02-13
+  - repo: xushengfeng/eSearch
+    file: entries/xushengfeng__eSearch.md
+    intent_matched: "截屏 + 离线 OCR + 翻译 + 屏幕搜索 全家桶"
+    stars: 6403
+    language: TypeScript
+    license: gpl-3.0
+    last_commit: 2026-05-22
+  - repo: SamuelZ12/screen-scribe
+    file: entries/SamuelZ12__screen-scribe.md
+    intent_matched: "截图 + Apple Vision OCR + Gemini 多模态解读"
+    stars: 86
+    language: Swift
+    license: mit
+    last_commit: 2026-03-13
+  - repo: hcmhcs/screenTranslate
+    file: entries/hcmhcs__screenTranslate.md
+    intent_matched: "Apple Vision 本地 OCR + Apple 本地翻译，零云调用"
+    stars: 37
+    language: Swift
+    license: gpl-3.0
+    last_commit: 2026-05-24
+  - repo: ljch2018/screen-watcher
+    file: entries/ljch2018__screen-watcher.md
+    intent_matched: "本地 VLM 后台监控屏幕做语义记忆 (Rewind 平替)"
+    stars: 0
+    language: Python
+    license: mit
+    last_commit: 2026-03-30

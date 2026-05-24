@@ -1,0 +1,82 @@
+[
+  {
+    "fullName": "nubskr/satoriDB",
+    "description": "High performance embedded vector database",
+    "stargazersCount": 241,
+    "updatedAt": "2026-05-24T12:00:07Z",
+    "pushedAt": "2026-01-24T22:21:05Z",
+    "language": "Rust",
+    "url": "https://github.com/nubskr/satoriDB",
+    "license": "MIT"
+  },
+  {
+    "fullName": "Shadylukin/Neumann",
+    "description": "A Rust runtime that unifies relational tables, graph relationships, and vector embeddings in a single tensor-based storage layer with distributed consensus and semantic search",
+    "stargazersCount": 75,
+    "updatedAt": "2026-05-22T03:14:47Z",
+    "pushedAt": "2026-05-22T03:14:43Z",
+    "language": "Rust",
+    "url": "https://github.com/Shadylukin/Neumann",
+    "license": "Apache-2.0"
+  },
+  {
+    "fullName": "lanterndata/lantern_extras",
+    "description": "Routines for generating, manipulating, parsing, importing vector embeddings into Postgres tables",
+    "stargazersCount": 22,
+    "updatedAt": "2025-06-21T05:05:37Z",
+    "pushedAt": "2024-10-18T13:44:54Z",
+    "language": "Rust",
+    "url": "https://github.com/lanterndata/lantern_extras",
+    "license": "NOASSERTION"
+  },
+  {
+    "fullName": "context-graph-ai/contextdb",
+    "description": "Embedded database for agentic memory — relational, graph, and vector under unified MVCC transactions",
+    "stargazersCount": 16,
+    "updatedAt": "2026-05-14T13:38:38Z",
+    "pushedAt": "2026-05-19T04:39:58Z",
+    "language": "Rust",
+    "url": "https://github.com/context-graph-ai/contextdb",
+    "license": "Apache-2.0"
+  },
+  {
+    "fullName": "YASSERRMD/barq-vweb",
+    "description": "Browser-native vector database built in Rust and compiled to WebAssembly for client-side embedding storage and semantic search.",
+    "stargazersCount": 19,
+    "updatedAt": "2026-05-19T04:53:50Z",
+    "pushedAt": "2026-03-13T13:14:44Z",
+    "language": "Rust",
+    "url": "https://github.com/YASSERRMD/barq-vweb",
+    "license": "MIT"
+  },
+  {
+    "fullName": "PhilipJohnBasile/vecstore",
+    "description": "Embeddable vector database for Rust and Python. HNSW indexing, metadata filtering, hybrid search, and snapshots. The SQLite of vector search.",
+    "stargazersCount": 14,
+    "updatedAt": "2026-05-14T08:20:52Z",
+    "pushedAt": "2026-04-03T01:54:19Z",
+    "language": "Rust",
+    "url": "https://github.com/PhilipJohnBasile/vecstore",
+    "license": "Apache-2.0"
+  },
+  {
+    "fullName": "hoffresearch/nest",
+    "description": "sovereign embedded vector database, single-file .nest container with content-addressable citations, reproducible builds, and offline-first model verification.",
+    "stargazersCount": 5,
+    "updatedAt": "2026-05-19T17:40:47Z",
+    "pushedAt": "2026-05-19T17:40:23Z",
+    "language": "Rust",
+    "url": "https://github.com/hoffresearch/nest",
+    "license": "MIT"
+  },
+  {
+    "fullName": "reasonkit/reasonkit-mem",
+    "description": "High-performance vector database & RAG memory layer - hybrid search, embeddings, RAPTOR trees, BM25 fusion for AI systems.",
+    "stargazersCount": 7,
+    "updatedAt": "2026-05-12T00:42:58Z",
+    "pushedAt": "2026-05-19T09:59:28Z",
+    "language": "Rust",
+    "url": "https://github.com/reasonkit/reasonkit-mem",
+    "license": "Apache-2.0"
+  }
+]

@@ -1,0 +1,23 @@
+domain: knowledge-graph
+description: 文本/笔记→知识图谱 抽取与可视化栈（LLM 驱动、本地可跑、真实图结构）
+entries:
+  - repo: TheAiSingularity/graphrag-local-ollama
+    file: entries/TheAiSingularity__graphrag-local-ollama.md
+    status: active
+    discovered: 2026-05-25
+  - repo: OrchForge/RAG-GraphRAG-Knowledge-Base
+    file: entries/OrchForge__RAG-GraphRAG-Knowledge-Base.md
+    status: active
+    discovered: 2026-05-25
+  - repo: Seif-Yasser-Ahmed/NodeWeaver
+    file: entries/Seif-Yasser-Ahmed__NodeWeaver.md
+    status: active
+    discovered: 2026-05-25
+  - repo: vaishcodescape/Omni-Graph
+    file: entries/vaishcodescape__Omni-Graph.md
+    status: active
+    discovered: 2026-05-25
+  - repo: arun1729/text-to-kg
+    file: entries/arun1729__text-to-kg.md
+    status: active
+    discovered: 2026-05-25

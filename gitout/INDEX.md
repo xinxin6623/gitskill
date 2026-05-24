@@ -1,11 +1,11 @@
 # gitout · 主题导航索引
 
 > 用 `/gitout` 累积的 GitHub 项目地图。每个 domain 一个目录，每条都有大白话简介 + 详细文档链接。
-> 最后更新：2026-05-24 · stars 数据快照于同日
+> 最后更新：2026-05-25 · stars 数据快照于同日
 
 ---
 
-## 🧭 15 个 domain 一览
+## 🧭 20 个 domain 一览
 
 | Domain | 一句话 | 项目数 | 首推 |
 | --- | --- | --- | --- |
@@ -24,8 +24,13 @@
 | [🧰 dev-productivity/personal-tools](#dev-productivitypersonal-tools--开发者生产力工具非-ai) | 不带 AI 也能让你 10x 的工具 | 5 | tuios (2.7k) |
 | [🗣️ xiaozhi-ai](#xiaozhi-ai--xiaozhi-语音对话硬件生态) | ESP32 + LLM 端侧 AI 语音盒子生态 | 5 | xiaozhi-esp32 (26.7k) |
 | [🧠 personality-test](#personality-test--性格-心理测试) | MBTI 等性格测试的开源实现（webapp / 小程序 / 题库 API） | 5 | yudada (385) |
+| [🦙 local-llm-runtime](#local-llm-runtime--mac-本地-llm-推理运行时) | Mac/Apple Silicon 本地跑 7B-30B 模型的反共识方案 | 5 | llamafile (24.5k) |
+| [🔍 rag-engine](#rag-engine--本地优先的-rag--向量检索引擎) | 嵌入式/自托管/浏览器原生的向量库 | 5 | vecstore (14) |
+| [🕸️ knowledge-graph](#knowledge-graph--文本笔记知识图谱-抽取与可视化栈) | 文本/笔记自动抽实体关系、生成可视化图谱 | 5 | graphrag-local-ollama (1.1k) |
+| [🔌 mcp-servers](#mcp-servers--mcp-server-生态合集) | 给 Claude/Codex/Cursor 扩展工具能力的 MCP server | 5 | servers (86.2k) |
+| [📷 screen-vision-assistant](#screen-vision-assistant--mac-屏幕-ocr--截图理解--视觉助手) | Mac 桌面 OCR + 截图多模态 + 本地 VLM 屏幕记忆 | 5 | TRex (1.8k) |
 
-**合计 73 个项目**
+**合计 98 个项目**
 
 ---
 
@@ -267,12 +272,93 @@
 
 ---
 
+## local-llm-runtime — Mac 本地 LLM 推理运行时
+
+**解决什么：** 不想被 OpenAI/Anthropic 卡着钱包，又嫌 Ollama 太大众？这里挑反共识方案——单文件可执行、Apple MLX 原生、Swift in-process。专为 M 系列 Mac 选。
+
+**⭐ 首推 `llamafile`（24.5k）：** 把模型权重 + 推理代码塞一个可执行文件，下载即跑、零安装、跨 OS；Mozilla 长期维护，唯一星数级生态。`mlx-swift-lm` 是 Apple 官方 Swift 库（嵌 macOS/iOS app 必备）；想用 Claude Code 但跑本地模型上 `Kevlar`（Anthropic API 兼容层）；想试投机解码新论文用 `mio`；纯 Swift coding agent 看 `mlx-coder`。
+
+| Repo | ⭐ | 大白话 | 详细文档 |
+| --- | ---: | --- | --- |
+| [mozilla-ai/llamafile](https://github.com/mozilla-ai/llamafile) | 24.5k | 单文件 LLM 旗舰：权重+推理捆一个可执行，下载即跑 | [📄](./local-llm-runtime/entries/mozilla-ai__llamafile.md) |
+| [ml-explore/mlx-swift-lm](https://github.com/ml-explore/mlx-swift-lm) | 523 | Apple 官方 Swift LLM 库，把 mlx-lm 那套搬进 Xcode | [📄](./local-llm-runtime/entries/ml-explore__mlx-swift-lm.md) |
+| [eduardogoncalves/mlx-coder](https://github.com/eduardogoncalves/mlx-coder) | 8 | Swift 写的 in-process coding agent，与 MLX 推理同进程 | [📄](./local-llm-runtime/entries/eduardogoncalves__mlx-coder.md) |
+| [nikholasnova/Kevlar](https://github.com/nikholasnova/Kevlar) | 7 | 让 Claude Code 跑你本地 MLX 模型的 Anthropic API 兼容层 | [📄](./local-llm-runtime/entries/nikholasnova__Kevlar.md) |
+| [Ruler-Dev/mio](https://github.com/Ruler-Dev/mio) | 4 | DFlash 投机解码 + PolarQuant KV 压缩的极致 MLX 引擎 | [📄](./local-llm-runtime/entries/Ruler-Dev__mio.md) |
+
+---
+
+## rag-engine — 本地优先的 RAG / 向量检索引擎
+
+**解决什么：** Pinecone 这类云向量库锁数据、按月收钱。本地能跑、嵌入式/单文件/浏览器原生的向量引擎才是个人知识库的底座。
+
+**⭐ 首推 `vecstore`（14）：** Rust 嵌入式 + 浏览器 WASM + hybrid search，最贴近"SQLite of vectors"的体验，进程内就能跑、API 干净；想要"build-once-ship-many"用 `nest`（单文件 `.nest` 容器、可签名分发）；想要 server 形态 `vecdb`；想直接拿来用的端到端 Graph RAG 选 `Kwipu`（83⭐ 自带 Obsidian/MCP）；做纯浏览器 RAG 用 `barq-vweb`。
+
+| Repo | ⭐ | 大白话 | 详细文档 |
+| --- | ---: | --- | --- |
+| [benmaster82/Kwipu](https://github.com/benmaster82/Kwipu) | 83 | 本地 Graph RAG 给 Obsidian/markdown 用，自带 MCP server | [📄](./rag-engine/entries/benmaster82__Kwipu.md) |
+| [YASSERRMD/barq-vweb](https://github.com/YASSERRMD/barq-vweb) | 19 | 浏览器原生 Rust+WASM 向量库，自带 MiniLM embedding，零后端 | [📄](./rag-engine/entries/YASSERRMD__barq-vweb.md) |
+| [PhilipJohnBasile/vecstore](https://github.com/PhilipJohnBasile/vecstore) | 14 | "向量界 SQLite"，Rust 嵌入式 + 浏览器 WASM + hybrid search | [📄](./rag-engine/entries/PhilipJohnBasile__vecstore.md) |
+| [zaydmulani09/vecdb](https://github.com/zaydmulani09/vecdb) | 7 | 单二进制自托管 Rust 向量服务，hybrid + 类 SQL 查询 | [📄](./rag-engine/entries/zaydmulani09__vecdb.md) |
+| [hoffresearch/nest](https://github.com/hoffresearch/nest) | 5 | 整个 RAG 知识库塞进 `.nest` 单文件，签名可校验、像分发 SQLite db | [📄](./rag-engine/entries/hoffresearch__nest.md) |
+
+---
+
+## knowledge-graph — 文本/笔记→知识图谱 抽取与可视化栈
+
+**解决什么：** Obsidian 双链是手动连的；这里要的是**LLM 自动抽实体关系**生成真正的图结构（HTML/JSON/Neo4j），喂给 GraphRAG 或可视化。
+
+**⭐ 首推 `graphrag-local-ollama`（1.1k）：** 微软 GraphRAG 本地化 + Ollama 接入，含 Web UI 图可视化和 5 种查询模式，是入门 GraphRAG 最直接的路径。想要"双引擎 + MCP server" 用 `OrchForge/RAG-GraphRAG-Knowledge-Base`；用 agent 把 PDF 织成 Obsidian markdown 知识图谱选 `NodeWeaver`；想要完整 KG 平台（13 工具 MCP）用 `Omni-Graph`；想读懂"文本→实体→图→查询"全流程从 `text-to-kg` 开始。
+
+| Repo | ⭐ | 大白话 | 详细文档 |
+| --- | ---: | --- | --- |
+| [TheAiSingularity/graphrag-local-ollama](https://github.com/TheAiSingularity/graphrag-local-ollama) | 1.1k | 微软 GraphRAG 本地化 + Ollama + Web UI 可视化 | [📄](./knowledge-graph/entries/TheAiSingularity__graphrag-local-ollama.md) |
+| [vaishcodescape/Omni-Graph](https://github.com/vaishcodescape/Omni-Graph) | 3 | 端到端 KG 平台，FastAPI + pgvector，4 种 search + 13 工具 MCP | [📄](./knowledge-graph/entries/vaishcodescape__Omni-Graph.md) |
+| [arun1729/text-to-kg](https://github.com/arun1729/text-to-kg) | 3 | CogDB 最小 demo，"文本→实体→图→查询"全流程入门读物 | [📄](./knowledge-graph/entries/arun1729__text-to-kg.md) |
+| [OrchForge/RAG-GraphRAG-Knowledge-Base](https://github.com/OrchForge/RAG-GraphRAG-Knowledge-Base) | 0 | Node 自托管 RAG+GraphRAG 双引擎 + 图编辑器 + Claude Desktop MCP | [📄](./knowledge-graph/entries/OrchForge__RAG-GraphRAG-Knowledge-Base.md) |
+| [Seif-Yasser-Ahmed/NodeWeaver](https://github.com/Seif-Yasser-Ahmed/NodeWeaver) | 0 | agent 把 PDF 啃成 Obsidian markdown 知识图谱，遍历 wikilink 推理 | [📄](./knowledge-graph/entries/Seif-Yasser-Ahmed__NodeWeaver.md) |
+
+---
+
+## mcp-servers — MCP server 生态合集
+
+**解决什么：** Claude/Codex/Cursor 通过 MCP 协议吃工具，这里收**工具端的实现**（不是 Claude skill 那种 agent 侧组织方式，那归 `claude-skills/`）。
+
+**⭐ 首推 `modelcontextprotocol/servers`（86.2k）：** Anthropic 官方参考 server 合集 + 全 SDK 入口，找现成 MCP server 第一站；想翻"全网 MCP server 大目录"上 `awesome-mcp-servers`（5.5k 社区版）；要接管已登录浏览器（自动化淘宝/微信网页版）选 `mcp-chrome`；处理 Excel 不依赖 Office 用 `excel-mcp-server`；操 K8s 用原生 Go 的 `kubernetes-mcp-server`（不包 kubectl）。
+
+| Repo | ⭐ | 大白话 | 详细文档 |
+| --- | ---: | --- | --- |
+| [modelcontextprotocol/servers](https://github.com/modelcontextprotocol/servers) | 86.2k | Anthropic 官方 MCP 参考 server 合集 + 全 SDK 入口 | [📄](./mcp-servers/entries/modelcontextprotocol__servers.md) |
+| [hangwin/mcp-chrome](https://github.com/hangwin/mcp-chrome) | 11.7k | Chrome 扩展型 MCP server，接管你已登录的真实 Chrome | [📄](./mcp-servers/entries/hangwin__mcp-chrome.md) |
+| [appcypher/awesome-mcp-servers](https://github.com/appcypher/awesome-mcp-servers) | 5.5k | 社区 MCP server 大目录，按场景翻清单 | [📄](./mcp-servers/entries/appcypher__awesome-mcp-servers.md) |
+| [haris-musa/excel-mcp-server](https://github.com/haris-musa/excel-mcp-server) | 3.9k | Python 写的 Excel MCP server，不依赖 Microsoft Office | [📄](./mcp-servers/entries/haris-musa__excel-mcp-server.md) |
+| [containers/kubernetes-mcp-server](https://github.com/containers/kubernetes-mcp-server) | 1.6k | Go 原生 K8s MCP server，直接走 API，不包 kubectl | [📄](./mcp-servers/entries/containers__kubernetes-mcp-server.md) |
+
+---
+
+## screen-vision-assistant — Mac 屏幕 OCR / 截图理解 / 视觉助手
+
+**解决什么：** 看到屏幕上的文字想复制？截图问 AI 帮翻译？后台监控屏幕做语义记忆（Rewind 平替）？五条不同形态对照矩阵。
+
+**⭐ 首推 `TRex`（1.8k）：** Swift 菜单栏小恐龙，框一块屏幕、文字进剪贴板，纯离线 Apple Vision，最贴 Mac 原生哲学；要 OCR+翻译+以图搜图全家桶（容忍 Electron）选 `eSearch`（6.4k 但反 native 偏好）；公式表格转 LaTeX/Markdown 选 `screen-scribe`（Apple Vision + Gemini）；全本地翻译（隐私至上）用 `screenTranslate`；做 Rewind 风格本地 VLM 屏幕记忆挑 `screen-watcher`。
+
+| Repo | ⭐ | 大白话 | 详细文档 |
+| --- | ---: | --- | --- |
+| [xushengfeng/eSearch](https://github.com/xushengfeng/eSearch) | 6.4k | 截屏+离线 OCR+翻译+以图搜图全家桶，跨平台 Electron | [📄](./screen-vision-assistant/entries/xushengfeng__eSearch.md) |
+| [amebalabs/TRex](https://github.com/amebalabs/TRex) | 1.8k | 菜单栏小恐龙，框一块屏幕，文字到剪贴板，纯离线 Swift | [📄](./screen-vision-assistant/entries/amebalabs__TRex.md) |
+| [SamuelZ12/screen-scribe](https://github.com/SamuelZ12/screen-scribe) | 86 | Apple Vision OCR + Gemini 多模态，专治公式表格转 LaTeX | [📄](./screen-vision-assistant/entries/SamuelZ12__screen-scribe.md) |
+| [hcmhcs/screenTranslate](https://github.com/hcmhcs/screenTranslate) | 37 | 全本地 Apple Vision + Apple Translation，隐私优先翻译 | [📄](./screen-vision-assistant/entries/hcmhcs__screenTranslate.md) |
+| [ljch2018/screen-watcher](https://github.com/ljch2018/screen-watcher) | 0 | 本地 VLM 后台默默看屏，做 Rewind 平替的语义记忆 | [📄](./screen-vision-assistant/entries/ljch2018__screen-watcher.md) |
+
+---
+
 ## 📊 整体统计
 
-- **总项目数**：73（cli-wrap 5 + voice-pipeline 5 + claude-skills 5 + im-export 5 + personal-kb 5 + ai-avatar 5 + server-ops 5 + iot-platform 4 + personal-site 4 + dev-productivity 20 + xiaozhi-ai 5 + personality-test 5）
-- **stars 总和**：约 95 万⭐ · 单条最高 OpenHands 74.6k · 中位数约 3k
+- **总项目数**：98（cli-wrap 5 + voice-pipeline 5 + claude-skills 5 + im-export 5 + personal-kb 5 + ai-avatar 5 + server-ops 5 + iot-platform 4 + personal-site 4 + dev-productivity 20 + xiaozhi-ai 5 + personality-test 5 + local-llm-runtime 5 + rag-engine 5 + knowledge-graph 5 + mcp-servers 5 + screen-vision-assistant 5）
+- **stars 总和**：约 180 万⭐ · 单条最高 modelcontextprotocol/servers 86.2k · 中位数约 2k
 - **已停更但仍收录**：3 个（WeChatMsg 41.5k、dendron 7.4k、DiscordChatExporter 维护模式）—— 思路或窗口期价值还在
 - **重型参考向（别整站 clone）**：jetlinks、kentcdodds.com、OpenHands —— 给你读架构的，不是拿来用的
+- **新一批 reach（2026-05-25）**：local-llm-runtime / rag-engine / knowledge-graph / mcp-servers / screen-vision-assistant 五个本地优先方向，平均星数低但意图匹配度高
 
 ## 🎯 跨域推荐路径
 
@@ -281,6 +367,8 @@
 3. **想做 Agent 产品：** cli-wrap/`open-interpreter` + claude-skills/`anthropics-sdk` + dev-productivity/ai-coding-agent/`OpenHands`（读架构）
 4. **想升级 skill 工程：** dev-productivity/claude-workflow/`Continuous-Claude-v3` 是直接对照样板
 5. **想做微信记录归档：** im-export/`WeChatMsg` 趁能用赶紧研究 · 长线靠 `HPI` 的"个人数据包"思路立差异
+6. **想搭本地 AI 栈：** local-llm-runtime/`llamafile` 跑模型 + rag-engine/`vecstore` 做检索 + knowledge-graph/`graphrag-local-ollama` 做图谱 + mcp-servers/`modelcontextprotocol/servers` 把工具接到 Claude Code
+7. **想让 Mac 桌面变 AI 助手：** screen-vision-assistant/`TRex` 选字 + screen-watcher 屏幕记忆 + 本地 MLX 模型做语义查询
 
 ---
 
@@ -305,3 +393,4 @@ gitout/
 *dev-productivity 四子域由 /gitout 多 agent 并行模式生成 · 2026-05-23*
 *xiaozhi-ai 由 /gitout 自然语言模式生成 · 2026-05-23*
 *personality-test 由 /gitout 自然语言模式生成 · 2026-05-24*
+*local-llm-runtime / rag-engine / knowledge-graph / mcp-servers / screen-vision-assistant 由 /gitout 5 agent 并行模式生成 · 2026-05-25*

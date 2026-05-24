@@ -10,6 +10,7 @@
 
 | 日期 | 类型 | 文件 | 一句话摘要 |
 | --- | --- | --- | --- |
+| 2026-05-25 | retro | [2026-05-25-5-domain-parallel-batch-retro.md](./2026-05-25-5-domain-parallel-batch-retro.md) | 5 agent 并行扫 local-llm-runtime / rag-engine / knowledge-graph / mcp-servers / screen-vision-assistant 共 25 entry 入库；首轮暴露 gh 未登录时 agent 行为不一致（2 个走匿名 REST、3 个严守 SKILL 停了）；总 73→98 |
 | 2026-05-24 | 阶段性修改 | — | 按 `2026-05-23-skill-optimization-checklist.md` 全部接受落实 17 项优化：SKILL.md 重写（安装节/INDEX 自检/input_type 分流/反 buzzword 抓取/停更扫描/三句硬模板/批量 subagent/--quick/结构化汇报）+ 新增 `_taxonomy.yaml` + `.gitignore` 重写 + symlink 安装 + radar v1.2 加实施状态段 |
 | 2026-05-24 | retro | [2026-05-24-personality-test-retro.md](./2026-05-24-personality-test-retro.md) | MBTI 主题首跑：5 query 并发因 `archivedAt` 字段名 bug 全失败需串行重跑；README 返空率偏高；INDEX 自检 0 缺 0 孤儿 |
 | 2026-05-23 | 优化清单 | [2026-05-23-skill-optimization-checklist.md](./2026-05-23-skill-optimization-checklist.md) | 综合 05-22 + 05-23 两份复盘 + radar 蓝本对照，输出 17 项可勾选优化清单（P0×6 / P1×6 / P2×5） |
