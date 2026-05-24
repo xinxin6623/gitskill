@@ -46,16 +46,29 @@ gitskill/
    - 在主题表新增一行
    - 在正文新增一个 `## <domain> — <一句话>` 小节，含完整 entry 表格
    - 更新底部"总项目数"统计
-5. 原始 gh JSON 落 `raw/<日期>/<intent-slug>/`，**不进 INDEX**。
-6. 复盘文档（如有）落 `retros/<日期>-<主题>-retro.md`，**不进 INDEX**。
+5. 原始 gh JSON 落 `raw/<日期>/<intent-slug>/`，**不进 `gitout/INDEX.md`**。
+6. 复盘文档（如有）落 `retros/<日期>-<主题>-retro.md`，**不进 `gitout/INDEX.md`**，但 **必须同步在 `gitout/retros/INDEX.md` append 一行摘要**（见 §3.2）。
+7. 任何对 SKILL.md / 主流程 / 目录结构的阶段性修改，也要在 `gitout/retros/INDEX.md` "阶段性修改时间线"表 append 一行。
 
-## 3. INDEX.md 维护职责
+## 3. 两个 INDEX 的职责分工
 
-INDEX.md 是**目录树的唯一真相源**，每次目录变动后立刻同步：
+仓库里有 **两个 INDEX.md**，职责互不重叠，**两个都要维护**：
+
+### 3.1 `gitout/INDEX.md` —— 项目 entry 总入口
+**目录树的唯一真相源**，每次目录变动后立刻同步：
 - 新增 domain → 加表头行 + 加正文小节
 - 删除/合并 domain → 同步删表头行和正文小节
 - 重命名 → 全文替换路径
 - 项目数变动 → 更新该 domain 的 `项目数` 列 + 底部"总项目数"
+
+### 3.2 `gitout/retros/INDEX.md` —— 复盘与阶段性修改时序索引
+按时序倒序记录所有 retro 文件 + 阶段性修改。**触发条件**：
+- 每次 `/gitout` 跑完 → "时序记录"表 append 一行（type=retro）+ 链接对应 retro 文件
+- 每次对 SKILL.md / 主流程 / 目录结构做阶段性修改 → 在"时序记录"和"阶段性修改时间线"两张表都 append（type=阶段性修改）
+- 摘要 ≤ 80 字，含"做了什么 + 关键发现/影响"
+- **只追加不删**
+
+两个 INDEX 各自负责一类东西，永远不要把 retro / 阶段修改塞进 `gitout/INDEX.md`，也不要把项目 entry 塞进 `gitout/retros/INDEX.md`。
 
 ## 4. 语言与风格
 - 中文优先（James 母语）；entry 文档遵循 SKILL.md 里的小红书风格小白说明。
