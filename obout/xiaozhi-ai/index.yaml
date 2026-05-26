@@ -1,0 +1,31 @@
+domain: xiaozhi-ai
+description: xiaozhi AI 语音对话硬件生态（原版固件 + 自建后端 + 跨端客户端）
+created: 2026-05-23
+last_updated: 2026-05-23
+
+entries:
+  - repo: 78/xiaozhi-esp32
+    file: entries/78__xiaozhi-esp32.md
+    intent_matched: "原版固件基准"
+    stars: 26685
+    language: C++
+  - repo: xinnan-tech/xiaozhi-esp32-server
+    file: entries/xinnan-tech__xiaozhi-esp32-server.md
+    intent_matched: "Python/Vue 全栈后端"
+    stars: 9612
+    language: JavaScript
+  - repo: huangjunsen0406/py-xiaozhi
+    file: entries/huangjunsen0406__py-xiaozhi.md
+    intent_matched: "无硬件纯 Python 客户端"
+    stars: 3324
+    language: Python
+  - repo: joey-zhou/xiaozhi-esp32-server-java
+    file: entries/joey-zhou__xiaozhi-esp32-server-java.md
+    intent_matched: "Java 企业级后端"
+    stars: 1256
+    language: Java
+  - repo: TOM88812/xiaozhi-android-client
+    file: entries/TOM88812__xiaozhi-android-client.md
+    intent_matched: "移动端 Flutter iOS/Android"
+    stars: 1477
+    language: Dart

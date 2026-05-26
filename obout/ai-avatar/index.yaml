@@ -1,0 +1,23 @@
+domain: ai-avatar
+description: AI 虚拟角色 / Live2D 桌宠
+entries:
+  - repo: moeru-ai/airi
+    file: entries/moeru-ai__airi.md
+    status: active
+    discovered: 2026-05-22
+  - repo: elevenyellow/handcrafted-persona-engine
+    file: entries/elevenyellow__handcrafted-persona-engine.md
+    status: active
+    discovered: 2026-05-22
+  - repo: whoiswennie/AI-Vtuber
+    file: entries/whoiswennie__AI-Vtuber.md
+    status: active
+    discovered: 2026-05-22
+  - repo: chyinan/Kokoro-Engine
+    file: entries/chyinan__Kokoro-Engine.md
+    status: active
+    discovered: 2026-05-22
+  - repo: suzuran0y/Live2D-LLM-Chat
+    file: entries/suzuran0y__Live2D-LLM-Chat.md
+    status: active
+    discovered: 2026-05-22

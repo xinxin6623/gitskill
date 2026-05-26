@@ -1,0 +1,28 @@
+domain: dev-productivity/ai-coding-agent
+description: AI Coding Agent / 自主代码生成代理框架
+entries:
+  - repo: OpenHands/OpenHands
+    file: entries/OpenHands__OpenHands.md
+    intent_matched: "学术派 SWE-Bench 77.6 分的开源 AI 工程师，全套 SDK + CLI + GUI + 沙箱"
+    status: active
+    discovered: 2026-05-23
+  - repo: cline/cline
+    file: entries/cline__cline.md
+    intent_matched: "同一个 agent 引擎跑 CLI / SDK / VS Code / JetBrains 四种形态，工程化教科书"
+    status: active
+    discovered: 2026-05-23
+  - repo: Aider-AI/aider
+    file: entries/Aider-AI__aider.md
+    intent_matched: "终端里的老牌 AI 结对编程，repo-map + git commit 自动化是亮点"
+    status: active
+    discovered: 2026-05-23
+  - repo: iannuttall/ralph
+    file: entries/iannuttall__ralph.md
+    intent_matched: "把 Claude Code / Codex / opencode 当 backend 的极简 agent loop，文件即记忆"
+    status: active
+    discovered: 2026-05-23
+  - repo: dollspace-gay/OpenClaudia
+    file: entries/dollspace-gay__OpenClaudia.md
+    intent_matched: "Rust 写的 Claude Code 复刻品，支持任意 LLM provider 和本地模型"
+    status: active
+    discovered: 2026-05-23

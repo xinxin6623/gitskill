@@ -1,0 +1,23 @@
+domain: voice-pipeline
+description: 语音 pipeline / 实时对话技术栈
+entries:
+  - repo: gradio-app/fastrtc
+    file: entries/gradio-app__fastrtc.md
+    status: active
+    discovered: 2026-05-22
+  - repo: OpenMOSS/MOSS-TTS
+    file: entries/OpenMOSS__MOSS-TTS.md
+    status: active
+    discovered: 2026-05-22
+  - repo: OpenMOSS/MOSS-TTSD
+    file: entries/OpenMOSS__MOSS-TTSD.md
+    status: active
+    discovered: 2026-05-22
+  - repo: soniqo/speech-swift
+    file: entries/soniqo__speech-swift.md
+    status: active
+    discovered: 2026-05-22
+  - repo: Liquid4All/liquid-audio
+    file: entries/Liquid4All__liquid-audio.md
+    status: active
+    discovered: 2026-05-22

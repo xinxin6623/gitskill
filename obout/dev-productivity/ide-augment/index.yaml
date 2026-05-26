@@ -1,0 +1,54 @@
+domain: dev-productivity/ide-augment
+direction: "IDE 增强 / 编辑器提效"
+intent: "个人提效工具，skill ide codeing harness 工程"
+generated_at: 2026-05-23
+queries:
+  - "vscode extension"
+  - "neovim plugin"
+  - "lsp server"
+  - "tabby ai coding"
+  - "continue dev"
+  - "ide ai coding"
+  - "continue copilot autocomplete"
+  - "code refactor lsp"
+  - "ai assistant editor"
+funnel:
+  raw_candidates: 95
+  after_date_stars_filter: 22
+  after_semantic_filter: 8
+  final_picks: 5
+entries:
+  - repo: continuedev/continue
+    file: entries/continuedev__continue.md
+    stars: 33334
+    language: TypeScript
+    one_liner: "跨编辑器 AI 插件 + 把 AI 检查规则版本控制成 markdown 跑在 CI"
+    fit_score: 5
+  - repo: TabbyML/tabby
+    file: entries/TabbyML__tabby.md
+    stars: 33541
+    language: Rust
+    one_liner: "自托管 Copilot：Rust server + 多 IDE 客户端 monorepo 工程样板"
+    fit_score: 4
+  - repo: yetone/avante.nvim
+    file: entries/yetone__avante.nvim.md
+    stars: 17917
+    language: Lua
+    one_liner: "Neovim 里复刻 Cursor，含 ACP 对接 claude code / codex + avante.md 项目规则"
+    fit_score: 5
+  - repo: olimorris/codecompanion.nvim
+    file: entries/olimorris__codecompanion.nvim.md
+    stars: 6607
+    language: Lua
+    one_liner: "Neovim AI 框架：prompt library + slash command + adapter 模块化扩展点"
+    fit_score: 5
+  - repo: mason-org/mason.nvim
+    file: entries/mason-org__mason.nvim.md
+    stars: 10300
+    language: Lua
+    one_liner: "Neovim 跨平台 LSP/DAP/linter 包管理器，编辑器工程化教科书"
+    fit_score: 4
+health:
+  all_active: true
+  oldest_commit: 2026-03-02  # tabby
+  total_stars: 101699

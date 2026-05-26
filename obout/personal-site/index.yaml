@@ -1,0 +1,23 @@
+domain: personal-site
+description: 个人网站/超级主页全栈项目（含 Blog/Projects/Now/Bookmarks 等可扩展模块）
+entries:
+  - repo: thedevdavid/digital-garden
+    file: entries/thedevdavid__digital-garden.md
+    intent_matched: "可扩展的全栈个人超级主页模板"
+    status: active
+    discovered: 2026-05-23
+  - repo: vercel/nextjs-portfolio-starter
+    file: entries/vercel__nextjs-portfolio-starter.md
+    intent_matched: "最简洁的官方个人站 starter"
+    status: active
+    discovered: 2026-05-23
+  - repo: apvarun/digital-garden-hugo-theme
+    file: entries/apvarun__digital-garden-hugo-theme.md
+    intent_matched: "高性能个人 digital garden 主题"
+    status: active
+    discovered: 2026-05-23
+  - repo: kentcdodds/kentcdodds.com
+    file: entries/kentcdodds__kentcdodds-com.md
+    intent_matched: "全栈含 DB 的个人站参考典范"
+    status: active
+    discovered: 2026-05-23

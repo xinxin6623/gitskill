@@ -1,0 +1,24 @@
+domain: im-export
+description: 聊天记录导出 / 个人数据归档
+entries:
+  - repo: LC044/WeChatMsg
+    file: entries/LC044__WeChatMsg.md
+    status: archived-but-useful
+    discovered: 2026-05-22
+    note: 作者已停更，窗口期价值
+  - repo: ReagentX/imessage-exporter
+    file: entries/ReagentX__imessage-exporter.md
+    status: active
+    discovered: 2026-05-22
+  - repo: Tyrrrz/DiscordChatExporter
+    file: entries/Tyrrrz__DiscordChatExporter.md
+    status: maintenance-mode
+    discovered: 2026-05-22
+  - repo: karlicoss/HPI
+    file: entries/karlicoss__HPI.md
+    status: active
+    discovered: 2026-05-22
+  - repo: karlicoss/promnesia
+    file: entries/karlicoss__promnesia.md
+    status: active
+    discovered: 2026-05-22

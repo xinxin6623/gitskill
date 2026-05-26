@@ -83,3 +83,8 @@ domains:
     cn: 性格/心理测试
     aliases: [mbti, personality, quiz, psychology, 16-personalities, big-five, enneagram]
     desc: MBTI / 大五 / 九型等心理测试的开源实现（webapp / 小程序 / 题库）
+
+  - name: git-self-host
+    cn: 自建 Git 仓库 / 依赖代理
+    aliases: [git-server, self-hosted-git, gitea, forgejo, gogs, soft-serve, git-mirror, go-proxy, dependency-cache, git-push-deploy, paas]
+    desc: 自建 Git 服务器（依赖镜像 + 网站 push 部署），4C4G 级别 VPS 友好

@@ -1,17 +1,18 @@
 # gitout · 主题导航索引
 
 > 用 `/gitout` 累积的 GitHub 项目地图。每个 domain 一个目录，每条都有大白话简介 + 详细文档链接。
-> 最后更新：2026-05-25 · stars 数据快照于同日
+<<<<<<< HEAD
+> 最后更新：2026-05-26 · stars 数据快照于同日
 
 ---
 
-## 🧭 20 个 domain 一览
+## 🧭 21 个 domain 一览
 
 | Domain | 一句话 | 项目数 | 首推 |
 | --- | --- | --- | --- |
 | [📦 cli-wrap](#cli-wrap--cli-包装--把工具变成-ai-能用的命令) | 让 AI 调命令行，或把任意软件包装成 Agent 接口 | 5 | open-interpreter (63.6k) |
 | [🎙️ voice-pipeline](#voice-pipeline--语音-pipeline--实时对话技术栈) | 跟 AI 实时语音对话的底座 | 5 | fastrtc (4.6k) |
-| [⚙️ claude-skills](#claude-skills--claude-code-生态--skill-和-hooks) | Claude Code skill/hook/subagent 入门 | 5 | awesome-claude-code (44.5k) |
+| [⚙️ claude-skills](#claude-skills--claude-code-生态--skill-和-hooks) | Claude Code skill/hook/subagent 入门 | 11 | mattpocock/skills (105k) |
 | [💬 im-export](#im-export--聊天记录导出--个人数据归档) | 微信/iMessage/Discord 历史导出 | 5 | WeChatMsg (41.5k) |
 | [📚 personal-kb](#personal-kb--个人知识库--markdown-wiki) | 本地优先的 Markdown 笔记 + 互链 + 可发布 | 5 | logseq (43.0k) |
 | [🤖 ai-avatar](#ai-avatar--ai-虚拟角色--live2d-桌宠) | 给 AI 套个皮：能动嘴、有表情、能聊天 | 5 | airi (39.5k) |
@@ -23,14 +24,14 @@
 | [✏️ dev-productivity/ide-augment](#dev-productivityide-augment--ide-增强--编辑器-ai-集成) | VSCode/Neovim 里的 AI 编程插件 | 5 | continue (33.3k) |
 | [🧰 dev-productivity/personal-tools](#dev-productivitypersonal-tools--开发者生产力工具非-ai) | 不带 AI 也能让你 10x 的工具 | 5 | tuios (2.7k) |
 | [🗣️ xiaozhi-ai](#xiaozhi-ai--xiaozhi-语音对话硬件生态) | ESP32 + LLM 端侧 AI 语音盒子生态 | 5 | xiaozhi-esp32 (26.7k) |
-| [🧠 personality-test](#personality-test--性格-心理测试) | MBTI 等性格测试的开源实现（webapp / 小程序 / 题库 API） | 5 | yudada (385) |
 | [🦙 local-llm-runtime](#local-llm-runtime--mac-本地-llm-推理运行时) | Mac/Apple Silicon 本地跑 7B-30B 模型的反共识方案 | 5 | llamafile (24.5k) |
 | [🔍 rag-engine](#rag-engine--本地优先的-rag--向量检索引擎) | 嵌入式/自托管/浏览器原生的向量库 | 5 | vecstore (14) |
 | [🕸️ knowledge-graph](#knowledge-graph--文本笔记知识图谱-抽取与可视化栈) | 文本/笔记自动抽实体关系、生成可视化图谱 | 5 | graphrag-local-ollama (1.1k) |
 | [🔌 mcp-servers](#mcp-servers--mcp-server-生态合集) | 给 Claude/Codex/Cursor 扩展工具能力的 MCP server | 5 | servers (86.2k) |
 | [📷 screen-vision-assistant](#screen-vision-assistant--mac-屏幕-ocr--截图理解--视觉助手) | Mac 桌面 OCR + 截图多模态 + 本地 VLM 屏幕记忆 | 5 | TRex (1.8k) |
+| [🗄️ git-self-host](#git-self-host--自建-git-仓库--依赖代理) | 自建 Git 服务器 + 国内依赖代理 + git push 部署网站 | 5 | piku (6.6k) |
 
-**合计 98 个项目**
+**合计 109 个项目**
 
 ---
 
@@ -70,15 +71,21 @@
 
 **解决什么：** Claude Code 不只是聊天，能装 skill、配 hook、塞 subagent。这里是把它玩花的入门起点（工程化体系向见 `dev-productivity/claude-workflow`）。
 
-**⭐ 首推 `awesome-claude-code`（44.5k）：** 整个生态唯一聚合页，找 skill / hook / extension 第一站。学 hook 写法直接对照 `claude-code-hooks-mastery`（13 种事件完整示例），写自己的应用用官方 SDK。
+**⭐ 首推 `mattpocock/skills`（105k）：** Total TypeScript 创办人那套"工程派"skill，`/grill-me` `/tdd` `/improve-codebase-architecture` 直接装。安全方向看 `trailofbits/skills`（30+ 审计 plugin），中文学习看 `dianyike/claude-code-insights`，全景索引看 `ComposioHQ/awesome-claude-skills`。
 
 | Repo | ⭐ | 大白话 | 详细文档 |
 | --- | ---: | --- | --- |
+| [mattpocock/skills](https://github.com/mattpocock/skills) | 105k | Total TypeScript 创办人的工程派 skill，`/grill-me` `/tdd` 源头 | [📄](./claude-skills/entries/mattpocock__skills.md) |
+| [ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills) | 61.8k | 6 万星头部 awesome list + 500 应用 connect plugin | [📄](./claude-skills/entries/ComposioHQ__awesome-claude-skills.md) |
 | [hesreallyhim/awesome-claude-code](https://github.com/hesreallyhim/awesome-claude-code) | 44.5k | Claude Code 整个生态的"黄页" | [📄](./claude-skills/entries/hesreallyhim__awesome-claude-code.md) |
 | [VoltAgent/awesome-claude-code-subagents](https://github.com/VoltAgent/awesome-claude-code-subagents) | 20.3k | 131+ 个角色化 subagent，一键安装 | [📄](./claude-skills/entries/VoltAgent__awesome-claude-code-subagents.md) |
+| [slavingia/skills](https://github.com/slavingia/skills) | 8.9k | Gumroad 创始人把《极简创业》变成 10 个 slash command | [📄](./claude-skills/entries/slavingia__skills.md) |
 | [anthropics/claude-agent-sdk-python](https://github.com/anthropics/claude-agent-sdk-python) | 7.0k | 官方 Python SDK | [📄](./claude-skills/entries/anthropics__claude-agent-sdk-python.md) |
+| [trailofbits/skills](https://github.com/trailofbits/skills) | 5.4k | Trail of Bits 安全审计 30+ plugin marketplace | [📄](./claude-skills/entries/trailofbits__skills.md) |
 | [disler/claude-code-hooks-mastery](https://github.com/disler/claude-code-hooks-mastery) | 3.7k | 13 种 hook 事件全讲清楚，附完整示例 | [📄](./claude-skills/entries/disler__claude-code-hooks-mastery.md) |
 | [coleam00/claude-memory-compiler](https://github.com/coleam00/claude-memory-compiler) | 1.1k | 聊天记录自动整理成知识库 | [📄](./claude-skills/entries/coleam00__claude-memory-compiler.md) |
+| [TheCraigHewitt/skills](https://github.com/TheCraigHewitt/skills) | 104 | 在 mattpocock 上做 `/shape` + `/ralph` 自动闭环 | [📄](./claude-skills/entries/TheCraigHewitt__skills.md) |
+| [dianyike/claude-code-insights](https://github.com/dianyike/claude-code-insights) | 54 | 中文最完整的 CLAUDE.md/Skill/Subagent 三件套指南 | [📄](./claude-skills/entries/dianyike__claude-code-insights.md) |
 
 ---
 
@@ -352,10 +359,26 @@
 
 ---
 
+## git-self-host — 自建 Git 仓库 / 依赖代理
+
+**解决什么：** 在自己的 VPS（典型 4C4G 国内云）上跑代码托管 + 国内依赖镜像 + `git push` 一键部署个人网站。两条主线：Git 服务器本体 + 依赖代理。
+
+**⭐ 首推 `piku`（6.6k）：** `git push` 即上线的最小 PaaS，跑在 256MB 树莓派都行，4C4G 简直奢侈，正好对接"git 管理个人网站"诉求。要完整 GitHub 体验 + mirror 国外依赖用 `gitea`（35.5k 自托管事实标准）；只要极简 SSH-only Git server 用 `soft-serve`；Go 依赖国内代理直接用 `goproxy.cn`，企业级私服上 `athens`。
+
+| Repo | ⭐ | 大白话 | 详细文档 |
+| --- | ---: | --- | --- |
+| [piku/piku](https://github.com/piku/piku) | 6.6k | `git push` 即上线的最小 PaaS，树莓派都能跑 | [📄](./git-self-host/entries/piku__piku.md) |
+| [go-gitea/gitea](https://github.com/go-gitea/gitea) | 55.9k | 自托管 Git 平台事实标准，单二进制 + mirror | [📄](./git-self-host/entries/go-gitea__gitea.md) |
+| [charmbracelet/soft-serve](https://github.com/charmbracelet/soft-serve) | 6.9k | 单二进制 SSH-only Git server，省内存极简风 | [📄](./git-self-host/entries/charmbracelet__soft-serve.md) |
+| [goproxy/goproxy.cn](https://github.com/goproxy/goproxy.cn) | 7.1k | 国内 Go 依赖代理（公共服务，七牛云运维） | [📄](./git-self-host/entries/goproxy__goproxy.cn.md) |
+| [gomods/athens](https://github.com/gomods/athens) | 4.8k | 企业级自建 Go module 代理 + 缓存（CNCF 沙箱） | [📄](./git-self-host/entries/gomods__athens.md) |
+
+---
+
 ## 📊 整体统计
 
-- **总项目数**：98（cli-wrap 5 + voice-pipeline 5 + claude-skills 5 + im-export 5 + personal-kb 5 + ai-avatar 5 + server-ops 5 + iot-platform 4 + personal-site 4 + dev-productivity 20 + xiaozhi-ai 5 + personality-test 5 + local-llm-runtime 5 + rag-engine 5 + knowledge-graph 5 + mcp-servers 5 + screen-vision-assistant 5）
-- **stars 总和**：约 180 万⭐ · 单条最高 modelcontextprotocol/servers 86.2k · 中位数约 2k
+- **总项目数**：109（cli-wrap 5 + voice-pipeline 5 + claude-skills 11 + im-export 5 + personal-kb 5 + ai-avatar 5 + server-ops 5 + iot-platform 4 + personal-site 4 + dev-productivity 20 + xiaozhi-ai 5 + personality-test 5 + local-llm-runtime 5 + rag-engine 5 + knowledge-graph 5 + mcp-servers 5 + screen-vision-assistant 5 + git-self-host 5）
+- **stars 总和**：约 206 万⭐ · 单条最高 modelcontextprotocol/servers 86.2k · 中位数约 2k
 - **已停更但仍收录**：3 个（WeChatMsg 41.5k、dendron 7.4k、DiscordChatExporter 维护模式）—— 思路或窗口期价值还在
 - **重型参考向（别整站 clone）**：jetlinks、kentcdodds.com、OpenHands —— 给你读架构的，不是拿来用的
 - **新一批 reach（2026-05-25）**：local-llm-runtime / rag-engine / knowledge-graph / mcp-servers / screen-vision-assistant 五个本地优先方向，平均星数低但意图匹配度高
@@ -394,3 +417,5 @@ gitout/
 *xiaozhi-ai 由 /gitout 自然语言模式生成 · 2026-05-23*
 *personality-test 由 /gitout 自然语言模式生成 · 2026-05-24*
 *local-llm-runtime / rag-engine / knowledge-graph / mcp-servers / screen-vision-assistant 由 /gitout 5 agent 并行模式生成 · 2026-05-25*
+*claude-skills 增补 6 entries（mattpocock/trailofbits/dianyike/slavingia/ComposioHQ/TheCraigHewitt）由 /gitout 自然语言模式生成 · 2026-05-26*
+*git-self-host 由 /gitout 自然语言模式生成 · 2026-05-26 · 主题：国内 4C4G 自建 Git + 依赖代理 + 网站部署*
