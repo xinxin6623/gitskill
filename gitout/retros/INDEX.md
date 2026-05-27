@@ -10,6 +10,7 @@
 
 | 日期 | 类型 | 文件 | 一句话摘要 |
 | --- | --- | --- | --- |
+| 2026-05-27 | retro | — | company-website 主题首跑：need 模式 9 query 中 4 个零返回（多词 AND 命中低），改单/双词后补足 5 entry；新建 domain 与 personal-site 区分（公司 brand/CTA vs 个人 portfolio/blog）；首次主动应用 SKILL v2.1 的"诉求覆盖广度"权重排序 |
 | 2026-05-26 | 阶段性修改 | — | SKILL.md v2.1：落地 git-self-host followup 的 5 项改进——intent 加 license_sensitivity / agent_friendly 字段、Step 2.1 GPL 强制追问、Step 5 加"诉求覆盖广度"权重、entry 模板加"📜 协议风险"强制段、汇报模板补两字段；文末加 ChangeLog |
 | 2026-05-26 | 阶段性修改 | — | 新增 `followups/` 目录承接 /gitout 搜索后的讨论 / 选型 / 反馈；CLAUDE.md 升级为三 INDEX 体系（gitout / retros / followups 互不混塞）；首份样板 followup = git-self-host（Gitea 选型 + 推飞书 + feedback 给出协议维度漏抽取等 5 项 SKILL 改进建议） |
 | 2026-05-26 | retro | [2026-05-26-git-self-host-retro.md](./2026-05-26-git-self-host-retro.md) | git-self-host 主题首跑：5 query 全有效返回；新建 domain；候选池有 GitLab 重型项目被合理 reject；piku/gitea/soft-serve/goproxy.cn/athens 5 entries 入库 |

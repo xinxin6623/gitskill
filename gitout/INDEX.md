@@ -6,7 +6,7 @@
 
 ---
 
-## 🧭 21 个 domain 一览
+## 🧭 22 个 domain 一览
 
 | Domain | 一句话 | 项目数 | 首推 |
 | --- | --- | --- | --- |
@@ -30,8 +30,9 @@
 | [🔌 mcp-servers](#mcp-servers--mcp-server-生态合集) | 给 Claude/Codex/Cursor 扩展工具能力的 MCP server | 5 | servers (86.2k) |
 | [📷 screen-vision-assistant](#screen-vision-assistant--mac-屏幕-ocr--截图理解--视觉助手) | Mac 桌面 OCR + 截图多模态 + 本地 VLM 屏幕记忆 | 5 | TRex (1.8k) |
 | [🗄️ git-self-host](#git-self-host--自建-git-仓库--依赖代理) | 自建 Git 服务器 + 国内依赖代理 + git push 部署网站 | 5 | piku (6.6k) |
+| [🏢 company-website](#company-website--公司展示站模板) | Next/Nuxt + Tailwind 公司官网脚手架，API/CLI 友好 | 5 | saasfly (2.9k) |
 
-**合计 109 个项目**
+**合计 114 个项目**
 
 ---
 
@@ -375,9 +376,25 @@
 
 ---
 
+## company-website — 公司展示站模板
+
+**解决什么：** 不想从零搭一个公司官网/品牌站。要 Next.js/Nuxt + Tailwind + 移动端响应式 + 现代 UI，最好能用 API/CLI/Git 程序化管理内容（而不是后台点点点）。
+
+**⭐ 首推 `nuxt-ui-templates/saas`（549）：** Nuxt 官方出品，landing+pricing+docs+blog 全套到位，开箱直接好看，Markdown 写内容 git push 即发布。只要单页 landing 选 `pure-landing-shadcnui-template`（Next 15 + shadcn 极简）；多页站 + Git-CMS 选 `andromeda-light-nextjs`（PageSpeed 100）；要 Cloudflare 全栈托管 + 完整 CMS 选 `cloudflare-workers-nextjs-saas-template`；未来要做客户登录/订阅选 `saasfly`（企业级 Next + Bun monorepo）。
+
+| Repo | ⭐ | 大白话 | 详细文档 |
+| --- | ---: | --- | --- |
+| [nuxt-ui-templates/saas](https://github.com/nuxt-ui-templates/saas) | 549 | Nuxt 官方公司站模板，landing+pricing+docs+blog 全套 | [📄](./company-website/entries/nuxt-ui-templates__saas.md) |
+| [akash3444/pure-landing-shadcnui-template](https://github.com/akash3444/pure-landing-shadcnui-template) | 81 | Next 15 + shadcn 极简单页 landing | [📄](./company-website/entries/akash3444__pure-landing-shadcnui-template.md) |
+| [themefisher/andromeda-light-nextjs](https://github.com/themefisher/andromeda-light-nextjs) | 114 | Next 多页公司站 + Git-CMS + PageSpeed 100 | [📄](./company-website/entries/themefisher__andromeda-light-nextjs.md) |
+| [LubomirGeorgiev/cloudflare-workers-nextjs-saas-template](https://github.com/LubomirGeorgiev/cloudflare-workers-nextjs-saas-template) | 765 | Next + CF Workers + 完整 CMS + AI agent 友好 | [📄](./company-website/entries/LubomirGeorgiev__cloudflare-workers-nextjs-saas-template.md) |
+| [nextify-limited/saasfly](https://github.com/nextify-limited/saasfly) | 2.9k | 企业级 Next + Bun monorepo + Clerk/Stripe | [📄](./company-website/entries/nextify-limited__saasfly.md) |
+
+---
+
 ## 📊 整体统计
 
-- **总项目数**：109（cli-wrap 5 + voice-pipeline 5 + claude-skills 11 + im-export 5 + personal-kb 5 + ai-avatar 5 + server-ops 5 + iot-platform 4 + personal-site 4 + dev-productivity 20 + xiaozhi-ai 5 + personality-test 5 + local-llm-runtime 5 + rag-engine 5 + knowledge-graph 5 + mcp-servers 5 + screen-vision-assistant 5 + git-self-host 5）
+- **总项目数**：114（cli-wrap 5 + voice-pipeline 5 + claude-skills 11 + im-export 5 + personal-kb 5 + ai-avatar 5 + server-ops 5 + iot-platform 4 + personal-site 4 + dev-productivity 20 + xiaozhi-ai 5 + personality-test 5 + local-llm-runtime 5 + rag-engine 5 + knowledge-graph 5 + mcp-servers 5 + screen-vision-assistant 5 + git-self-host 5 + company-website 5）
 - **stars 总和**：约 206 万⭐ · 单条最高 modelcontextprotocol/servers 86.2k · 中位数约 2k
 - **已停更但仍收录**：3 个（WeChatMsg 41.5k、dendron 7.4k、DiscordChatExporter 维护模式）—— 思路或窗口期价值还在
 - **重型参考向（别整站 clone）**：jetlinks、kentcdodds.com、OpenHands —— 给你读架构的，不是拿来用的
@@ -419,3 +436,4 @@ gitout/
 *local-llm-runtime / rag-engine / knowledge-graph / mcp-servers / screen-vision-assistant 由 /gitout 5 agent 并行模式生成 · 2026-05-25*
 *claude-skills 增补 6 entries（mattpocock/trailofbits/dianyike/slavingia/ComposioHQ/TheCraigHewitt）由 /gitout 自然语言模式生成 · 2026-05-26*
 *git-self-host 由 /gitout 自然语言模式生成 · 2026-05-26 · 主题：国内 4C4G 自建 Git + 依赖代理 + 网站部署*
+*company-website 由 /gitout 自然语言模式生成 · 2026-05-27 · 主题：轻量+展示为主+API/CLI 友好的公司官网脚手架*

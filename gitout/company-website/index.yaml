@@ -1,0 +1,45 @@
+domain: company-website
+cn: 公司展示站模板
+description: Next.js/Nuxt + Tailwind + 移动端响应式 + 可程序化管理内容的公司官网脚手架
+last_updated: 2026-05-27
+
+entries:
+  - repo: nuxt-ui-templates/saas
+    file: entries/nuxt-ui-templates__saas.md
+    stars: 549
+    license: MIT
+    framework: Nuxt
+    status: active
+    one_liner: Nuxt 官方公司站模板，landing+pricing+docs+blog 全套
+
+  - repo: akash3444/pure-landing-shadcnui-template
+    file: entries/akash3444__pure-landing-shadcnui-template.md
+    stars: 81
+    license: none-declared
+    framework: Next.js
+    status: active
+    one_liner: Next 15 + shadcn 极简单页 landing
+
+  - repo: themefisher/andromeda-light-nextjs
+    file: entries/themefisher__andromeda-light-nextjs.md
+    stars: 114
+    license: MIT
+    framework: Next.js
+    status: active
+    one_liner: Next 多页站 + Git-CMS + PageSpeed 100
+
+  - repo: LubomirGeorgiev/cloudflare-workers-nextjs-saas-template
+    file: entries/LubomirGeorgiev__cloudflare-workers-nextjs-saas-template.md
+    stars: 765
+    license: MIT
+    framework: Next.js (Vinext on CF Workers)
+    status: active
+    one_liner: Next + CF Workers + 完整 CMS + AI agent 友好
+
+  - repo: nextify-limited/saasfly
+    file: entries/nextify-limited__saasfly.md
+    stars: 2874
+    license: MIT
+    framework: Next.js
+    status: active
+    one_liner: 企业级 Next + Bun monorepo + Clerk/Stripe
