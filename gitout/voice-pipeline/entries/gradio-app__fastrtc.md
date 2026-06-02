@@ -15,7 +15,8 @@ signals:
   license: MIT
 url: https://github.com/gradio-app/fastrtc
 absorption:
-  harvested: false
+  harvested: true
+  harvested_into: function-to-realtime-stream
   used: false
   used_in: []
 ---
@@ -82,7 +83,7 @@ stream.ui.launch()  # 自动起 Gradio + WebRTC
 
 ## 🤔 为什么这次推它给你
 
-**上轮搜索发现 caLLMe 是命令行 demo 级别，这次补一个生产级实时通信底座**。FastRTC 解决了你做 voice 项目"怎么从命令行升级到网页/电话入口"的最大障碍。**ReplyOnPause 的可打断设计、自动 WebRTC mount** 都可以直接抄。pattern 候选：`function-to-realtime-stream`。
+**上轮搜索发现 caLLMe 是命令行 demo 级别，这次补一个生产级实时通信底座**。FastRTC 解决了你做 voice 项目"怎么从命令行升级到网页/电话入口"的最大障碍。**ReplyOnPause 的可打断设计、自动 WebRTC mount** 都可以直接抄。已从中提炼 pattern：[[insights/patterns/function-to-realtime-stream.md|Function → Realtime Stream]]。
 
 ---
 *由 /gitout 生成 · 2026-05-22 · theme: 语音 pipeline 补充角度*

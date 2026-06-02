@@ -15,7 +15,8 @@ signals:
   license: Apache-2.0
 url: https://github.com/OpenMOSS/MOSS-TTS
 absorption:
-  harvested: false
+  harvested: true
+  harvested_into: function-to-realtime-stream
   used: false
   used_in: []
 ---

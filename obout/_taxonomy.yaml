@@ -83,3 +83,33 @@ domains:
     cn: 性格/心理测试
     aliases: [mbti, personality, quiz, psychology, 16-personalities, big-five, enneagram]
     desc: MBTI / 大五 / 九型等心理测试的开源实现（webapp / 小程序 / 题库）
+
+  - name: git-self-host
+    cn: 自建 Git 仓库 / 依赖代理
+    aliases: [git-server, self-hosted-git, gitea, forgejo, gogs, soft-serve, git-mirror, go-proxy, dependency-cache, git-push-deploy, paas]
+    desc: 自建 Git 服务器（依赖镜像 + 网站 push 部署），4C4G 级别 VPS 友好
+
+  - name: local-llm-runtime
+    cn: Mac 本地 LLM 推理运行时
+    aliases: [local-llm, mlx, llamafile, apple-silicon, mac-llm, local-inference, swift-llm]
+    desc: Mac/Apple Silicon 本地跑 7B-30B 模型的反共识方案，不收 Ollama 本体
+
+  - name: rag-engine
+    cn: 本地优先的 RAG / 向量检索引擎
+    aliases: [rag, vector-db, embedding, retrieval, hybrid-search, vector-store, graph-rag]
+    desc: 嵌入式 / 自托管 / 浏览器原生的向量库，个人知识库底座
+
+  - name: knowledge-graph
+    cn: 文本/笔记→知识图谱 抽取与可视化栈
+    aliases: [knowledge-graph, graphrag, entity-extraction, neo4j, kg, graph-db]
+    desc: LLM 自动抽实体关系，生成可查询 / 可可视化的图结构
+
+  - name: mcp-servers
+    cn: MCP server 生态合集
+    aliases: [mcp, model-context-protocol, tool-server, function-calling, mcp-server]
+    desc: 给 Claude/Codex/Cursor 扩展工具能力的 MCP server 实现
+
+  - name: screen-vision-assistant
+    cn: Mac 屏幕 OCR / 截图理解 / 视觉助手
+    aliases: [screen-ocr, screenshot, ocr, screen-vision, desktop-vision, text-grabber, screen-watcher]
+    desc: Mac 桌面 OCR + 截图多模态 + 本地 VLM 屏幕记忆

@@ -1,0 +1,38 @@
+domain: git-self-host
+cn: 自建 Git 仓库 / 依赖代理
+last_scan: 2026-05-26
+entries:
+  - repo: piku/piku
+    file: entries/piku__piku.md
+    stars: 6586
+    language: Python
+    status: active
+    intent_matched: "git push 部署个人网站到自己服务器"
+
+  - repo: go-gitea/gitea
+    file: entries/go-gitea__gitea.md
+    stars: 55916
+    language: Go
+    status: active
+    intent_matched: "自托管 Git 平台，支持镜像同步国外仓库做依赖代理"
+
+  - repo: charmbracelet/soft-serve
+    file: entries/charmbracelet__soft-serve.md
+    stars: 6939
+    language: Go
+    status: active
+    intent_matched: "极简自托管 Git 服务器，单二进制，省内存"
+
+  - repo: goproxy/goproxy.cn
+    file: entries/goproxy__goproxy.cn.md
+    stars: 7080
+    language: HTML
+    status: active
+    intent_matched: "国内 Go 依赖代理（可直接用 / 可自建）"
+
+  - repo: gomods/athens
+    file: entries/gomods__athens.md
+    stars: 4763
+    language: Go
+    status: active
+    intent_matched: "企业级自建 Go module 代理 + 缓存"

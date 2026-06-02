@@ -26,3 +26,28 @@ entries:
     intent_matched: "单机/VPS 用的开源 Web 面板（老牌备选）"
     status: active
     discovered: 2026-05-23
+  - repo: dokku/dokku
+    file: entries/dokku__dokku.md
+    intent_matched: "一台 VPS CLI 部署多个小站，适合 Claude Code 操作"
+    status: active
+    discovered: 2026-05-26
+  - repo: Dokploy/dokploy
+    file: entries/Dokploy__dokploy.md
+    intent_matched: "一台 VPS 现代化 PaaS，CLI + API 双通道"
+    status: active
+    discovered: 2026-05-26
+  - repo: coollabsio/coolify
+    file: entries/coollabsio__coolify.md
+    intent_matched: "一台 VPS 全功能 PaaS，280+ 一键应用"
+    status: active
+    discovered: 2026-05-26
+  - repo: caprover/caprover
+    file: entries/caprover__caprover.md
+    intent_matched: "一台 VPS 轻松部署多个应用，CLI + 一键商店"
+    status: active
+    discovered: 2026-05-26
+  - repo: NginxProxyManager/nginx-proxy-manager
+    file: entries/NginxProxyManager__nginx-proxy-manager.md
+    intent_matched: "多站点反向代理 + 自动 SSL 管理界面"
+    status: active
+    discovered: 2026-05-26

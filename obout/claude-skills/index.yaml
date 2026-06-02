@@ -21,3 +21,41 @@ entries:
     file: entries/coleam00__claude-memory-compiler.md
     status: active
     discovered: 2026-05-22
+  - repo: mattpocock/skills
+    file: entries/mattpocock__skills.md
+    status: active
+    discovered: 2026-05-26
+  - repo: trailofbits/skills
+    file: entries/trailofbits__skills.md
+    status: active
+    discovered: 2026-05-26
+  - repo: dianyike/claude-code-insights
+    file: entries/dianyike__claude-code-insights.md
+    status: active
+    discovered: 2026-05-26
+  - repo: slavingia/skills
+    file: entries/slavingia__skills.md
+    status: active
+    discovered: 2026-05-26
+  - repo: ComposioHQ/awesome-claude-skills
+    file: entries/ComposioHQ__awesome-claude-skills.md
+    status: active
+    discovered: 2026-05-26
+  - repo: TheCraigHewitt/skills
+    file: entries/TheCraigHewitt__skills.md
+    status: active
+    discovered: 2026-05-26
+
+discarded_queries:
+  - "aihero claude"  # 0 hits — aihero.dev 是 mattpocock 的 newsletter 平台，GitHub 上无同名 skill 库
+
+related_周边:
+  - vinvcn/mattpocock-skills-zh-CN  # mattpocock 简中本地化
+  - amazingloft999-droid/mattpocock-skills  # mattpocock 镜像
+  - bbylw/mattpocock-skills-cn  # 另一个 mattpocock 中文版
+  - karanb192/awesome-claude-skills  # 同名 awesome list 分叉
+  - travisvn/awesome-claude-skills  # 同名 awesome list 分叉
+  - alirezarezvani/claude-skills  # 313 skill 多 agent 通用，量大但口味重商业
+  - daymade/claude-code-skills  # 52 skill marketplace，skill-creator 增强版
+  - czlonkowski/n8n-skills  # 垂直 n8n 工作流 7 个 skill
+  - jeremylongshore/claude-code-plugins-plus-skills  # 425 plugin 2810 skill 体量大但鱼龙混杂

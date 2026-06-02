@@ -5,7 +5,7 @@ import shutil
 import sys
 
 def main():
-    workspace_dir = "/Users/qoragufimo390gmail.com/Documents/gitskill"
+    workspace_dir = "/Users/macmini/Documents/gitskill"
     src_dir = os.path.join(workspace_dir, "gitout")
     dst_dir = os.path.join(workspace_dir, "obout")
 

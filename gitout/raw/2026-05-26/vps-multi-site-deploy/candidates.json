@@ -1,0 +1,7 @@
+[
+  {"fullName":"dokku/dokku","description":"A docker-powered PaaS that helps you build and manage the lifecycle of applications","stargazersCount":31903,"updatedAt":"2026-05-26","language":"Shell","license":"MIT","url":"https://github.com/dokku/dokku"},
+  {"fullName":"Dokploy/dokploy","description":"Open Source Alternative to Vercel, Netlify and Heroku.","stargazersCount":34245,"updatedAt":"2026-05-26","language":"TypeScript","license":"Other","url":"https://github.com/Dokploy/dokploy"},
+  {"fullName":"coollabsio/coolify","description":"An open-source, self-hostable PaaS alternative to Vercel, Heroku & Netlify","stargazersCount":56003,"updatedAt":"2026-05-26","language":"PHP","license":"Apache-2.0","url":"https://github.com/coollabsio/coolify"},
+  {"fullName":"caprover/caprover","description":"Scalable PaaS (automated Docker+nginx) - aka Heroku on Steroids","stargazersCount":15039,"updatedAt":"2026-05-26","language":"TypeScript","license":"Other","url":"https://github.com/caprover/caprover"},
+  {"fullName":"NginxProxyManager/nginx-proxy-manager","description":"Docker container for managing Nginx proxy hosts with a simple, powerful interface","stargazersCount":32935,"updatedAt":"2026-05-26","language":"TypeScript","license":"MIT","url":"https://github.com/NginxProxyManager/nginx-proxy-manager"}
+]

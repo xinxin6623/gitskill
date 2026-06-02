@@ -1,0 +1,23 @@
+domain: local-llm-runtime
+description: Mac/Apple Silicon 本地跑 LLM 推理的反共识/原生 runtime（非 Ollama 本体、非 cloud 包装）
+entries:
+  - repo: mozilla-ai/llamafile
+    file: entries/mozilla-ai__llamafile.md
+    status: active
+    discovered: 2026-05-25
+  - repo: ml-explore/mlx-swift-lm
+    file: entries/ml-explore__mlx-swift-lm.md
+    status: active
+    discovered: 2026-05-25
+  - repo: Ruler-Dev/mio
+    file: entries/Ruler-Dev__mio.md
+    status: active
+    discovered: 2026-05-25
+  - repo: eduardogoncalves/mlx-coder
+    file: entries/eduardogoncalves__mlx-coder.md
+    status: active
+    discovered: 2026-05-25
+  - repo: nikholasnova/Kevlar
+    file: entries/nikholasnova__Kevlar.md
+    status: active
+    discovered: 2026-05-25

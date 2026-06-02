@@ -1,0 +1,38 @@
+# 关系类型词表（append-only）
+# 新建关系类型时必须在此注册，确保全库使用一致标签
+
+types:
+  - name: depends-on
+    label: 依赖
+    symmetric: false
+    description: A 功能/部署/运行时依赖 B
+
+  - name: alternative-to
+    label: 替代
+    symmetric: true
+    description: A 可替代 B（同场景不同方案）
+
+  - name: complements
+    label: 互补
+    symmetric: true
+    description: A 补充 B 的缺失环节，组合使用效果更好
+
+  - name: supersedes
+    label: 取代
+    symmetric: false
+    description: A 在功能/社区/维护上取代 B
+
+  - name: similar-to
+    label: 相似
+    symmetric: true
+    description: A 与 B 属同类但各有取舍，非直接替代
+
+  - name: related-to
+    label: 关联
+    symmetric: true
+    description: A 与 B 在同一领域，有概念/技术关联
+
+  - name: cross-domain-recommendation
+    label: 跨域推荐
+    symmetric: false
+    description: 跨 domain 的推荐路径，A → B → C 构成一个完整诉求

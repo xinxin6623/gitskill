@@ -93,3 +93,28 @@ domains:
     cn: 公司展示站模板
     aliases: [company-site, corporate-website, business-website, marketing-site, landing-page, saas-landing, brand-site]
     desc: Next.js/Nuxt + Tailwind + 移动端响应式 + 可程序化管理内容的公司官网脚手架（不同于 personal-site：偏 brand/product/CTA/SEO，非博客/portfolio 性质）
+
+  - name: local-llm-runtime
+    cn: Mac 本地 LLM 推理运行时
+    aliases: [local-llm, mlx, llamafile, apple-silicon, mac-llm, local-inference, swift-llm]
+    desc: Mac/Apple Silicon 本地跑 7B-30B 模型的反共识方案，不收 Ollama 本体
+
+  - name: rag-engine
+    cn: 本地优先的 RAG / 向量检索引擎
+    aliases: [rag, vector-db, embedding, retrieval, hybrid-search, vector-store, graph-rag]
+    desc: 嵌入式 / 自托管 / 浏览器原生的向量库，个人知识库底座
+
+  - name: knowledge-graph
+    cn: 文本/笔记→知识图谱 抽取与可视化栈
+    aliases: [knowledge-graph, graphrag, entity-extraction, neo4j, kg, graph-db]
+    desc: LLM 自动抽实体关系，生成可查询 / 可可视化的图结构
+
+  - name: mcp-servers
+    cn: MCP server 生态合集
+    aliases: [mcp, model-context-protocol, tool-server, function-calling, mcp-server]
+    desc: 给 Claude/Codex/Cursor 扩展工具能力的 MCP server 实现
+
+  - name: screen-vision-assistant
+    cn: Mac 屏幕 OCR / 截图理解 / 视觉助手
+    aliases: [screen-ocr, screenshot, ocr, screen-vision, desktop-vision, text-grabber, screen-watcher]
+    desc: Mac 桌面 OCR + 截图多模态 + 本地 VLM 屏幕记忆

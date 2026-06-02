@@ -13,7 +13,8 @@ signals:
   license: MIT
 url: https://github.com/parcadei/Continuous-Claude-v3
 absorption:
-  harvested: false
+  harvested: true
+  harvested_into: agent-feedback-loop
   used: false
   used_in: []
 ---

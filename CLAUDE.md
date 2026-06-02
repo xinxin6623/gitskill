@@ -20,6 +20,19 @@ gitskill/
 │   │       └── <owner>__<repo>.md     # 每个项目一个小白文档
 │   ├── raw/<YYYY-MM-DD>/<intent-slug>/  # gh 检索原始 JSON 归档(只读)
 │   └── retros/<YYYY-MM-DD>-<主题>-retro.md  # /gitout 流程复盘
+├── relationships/                     # 关系索引（第四套 INDEX）
+│   ├── INDEX.md                      # 人类可读关系浏览器
+│   ├── index.yaml                    # 机器可读关系索引
+│   ├── _types.yaml                   # 关系类型词表（append-only）
+│   └── domain-graph.mermaid          # domain 级 Mermaid 图
+├── insights/                         # 成长型知识库（个人消化/创造）
+│   ├── INDEX.md                      # 主入口
+│   ├── index.yaml                    # 机器可读索引
+│   ├── _templates/                   # 四类模板（pattern/learning/synthesis/project）
+│   ├── patterns/                     # 跨 2+ entry 的抽象模式（上限 20）
+│   ├── learning/                     # 个人学习笔记（append-only）
+│   ├── synthesis/                    # 跨域综合洞见（季度/月度整理）
+│   └── projects/                    # 自有项目文档（每个项目一子目录）
 └── followups/                         # 搜索之后的讨论 / 选型 / 反馈
     ├── INDEX.md                       # 时序索引(必须维护)
     ├── README.md                      # followups 简介与边界
@@ -44,7 +57,17 @@ gitskill/
 - 现存唯一例外：`dev-productivity/` 下分 `claude-workflow / ai-coding-agent / ide-augment / personal-tools` 四子域。
 - sub-domain 也必须有自己的 `README.md` + `index.yaml` + `entries/`。
 
-### 1.3 followups 目录命名
+### 1.3 relationships/ 目录命名
+- relationships/ 不细分，所有关系存于 `index.yaml`，人类阅读走 `INDEX.md`
+- 关系类型在 `_types.yaml` 注册，append-only
+
+### 1.4 insights/ 目录命名
+- `patterns/` 内文件名：kebab-case，反映模式名称
+- `learning/` 内文件名：`<YYYY-MM-DD>-<kebab-topic>.md`
+- `synthesis/` 内文件名：`<kebab-topic>.md`
+- `projects/` 内子目录名：kebab-case，反映项目名称
+
+### 1.5 followups 目录命名
 - followup 目录名：`<YYYY-MM-DD>-<domain-or-topic>`，日期对齐对应 /gitout retro 日期
 - domain-or-topic **优先与 `gitout/<domain>/` 同名**；跨多 domain 时用主题词（如 `2026-06-01-ai-coding-stack`）
 - 四个标准文件名固定：`README.md` / `discussion.md` / `decision.md` / `feedback.md`
@@ -79,9 +102,35 @@ gitskill/
    - 不要把 /gitout 流程复盘塞进 `feedback.md`——那是 `gitout/retros/` 的活
    - 不要把项目卡片复制到 followups 里——entry 还在 `gitout/<domain>/entries/`
 
-## 3. 三个 INDEX 的职责分工
+## 2ter. insights/ 产出约束（成长型知识库）
 
-仓库里有 **三个 INDEX.md**，职责互不重叠，**全部都要维护**：
+insights/ 是 gitout/（发现）和 followups/（决策）之外的**个人消化与创造空间**。
+
+### 四类内容
+
+| 目录 | 内容 | 创建时机 | 容量上限 |
+|------|------|---------|----------|
+| `patterns/` | 跨 2+ repo 提炼的抽象模式 | 发现重复模式时 | ≤ 20 |
+| `learning/` | 个人学习笔记 | 学新东西时 | 无上限 |
+| `synthesis/` | 跨 3+ domain 横向对比/洞见 | 季度/月度整理 | 无上限 |
+| `projects/` | 自有项目文档 | 新建项目时 | 无上限 |
+
+### 与 gitout/ 的关系规则
+- `absorption.used_in` → 指向 `insights/projects/<name>`
+- `absorption.harvested` → 指向 `insights/patterns/<name>`
+- insights 文档**必须**反向链接回 `gitout/` 的源 entry
+- patterns 必须关联 ≥2 个 source repo
+- 新建 pattern 后同步更新 source entry 的 `absorption.harvested` 字段
+
+### 不要做的事
+- ❌ 不要把个人笔记塞进 `gitout/`——那是发现空间，不是笔记本
+- ❌ 不要创建没有 2+ source 的 pattern——单 repo 的"特性"不叫模式
+- ❌ 不要把 `/gitout` 流程复盘塞进 insights——那是 `gitout/retros/` 的活
+- ❌ 不要把项目卡片从 gitout/entries/ 复制到 insights——用 wikilink 引用即可
+
+## 3. 四个 INDEX 的职责分工
+
+仓库里有 **四个 INDEX.md**，职责互不重叠，**全部都要维护**：
 
 ### 3.1 `gitout/INDEX.md` —— 项目 entry 总入口
 **目录树的唯一真相源**，每次目录变动后立刻同步：
@@ -104,10 +153,17 @@ gitskill/
 - 摘要 ≤ 80 字
 - **只追加不删**
 
-三个 INDEX 各自负责一类东西，永远不要混塞：
+### 3.4 `relationships/INDEX.md` —— 关系索引
+记录 `gitout/` 各 domain/entry 之间的非目录关系。**触发条件**：
+- 发现新的关系（隐式引用/替换/互补/跨域推荐）时→ `index.yaml` 追加 + `INDEX.md` 更新对应小节
+- 新增关系类型→ 先在 `_types.yaml` 注册
+- **只追加不删**
+
+四个 INDEX 各自负责一类东西，永远不要混塞：
 - 项目 entry → 只进 `gitout/INDEX.md`
 - 流程复盘 / SKILL 阶段性修改 → 只进 `gitout/retros/INDEX.md`
 - 搜索后讨论 / 选型 / 外部推送 → 只进 `followups/INDEX.md`
+- 条目间关系 / 跨域推荐 → 只进 `relationships/INDEX.md`
 
 ## 4. 语言与风格
 - 中文优先（James 母语）；entry 文档遵循 SKILL.md 里的小红书风格小白说明。
@@ -120,9 +176,13 @@ gitskill/
 - ❌ 不要在 followups/ 里放原始对话 transcript——摘要即可
 - ❌ 不要把飞书 / Notion 等外部文档当真相源——本地 `decision.md` 才是
 - ❌ 不要把 /gitout 流程复盘塞进 followups/feedback.md（那是 `gitout/retros/` 的活）
+- ❌ 不要把 /gitout 流程复盘塞进 insights/——那是 `gitout/retros/` 的活
 - ❌ 不要在 `gitout/` 根目录直接放散文（如 zongjie.md），所有内容都得归 domain 或 retros
 - ❌ 不要在 entry 文档外另起 `.md` 文件做"补充说明"——补充内容写进 entry 本身或 README
+- ❌ 不要把个人笔记塞进 `gitout/`——insights/ 才是笔记本
+- ❌ 不要创建没有 2+ source 的 pattern
 
 ## 6. 已知历史
 - 2026-05-22 ~ 23：14 个主题、68 个项目入库；同步把早期 `misc/` 拆成 6 个一级 domain（cli-wrap / voice-pipeline / claude-skills / im-export / personal-kb / ai-avatar）。
 - 两份 zongjie.md 归档到 `gitout/retros/`。
+- 2026-05-30：关系索引（relationships/）+ 成长型知识库（insights/）+ Obsidian 图谱配色落地；CLAUDE.md 升级为四 INDEX 体系 + §2ter。

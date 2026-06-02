@@ -1,0 +1,82 @@
+%% relationships/domain-graph.mermaid
+%% Domain 级关系图 — 展示 gitout 21 domain 之间的主要关系
+%% 生成时间：2026-05-30
+%% 使用：在 Obsidian 或 Mermaid 渲染器中打开
+
+graph TD
+    %% Voice/Audio 簇
+    subgraph "🎙️ Voice / Audio"
+        voice-pipeline
+        xiaozhi-ai
+        ai-avatar
+    end
+
+    %% Claude 生态簇
+    subgraph "⚙️ Claude Ecosystem"
+        claude-skills
+        dev-productivity-claude-workflow["dev-productivity/claude-workflow"]
+        dev-productivity-ai-coding-agent["dev-productivity/ai-coding-agent"]
+        dev-productivity-ide-augment["dev-productivity/ide-augment"]
+        dev-productivity-personal-tools["dev-productivity/personal-tools"]
+    end
+
+    %% Self-Hosting 簇
+    subgraph "🖥️ Self-Hosting"
+        server-ops
+        git-self-host
+        iot-platform
+    end
+
+    %% Knowledge & RAG 簇
+    subgraph "🧠 Knowledge & RAG"
+        personal-kb
+        rag-engine
+        knowledge-graph
+        local-llm-runtime
+    end
+
+    %% Desktop & Tools 簇
+    subgraph "🛠️ Desktop & Tools"
+        cli-wrap
+        screen-vision-assistant
+    end
+
+    %% Web & Content 簇
+    subgraph "🌐 Web & Content"
+        personal-site
+        im-export
+        mcp-servers
+    end
+
+    %% 🧪 Other
+    personality-test
+
+    %% === 关系边 ===
+    %% 互补关系
+    voice-pipeline -. "互补" .-> xiaozhi-ai
+    voice-pipeline -. "互补" .-> ai-avatar
+    local-llm-runtime -. "互补" .-> rag-engine
+    rag-engine -. "互补" .-> knowledge-graph
+    knowledge-graph -. "互补" .-> mcp-servers
+    local-llm-runtime -. "互补" .-> mcp-servers
+    personal-kb -. "互补" .-> rag-engine
+    personal-kb -. "互补" .-> knowledge-graph
+
+    %% 替代关系
+    server-ops -->|"替代"| git-self-host
+    %% (git-self-host 的 piku 可替代 server-ops 的 dokku)
+
+    %% 相似 / 关联
+    claude-skills ---|"相似"| dev-productivity-claude-workflow
+    cli-wrap ---|"关联"| mcp-servers
+    screen-vision-assistant ---|"关联"| local-llm-runtime
+    personal-site ---|"关联"| personal-kb
+
+    %% 跨域推荐路径
+    personal-site -.->|"推荐"| claude-skills
+    cli-wrap -.->|"推荐"| dev-productivity-ai-coding-agent
+    im-export -.->|"推荐"| personal-kb
+    screen-vision-assistant -.->|"推荐"| local-llm-runtime
+
+    %% 独立 domain
+    personality-test ~~~ iot-platform

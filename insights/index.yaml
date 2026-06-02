@@ -1,0 +1,19 @@
+# insights · 机器可读索引
+generated_at: 2026-05-30
+categories:
+  - name: patterns
+    description: 跨 2+ repo 提炼的抽象模式
+    entries:
+      - function-to-realtime-stream
+      - agent-feedback-loop
+  - name: learning
+    description: 个人学习笔记
+    entries: []
+  - name: synthesis
+    description: 跨 3+ domain 横向对比/洞见
+    entries:
+      - local-ai-stack
+      - personal-productivity-stack
+  - name: projects
+    description: 自有项目文档
+    entries: []

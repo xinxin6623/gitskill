@@ -1,0 +1,137 @@
+# relationships · 关系索引（机器可读）
+generated_at: 2026-05-30
+total_relationships: 22
+
+# 每种类型的关系列表
+relationships:
+  - type: alternative-to
+    source: gitout/server-ops/entries/dokku__dokku.md
+    target: gitout/git-self-host/entries/piku__piku.md
+    label: piku 是 dokku 的更轻量替代（树莓派级）
+    discovered: 2026-05-30
+
+  - type: alternative-to
+    source: gitout/git-self-host/entries/go-gitea__gitea.md
+    target: gitout/git-self-host/entries/charmbracelet__soft-serve.md
+    label: Gitea 完整 Git 平台 vs Soft Serve 极简 SSH-only
+    discovered: 2026-05-30
+
+  - type: alternative-to
+    source: gitout/server-ops/entries/coollabsio__coolify.md
+    target: gitout/server-ops/entries/Dokploy__dokploy.md
+    label: Coolify 功能最全 vs Dokploy CLI+API 双模
+    discovered: 2026-05-30
+
+  - type: similar-to
+    source: gitout/server-ops/entries/coollabsio__coolify.md
+    target: gitout/server-ops/entries/dokku__dokku.md
+    label: 同属轻量 PaaS 赛道，coolify 有 Web UI，dokku 纯 CLI
+    discovered: 2026-05-30
+
+  - type: similar-to
+    source: gitout/dev-productivity/personal-tools/entries/SuperCuber__dotter.md
+    target: gitout/dev-productivity/personal-tools/index.yaml#L74
+    label: dotter 与 toml-bombadil 同属 dotfile 管理器
+    discovered: 2026-05-30
+
+  - type: similar-to
+    source: gitout/dev-productivity/personal-tools/entries/SuperCuber__dotter.md
+    target: https://github.com/yadm-dev/yadm
+    label: 同为 dotfile 管理，yadm 是"老朋友"已排除
+    discovered: 2026-05-30
+
+  - type: complements
+    source: gitout/voice-pipeline/entries/gradio-app__fastrtc.md
+    target: gitout/voice-pipeline/entries/OpenMOSS__MOSS-TTS.md
+    label: FastRTC 提供 WebRTC 管道，MOSS-TTS 提供中文 TTS 填充
+    discovered: 2026-05-30
+
+  - type: complements
+    source: gitout/voice-pipeline/entries/gradio-app__fastrtc.md
+    target: gitout/voice-pipeline/entries/Liquid4All__liquid-audio.md
+    label: FastRTC 做管道，Liquid Audio 做端到端语音理解
+    discovered: 2026-05-30
+
+  - type: complements
+    source: gitout/local-llm-runtime/entries/mozilla-ai__llamafile.md
+    target: gitout/rag-engine/entries/PhilipJohnBasile__vecstore.md
+    label: llamafile 跑模型 + vecstore 做检索构成本地 RAG 底座
+    discovered: 2026-05-30
+
+  - type: complements
+    source: gitout/local-llm-runtime/entries/mozilla-ai__llamafile.md
+    target: gitout/knowledge-graph/entries/TheAiSingularity__graphrag-local-ollama.md
+    label: llamafile 做推理后端，graphrag-local-ollama 做图谱查询
+    discovered: 2026-05-30
+
+  - type: complements
+    source: gitout/rag-engine/entries/PhilipJohnBasile__vecstore.md
+    target: gitout/knowledge-graph/entries/TheAiSingularity__graphrag-local-ollama.md
+    label: vecstore 向量检索 + GraphRAG 图谱检索，互补查询策略
+    discovered: 2026-05-30
+
+  - type: complements
+    source: gitout/personal-kb/entries/logseq__logseq.md
+    target: gitout/personal-kb/entries/jackyzha0__quartz.md
+    label: Logseq 记笔记 + Quartz 发布数字花园
+    discovered: 2026-05-30
+
+  - type: related-to
+    source: gitout/claude-skills/entries/mattpocock__skills.md
+    target: gitout/dev-productivity/claude-workflow/entries/parcadei__Continuous-Claude-v3.md
+    label: 同为 skill 生态，mattpocock 是社区首发，Continuous-Claude-v3 是工程化进阶
+    discovered: 2026-05-30
+
+  - type: related-to
+    source: gitout/xiaozhi-ai/entries/78__xiaozhi-esp32.md
+    target: gitout/voice-pipeline/entries/gradio-app__fastrtc.md
+    label: xiaozhi 的语音链路可用 FastRTC 做 WebRTC 入口
+    discovered: 2026-05-30
+
+  - type: depends-on
+    source: gitout/xiaozhi-ai/entries/xinnan-tech__xiaozhi-esp32-server.md
+    target: gitout/xiaozhi-ai/entries/78__xiaozhi-esp32.md
+    label: xiaozhi-esp32-server 是 xiaozhi-esp32 的后端实现
+    discovered: 2026-05-30
+
+  - type: supersedes
+    source: gitout/personal-kb/entries/dendronhq__dendron.md
+    target: gitout/personal-kb/entries/logseq__logseq.md
+    label: Dendron 已停更，Logseq 是当前活跃替代
+    discovered: 2026-05-30
+
+  - type: cross-domain-recommendation
+    source: gitout/INDEX.md#L400
+    target: "个人产品起点：personal-site/digital-garden + claude-skills/awesome-claude-code"
+    label: 想搭个人站→用 digital-garden 模板 + Claude Code 改
+    discovered: 2026-05-30
+
+  - type: cross-domain-recommendation
+    source: gitout/INDEX.md#L401
+    target: "VPS 多站：server-ops/1Panel + server-ops/Dokku"
+    label: 一台 VPS 跑多个小站的首选组合
+    discovered: 2026-05-30
+
+  - type: cross-domain-recommendation
+    source: gitout/INDEX.md#L402
+    target: "Agent 产品：cli-wrap/open-interpreter + claude-skills/sdk + ai-coding-agent/OpenHands"
+    label: 想做 Agent 产品的三层参考栈
+    discovered: 2026-05-30
+
+  - type: cross-domain-recommendation
+    source: gitout/INDEX.md#L403
+    target: "Skill 工程：dev-productivity/claude-workflow/Continuous-Claude-v3"
+    label: 升级 skill 工程化的直接对照样板
+    discovered: 2026-05-30
+
+  - type: cross-domain-recommendation
+    source: gitout/INDEX.md#L405
+    target: "本地 AI 栈：llamafile + vecstore + graphrag-local-ollama + MCP servers"
+    label: 本地 AI 四件套：推理 + 检索 + 图谱 + 工具
+    discovered: 2026-05-30
+
+  - type: cross-domain-recommendation
+    source: gitout/INDEX.md#L406
+    target: "Mac 桌面 AI：screen-vision-assistant/TRex + screen-watcher + local-llm-runtime"
+    label: Mac 变 AI 助手：截图理解 + 屏幕记忆 + 本地推理
+    discovered: 2026-05-30

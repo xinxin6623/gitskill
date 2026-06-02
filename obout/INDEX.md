@@ -1,21 +1,22 @@
 # gitout · 主题导航索引
 
 > 用 `/gitout` 累积的 GitHub 项目地图。每个 domain 一个目录，每条都有大白话简介 + 详细文档链接。
-> 最后更新：2026-05-24 · stars 数据快照于同日
+<<<<<<< HEAD
+> 最后更新：2026-05-26 · stars 数据快照于同日
 
 ---
 
-## 🧭 15 个 domain 一览
+## 🧭 21 个 domain 一览
 
 | Domain | 一句话 | 项目数 | 首推 |
 | --- | --- | --- | --- |
 | [[#cli-wrap--cli-包装--把工具变成-ai-能用的命令|📦 cli-wrap]] | 让 AI 调命令行，或把任意软件包装成 Agent 接口 | 5 | open-interpreter (63.6k) |
 | [[#voice-pipeline--语音-pipeline--实时对话技术栈|🎙️ voice-pipeline]] | 跟 AI 实时语音对话的底座 | 5 | fastrtc (4.6k) |
-| [[#claude-skills--claude-code-生态--skill-和-hooks|⚙️ claude-skills]] | Claude Code skill/hook/subagent 入门 | 5 | awesome-claude-code (44.5k) |
+| [[#claude-skills--claude-code-生态--skill-和-hooks|⚙️ claude-skills]] | Claude Code skill/hook/subagent 入门 | 11 | mattpocock/skills (105k) |
 | [[#im-export--聊天记录导出--个人数据归档|💬 im-export]] | 微信/iMessage/Discord 历史导出 | 5 | WeChatMsg (41.5k) |
 | [[#personal-kb--个人知识库--markdown-wiki|📚 personal-kb]] | 本地优先的 Markdown 笔记 + 互链 + 可发布 | 5 | logseq (43.0k) |
 | [[#ai-avatar--ai-虚拟角色--live2d-桌宠|🤖 ai-avatar]] | 给 AI 套个皮：能动嘴、有表情、能聊天 | 5 | airi (39.5k) |
-| [[#server-ops--服务器搭建管理面板|🖥️ server-ops]] | Web 面板鼠标点点搞定服务器 | 5 | 1Panel (35.5k) |
+| [[#server-ops--服务器搭建管理面板|🖥️ server-ops]] | Web 面板 + 轻量 PaaS + 反代（VPS 多站部署） | 10 | Dokku (32k) / Coolify (56k) |
 | [[#iot-platform--物联网平台|🌐 iot-platform]] | MQTT + 规则引擎 + Dashboard 完整 IoT 后台 | 4 | FastBee (2.2k) |
 | [[#personal-site--个人网站全栈模板|🏠 personal-site]] | 博客 + 项目展示 + Now 页一个 starter 搞定 | 4 | digital-garden (331) |
 | [[#dev-productivityclaude-workflow--claude-code-工作流工程化|🛠️ dev-productivity/claude-workflow]] | skill 工厂 / hook SDK / 自学习 harness | 5 | Continuous-Claude-v3 (3.8k) |
@@ -23,9 +24,14 @@
 | [[#dev-productivityide-augment--ide-增强--编辑器-ai-集成|✏️ dev-productivity/ide-augment]] | VSCode/Neovim 里的 AI 编程插件 | 5 | continue (33.3k) |
 | [[#dev-productivitypersonal-tools--开发者生产力工具非-ai|🧰 dev-productivity/personal-tools]] | 不带 AI 也能让你 10x 的工具 | 5 | tuios (2.7k) |
 | [[#xiaozhi-ai--xiaozhi-语音对话硬件生态|🗣️ xiaozhi-ai]] | ESP32 + LLM 端侧 AI 语音盒子生态 | 5 | xiaozhi-esp32 (26.7k) |
-| [[#personality-test--性格-心理测试|🧠 personality-test]] | MBTI 等性格测试的开源实现（webapp / 小程序 / 题库 API） | 5 | yudada (385) |
+| [[#local-llm-runtime--mac-本地-llm-推理运行时|🦙 local-llm-runtime]] | Mac/Apple Silicon 本地跑 7B-30B 模型的反共识方案 | 5 | llamafile (24.5k) |
+| [[#rag-engine--本地优先的-rag--向量检索引擎|🔍 rag-engine]] | 嵌入式/自托管/浏览器原生的向量库 | 5 | vecstore (14) |
+| [[#knowledge-graph--文本笔记知识图谱-抽取与可视化栈|🕸️ knowledge-graph]] | 文本/笔记自动抽实体关系、生成可视化图谱 | 5 | graphrag-local-ollama (1.1k) |
+| [[#mcp-servers--mcp-server-生态合集|🔌 mcp-servers]] | 给 Claude/Codex/Cursor 扩展工具能力的 MCP server | 5 | servers (86.2k) |
+| [[#screen-vision-assistant--mac-屏幕-ocr--截图理解--视觉助手|📷 screen-vision-assistant]] | Mac 桌面 OCR + 截图多模态 + 本地 VLM 屏幕记忆 | 5 | TRex (1.8k) |
+| [[#git-self-host--自建-git-仓库--依赖代理|🗄️ git-self-host]] | 自建 Git 服务器 + 国内依赖代理 + git push 部署网站 | 5 | piku (6.6k) |
 
-**合计 73 个项目**
+**合计 114 个项目**
 
 ---
 
@@ -65,15 +71,21 @@
 
 **解决什么：** Claude Code 不只是聊天，能装 skill、配 hook、塞 subagent。这里是把它玩花的入门起点（工程化体系向见 `dev-productivity/claude-workflow`）。
 
-**⭐ 首推 `awesome-claude-code`（44.5k）：** 整个生态唯一聚合页，找 skill / hook / extension 第一站。学 hook 写法直接对照 `claude-code-hooks-mastery`（13 种事件完整示例），写自己的应用用官方 SDK。
+**⭐ 首推 `mattpocock/skills`（105k）：** Total TypeScript 创办人那套"工程派"skill，`/grill-me` `/tdd` `/improve-codebase-architecture` 直接装。安全方向看 `trailofbits/skills`（30+ 审计 plugin），中文学习看 `dianyike/claude-code-insights`，全景索引看 `ComposioHQ/awesome-claude-skills`。
 
 | Repo | ⭐ | 大白话 | 详细文档 |
 | --- | ---: | --- | --- |
+| [mattpocock/skills](https://github.com/mattpocock/skills) | 105k | Total TypeScript 创办人的工程派 skill，`/grill-me` `/tdd` 源头 | [[claude-skills/entries/mattpocock__skills|📄]] |
+| [ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills) | 61.8k | 6 万星头部 awesome list + 500 应用 connect plugin | [[claude-skills/entries/ComposioHQ__awesome-claude-skills|📄]] |
 | [hesreallyhim/awesome-claude-code](https://github.com/hesreallyhim/awesome-claude-code) | 44.5k | Claude Code 整个生态的"黄页" | [[claude-skills/entries/hesreallyhim__awesome-claude-code|📄]] |
 | [VoltAgent/awesome-claude-code-subagents](https://github.com/VoltAgent/awesome-claude-code-subagents) | 20.3k | 131+ 个角色化 subagent，一键安装 | [[claude-skills/entries/VoltAgent__awesome-claude-code-subagents|📄]] |
+| [slavingia/skills](https://github.com/slavingia/skills) | 8.9k | Gumroad 创始人把《极简创业》变成 10 个 slash command | [[claude-skills/entries/slavingia__skills|📄]] |
 | [anthropics/claude-agent-sdk-python](https://github.com/anthropics/claude-agent-sdk-python) | 7.0k | 官方 Python SDK | [[claude-skills/entries/anthropics__claude-agent-sdk-python|📄]] |
+| [trailofbits/skills](https://github.com/trailofbits/skills) | 5.4k | Trail of Bits 安全审计 30+ plugin marketplace | [[claude-skills/entries/trailofbits__skills|📄]] |
 | [disler/claude-code-hooks-mastery](https://github.com/disler/claude-code-hooks-mastery) | 3.7k | 13 种 hook 事件全讲清楚，附完整示例 | [[claude-skills/entries/disler__claude-code-hooks-mastery|📄]] |
 | [coleam00/claude-memory-compiler](https://github.com/coleam00/claude-memory-compiler) | 1.1k | 聊天记录自动整理成知识库 | [[claude-skills/entries/coleam00__claude-memory-compiler|📄]] |
+| [TheCraigHewitt/skills](https://github.com/TheCraigHewitt/skills) | 104 | 在 mattpocock 上做 `/shape` + `/ralph` 自动闭环 | [[claude-skills/entries/TheCraigHewitt__skills|📄]] |
+| [dianyike/claude-code-insights](https://github.com/dianyike/claude-code-insights) | 54 | 中文最完整的 CLAUDE.md/Skill/Subagent 三件套指南 | [[claude-skills/entries/dianyike__claude-code-insights|📄]] |
 
 ---
 
@@ -127,9 +139,11 @@
 
 ## server-ops — 服务器搭建管理面板
 
-**解决什么：** 你买了台 VPS 或家里有台小主机，但配 Nginx、装 MySQL、跑 Docker 一堆命令背不下来。这些项目让你浏览器点点就能搞定。
+**解决什么：** 你买了台 VPS 或家里有台小主机，但配 Nginx、装 MySQL、跑 Docker 一堆命令背不下来。这些项目让你浏览器点点就能搞定。第二批（2026-05-26）增加轻量 PaaS 方向：一台 VPS 跑 2-3 个小站、自动反代 + SSL、适合 Claude Code 操作。
 
-**⭐ 首推 `1Panel`（35.5k）：** 国产现代化全能面板、165+ 应用一键装、Docker 一体化，不知道选啥就用它。家用 NAS / 小主机用 `CasaOS`（33.9k），要轻量纯中文用 `AcePanel`，老牌邮件/DNS 服务管理用 `webmin`。
+**⭐ 面板首推 `1Panel`（35.5k）：** 不知道选啥就用它。**多站部署首推 `Dokku`（32k）：** 100% CLI、git push 就上线，Claude Code 友好度最高。要 Web UI + CLI 两手抓选 `Dokploy`（34k），功能最全选 `Coolify`（56k）。
+
+### 管理面板
 
 | Repo | ⭐ | 大白话 | 详细文档 |
 | --- | ---: | --- | --- |
@@ -138,6 +152,16 @@
 | [webmin/webmin](https://github.com/webmin/webmin) | 5.7k | 1997 年至今的"祖师爷"，传统 Linux 服务管理王者 | [[server-ops/entries/webmin__webmin|📄]] |
 | [aaPanel/aaPanel](https://github.com/aaPanel/aaPanel) | 3.0k | 宝塔国际版，60M 内存就能跑，PHP 建站老朋友 | [[server-ops/entries/aaPanel__aaPanel|📄]] |
 | [acepanel/panel](https://github.com/acepanel/panel) | 2.8k | Go 单文件运行、轻量不破坏系统的中文面板（耗子面板新版） | [[server-ops/entries/acepanel__panel|📄]] |
+
+### 轻量 PaaS / 多站部署（Claude Code 友好）
+
+| Repo | ⭐ | 大白话 | CC 友好度 | 详细文档 |
+| --- | ---: | --- | --- | --- |
+| [coollabsio/coolify](https://github.com/coollabsio/coolify) | 56k | 最火自托管 PaaS，280+ 一键模板，有 API | 中高 | [[server-ops/entries/coollabsio__coolify|📄]] |
+| [Dokploy/dokploy](https://github.com/Dokploy/dokploy) | 34k | 现代 PaaS，CLI + API + Traefik 自动路由 + Docker Compose 原生 | 高 | [[server-ops/entries/Dokploy__dokploy|📄]] |
+| [NginxProxyManager/nginx-proxy-manager](https://github.com/NginxProxyManager/nginx-proxy-manager) | 33k | 最流行反代 GUI，自动 SSL，不懂 Nginx 也能用 | 低 | [[server-ops/entries/NginxProxyManager__nginx-proxy-manager|📄]] |
+| [dokku/dokku](https://github.com/dokku/dokku) | 32k | 100% CLI 的 mini-Heroku，git push 就部署 | **极高** | [[server-ops/entries/dokku__dokku|📄]] |
+| [caprover/caprover](https://github.com/caprover/caprover) | 15k | Docker+Nginx PaaS，600+ 一键应用商店 | 中 | [[server-ops/entries/caprover__caprover|📄]] |
 
 ---
 
@@ -267,20 +291,119 @@
 
 ---
 
+## local-llm-runtime — Mac 本地 LLM 推理运行时
+
+**解决什么：** 不想被 OpenAI/Anthropic 卡着钱包，又嫌 Ollama 太大众？这里挑反共识方案——单文件可执行、Apple MLX 原生、Swift in-process。专为 M 系列 Mac 选。
+
+**⭐ 首推 `llamafile`（24.5k）：** 把模型权重 + 推理代码塞一个可执行文件，下载即跑、零安装、跨 OS；Mozilla 长期维护，唯一星数级生态。`mlx-swift-lm` 是 Apple 官方 Swift 库（嵌 macOS/iOS app 必备）；想用 Claude Code 但跑本地模型上 `Kevlar`（Anthropic API 兼容层）；想试投机解码新论文用 `mio`；纯 Swift coding agent 看 `mlx-coder`。
+
+| Repo | ⭐ | 大白话 | 详细文档 |
+| --- | ---: | --- | --- |
+| [mozilla-ai/llamafile](https://github.com/mozilla-ai/llamafile) | 24.5k | 单文件 LLM 旗舰：权重+推理捆一个可执行，下载即跑 | [[local-llm-runtime/entries/mozilla-ai__llamafile|📄]] |
+| [ml-explore/mlx-swift-lm](https://github.com/ml-explore/mlx-swift-lm) | 523 | Apple 官方 Swift LLM 库，把 mlx-lm 那套搬进 Xcode | [[local-llm-runtime/entries/ml-explore__mlx-swift-lm|📄]] |
+| [eduardogoncalves/mlx-coder](https://github.com/eduardogoncalves/mlx-coder) | 8 | Swift 写的 in-process coding agent，与 MLX 推理同进程 | [[local-llm-runtime/entries/eduardogoncalves__mlx-coder|📄]] |
+| [nikholasnova/Kevlar](https://github.com/nikholasnova/Kevlar) | 7 | 让 Claude Code 跑你本地 MLX 模型的 Anthropic API 兼容层 | [[local-llm-runtime/entries/nikholasnova__Kevlar|📄]] |
+| [Ruler-Dev/mio](https://github.com/Ruler-Dev/mio) | 4 | DFlash 投机解码 + PolarQuant KV 压缩的极致 MLX 引擎 | [[local-llm-runtime/entries/Ruler-Dev__mio|📄]] |
+
+---
+
+## rag-engine — 本地优先的 RAG / 向量检索引擎
+
+**解决什么：** Pinecone 这类云向量库锁数据、按月收钱。本地能跑、嵌入式/单文件/浏览器原生的向量引擎才是个人知识库的底座。
+
+**⭐ 首推 `vecstore`（14）：** Rust 嵌入式 + 浏览器 WASM + hybrid search，最贴近"SQLite of vectors"的体验，进程内就能跑、API 干净；想要"build-once-ship-many"用 `nest`（单文件 `.nest` 容器、可签名分发）；想要 server 形态 `vecdb`；想直接拿来用的端到端 Graph RAG 选 `Kwipu`（83⭐ 自带 Obsidian/MCP）；做纯浏览器 RAG 用 `barq-vweb`。
+
+| Repo | ⭐ | 大白话 | 详细文档 |
+| --- | ---: | --- | --- |
+| [benmaster82/Kwipu](https://github.com/benmaster82/Kwipu) | 83 | 本地 Graph RAG 给 Obsidian/markdown 用，自带 MCP server | [[rag-engine/entries/benmaster82__Kwipu|📄]] |
+| [YASSERRMD/barq-vweb](https://github.com/YASSERRMD/barq-vweb) | 19 | 浏览器原生 Rust+WASM 向量库，自带 MiniLM embedding，零后端 | [[rag-engine/entries/YASSERRMD__barq-vweb|📄]] |
+| [PhilipJohnBasile/vecstore](https://github.com/PhilipJohnBasile/vecstore) | 14 | "向量界 SQLite"，Rust 嵌入式 + 浏览器 WASM + hybrid search | [[rag-engine/entries/PhilipJohnBasile__vecstore|📄]] |
+| [zaydmulani09/vecdb](https://github.com/zaydmulani09/vecdb) | 7 | 单二进制自托管 Rust 向量服务，hybrid + 类 SQL 查询 | [[rag-engine/entries/zaydmulani09__vecdb|📄]] |
+| [hoffresearch/nest](https://github.com/hoffresearch/nest) | 5 | 整个 RAG 知识库塞进 `.nest` 单文件，签名可校验、像分发 SQLite db | [[rag-engine/entries/hoffresearch__nest|📄]] |
+
+---
+
+## knowledge-graph — 文本/笔记→知识图谱 抽取与可视化栈
+
+**解决什么：** Obsidian 双链是手动连的；这里要的是**LLM 自动抽实体关系**生成真正的图结构（HTML/JSON/Neo4j），喂给 GraphRAG 或可视化。
+
+**⭐ 首推 `graphrag-local-ollama`（1.1k）：** 微软 GraphRAG 本地化 + Ollama 接入，含 Web UI 图可视化和 5 种查询模式，是入门 GraphRAG 最直接的路径。想要"双引擎 + MCP server" 用 `OrchForge/RAG-GraphRAG-Knowledge-Base`；用 agent 把 PDF 织成 Obsidian markdown 知识图谱选 `NodeWeaver`；想要完整 KG 平台（13 工具 MCP）用 `Omni-Graph`；想读懂"文本→实体→图→查询"全流程从 `text-to-kg` 开始。
+
+| Repo | ⭐ | 大白话 | 详细文档 |
+| --- | ---: | --- | --- |
+| [TheAiSingularity/graphrag-local-ollama](https://github.com/TheAiSingularity/graphrag-local-ollama) | 1.1k | 微软 GraphRAG 本地化 + Ollama + Web UI 可视化 | [[knowledge-graph/entries/TheAiSingularity__graphrag-local-ollama|📄]] |
+| [vaishcodescape/Omni-Graph](https://github.com/vaishcodescape/Omni-Graph) | 3 | 端到端 KG 平台，FastAPI + pgvector，4 种 search + 13 工具 MCP | [[knowledge-graph/entries/vaishcodescape__Omni-Graph|📄]] |
+| [arun1729/text-to-kg](https://github.com/arun1729/text-to-kg) | 3 | CogDB 最小 demo，"文本→实体→图→查询"全流程入门读物 | [[knowledge-graph/entries/arun1729__text-to-kg|📄]] |
+| [OrchForge/RAG-GraphRAG-Knowledge-Base](https://github.com/OrchForge/RAG-GraphRAG-Knowledge-Base) | 0 | Node 自托管 RAG+GraphRAG 双引擎 + 图编辑器 + Claude Desktop MCP | [[knowledge-graph/entries/OrchForge__RAG-GraphRAG-Knowledge-Base|📄]] |
+| [Seif-Yasser-Ahmed/NodeWeaver](https://github.com/Seif-Yasser-Ahmed/NodeWeaver) | 0 | agent 把 PDF 啃成 Obsidian markdown 知识图谱，遍历 wikilink 推理 | [[knowledge-graph/entries/Seif-Yasser-Ahmed__NodeWeaver|📄]] |
+
+---
+
+## mcp-servers — MCP server 生态合集
+
+**解决什么：** Claude/Codex/Cursor 通过 MCP 协议吃工具，这里收**工具端的实现**（不是 Claude skill 那种 agent 侧组织方式，那归 `claude-skills/`）。
+
+**⭐ 首推 `modelcontextprotocol/servers`（86.2k）：** Anthropic 官方参考 server 合集 + 全 SDK 入口，找现成 MCP server 第一站；想翻"全网 MCP server 大目录"上 `awesome-mcp-servers`（5.5k 社区版）；要接管已登录浏览器（自动化淘宝/微信网页版）选 `mcp-chrome`；处理 Excel 不依赖 Office 用 `excel-mcp-server`；操 K8s 用原生 Go 的 `kubernetes-mcp-server`（不包 kubectl）。
+
+| Repo | ⭐ | 大白话 | 详细文档 |
+| --- | ---: | --- | --- |
+| [modelcontextprotocol/servers](https://github.com/modelcontextprotocol/servers) | 86.2k | Anthropic 官方 MCP 参考 server 合集 + 全 SDK 入口 | [[mcp-servers/entries/modelcontextprotocol__servers|📄]] |
+| [hangwin/mcp-chrome](https://github.com/hangwin/mcp-chrome) | 11.7k | Chrome 扩展型 MCP server，接管你已登录的真实 Chrome | [[mcp-servers/entries/hangwin__mcp-chrome|📄]] |
+| [appcypher/awesome-mcp-servers](https://github.com/appcypher/awesome-mcp-servers) | 5.5k | 社区 MCP server 大目录，按场景翻清单 | [[mcp-servers/entries/appcypher__awesome-mcp-servers|📄]] |
+| [haris-musa/excel-mcp-server](https://github.com/haris-musa/excel-mcp-server) | 3.9k | Python 写的 Excel MCP server，不依赖 Microsoft Office | [[mcp-servers/entries/haris-musa__excel-mcp-server|📄]] |
+| [containers/kubernetes-mcp-server](https://github.com/containers/kubernetes-mcp-server) | 1.6k | Go 原生 K8s MCP server，直接走 API，不包 kubectl | [[mcp-servers/entries/containers__kubernetes-mcp-server|📄]] |
+
+---
+
+## screen-vision-assistant — Mac 屏幕 OCR / 截图理解 / 视觉助手
+
+**解决什么：** 看到屏幕上的文字想复制？截图问 AI 帮翻译？后台监控屏幕做语义记忆（Rewind 平替）？五条不同形态对照矩阵。
+
+**⭐ 首推 `TRex`（1.8k）：** Swift 菜单栏小恐龙，框一块屏幕、文字进剪贴板，纯离线 Apple Vision，最贴 Mac 原生哲学；要 OCR+翻译+以图搜图全家桶（容忍 Electron）选 `eSearch`（6.4k 但反 native 偏好）；公式表格转 LaTeX/Markdown 选 `screen-scribe`（Apple Vision + Gemini）；全本地翻译（隐私至上）用 `screenTranslate`；做 Rewind 风格本地 VLM 屏幕记忆挑 `screen-watcher`。
+
+| Repo | ⭐ | 大白话 | 详细文档 |
+| --- | ---: | --- | --- |
+| [xushengfeng/eSearch](https://github.com/xushengfeng/eSearch) | 6.4k | 截屏+离线 OCR+翻译+以图搜图全家桶，跨平台 Electron | [[screen-vision-assistant/entries/xushengfeng__eSearch|📄]] |
+| [amebalabs/TRex](https://github.com/amebalabs/TRex) | 1.8k | 菜单栏小恐龙，框一块屏幕，文字到剪贴板，纯离线 Swift | [[screen-vision-assistant/entries/amebalabs__TRex|📄]] |
+| [SamuelZ12/screen-scribe](https://github.com/SamuelZ12/screen-scribe) | 86 | Apple Vision OCR + Gemini 多模态，专治公式表格转 LaTeX | [[screen-vision-assistant/entries/SamuelZ12__screen-scribe|📄]] |
+| [hcmhcs/screenTranslate](https://github.com/hcmhcs/screenTranslate) | 37 | 全本地 Apple Vision + Apple Translation，隐私优先翻译 | [[screen-vision-assistant/entries/hcmhcs__screenTranslate|📄]] |
+| [ljch2018/screen-watcher](https://github.com/ljch2018/screen-watcher) | 0 | 本地 VLM 后台默默看屏，做 Rewind 平替的语义记忆 | [[screen-vision-assistant/entries/ljch2018__screen-watcher|📄]] |
+
+---
+
+## git-self-host — 自建 Git 仓库 / 依赖代理
+
+**解决什么：** 在自己的 VPS（典型 4C4G 国内云）上跑代码托管 + 国内依赖镜像 + `git push` 一键部署个人网站。两条主线：Git 服务器本体 + 依赖代理。
+
+**⭐ 首推 `piku`（6.6k）：** `git push` 即上线的最小 PaaS，跑在 256MB 树莓派都行，4C4G 简直奢侈，正好对接"git 管理个人网站"诉求。要完整 GitHub 体验 + mirror 国外依赖用 `gitea`（35.5k 自托管事实标准）；只要极简 SSH-only Git server 用 `soft-serve`；Go 依赖国内代理直接用 `goproxy.cn`，企业级私服上 `athens`。
+
+| Repo | ⭐ | 大白话 | 详细文档 |
+| --- | ---: | --- | --- |
+| [piku/piku](https://github.com/piku/piku) | 6.6k | `git push` 即上线的最小 PaaS，树莓派都能跑 | [[git-self-host/entries/piku__piku|📄]] |
+| [go-gitea/gitea](https://github.com/go-gitea/gitea) | 55.9k | 自托管 Git 平台事实标准，单二进制 + mirror | [[git-self-host/entries/go-gitea__gitea|📄]] |
+| [charmbracelet/soft-serve](https://github.com/charmbracelet/soft-serve) | 6.9k | 单二进制 SSH-only Git server，省内存极简风 | [[git-self-host/entries/charmbracelet__soft-serve|📄]] |
+| [goproxy/goproxy.cn](https://github.com/goproxy/goproxy.cn) | 7.1k | 国内 Go 依赖代理（公共服务，七牛云运维） | [[git-self-host/entries/goproxy__goproxy.cn|📄]] |
+| [gomods/athens](https://github.com/gomods/athens) | 4.8k | 企业级自建 Go module 代理 + 缓存（CNCF 沙箱） | [[git-self-host/entries/gomods__athens|📄]] |
+
+---
+
 ## 📊 整体统计
 
-- **总项目数**：73（cli-wrap 5 + voice-pipeline 5 + claude-skills 5 + im-export 5 + personal-kb 5 + ai-avatar 5 + server-ops 5 + iot-platform 4 + personal-site 4 + dev-productivity 20 + xiaozhi-ai 5 + personality-test 5）
-- **stars 总和**：约 95 万⭐ · 单条最高 OpenHands 74.6k · 中位数约 3k
+- **总项目数**：114（cli-wrap 5 + voice-pipeline 5 + claude-skills 11 + im-export 5 + personal-kb 5 + ai-avatar 5 + server-ops 10 + iot-platform 4 + personal-site 4 + dev-productivity 20 + xiaozhi-ai 5 + personality-test 5 + local-llm-runtime 5 + rag-engine 5 + knowledge-graph 5 + mcp-servers 5 + screen-vision-assistant 5 + git-self-host 5）
+- **stars 总和**：约 206 万⭐ · 单条最高 modelcontextprotocol/servers 86.2k · 中位数约 2k
 - **已停更但仍收录**：3 个（WeChatMsg 41.5k、dendron 7.4k、DiscordChatExporter 维护模式）—— 思路或窗口期价值还在
 - **重型参考向（别整站 clone）**：jetlinks、kentcdodds.com、OpenHands —— 给你读架构的，不是拿来用的
+- **新一批 reach（2026-05-25）**：local-llm-runtime / rag-engine / knowledge-graph / mcp-servers / screen-vision-assistant 五个本地优先方向，平均星数低但意图匹配度高
 
 ## 🎯 跨域推荐路径
 
 1. **想搭个人产品起点：** personal-site/`thedevdavid/digital-garden` + Claude Code（配套 claude-skills/`awesome-claude-code` 入门）
-2. **想搞个 VPS 跑点东西：** server-ops/`1Panel`（万能） · 想轻量就 `AcePanel`
+2. **想搞个 VPS 跑点东西：** 管理面板选 server-ops/`1Panel`（万能） · 一台 VPS 跑多站选 `Dokku`（Claude Code 友好）或 `Dokploy`（Web UI + CLI）
 3. **想做 Agent 产品：** cli-wrap/`open-interpreter` + claude-skills/`anthropics-sdk` + dev-productivity/ai-coding-agent/`OpenHands`（读架构）
 4. **想升级 skill 工程：** dev-productivity/claude-workflow/`Continuous-Claude-v3` 是直接对照样板
 5. **想做微信记录归档：** im-export/`WeChatMsg` 趁能用赶紧研究 · 长线靠 `HPI` 的"个人数据包"思路立差异
+6. **想搭本地 AI 栈：** local-llm-runtime/`llamafile` 跑模型 + rag-engine/`vecstore` 做检索 + knowledge-graph/`graphrag-local-ollama` 做图谱 + mcp-servers/`modelcontextprotocol/servers` 把工具接到 Claude Code
+7. **想让 Mac 桌面变 AI 助手：** screen-vision-assistant/`TRex` 选字 + screen-watcher 屏幕记忆 + 本地 MLX 模型做语义查询
 
 ---
 
@@ -305,3 +428,7 @@ gitout/
 *dev-productivity 四子域由 /gitout 多 agent 并行模式生成 · 2026-05-23*
 *xiaozhi-ai 由 /gitout 自然语言模式生成 · 2026-05-23*
 *personality-test 由 /gitout 自然语言模式生成 · 2026-05-24*
+*local-llm-runtime / rag-engine / knowledge-graph / mcp-servers / screen-vision-assistant 由 /gitout 5 agent 并行模式生成 · 2026-05-25*
+*claude-skills 增补 6 entries（mattpocock/trailofbits/dianyike/slavingia/ComposioHQ/TheCraigHewitt）由 /gitout 自然语言模式生成 · 2026-05-26*
+*git-self-host 由 /gitout 自然语言模式生成 · 2026-05-26 · 主题：国内 4C4G 自建 Git + 依赖代理 + 网站部署*
+*server-ops 增补 5 entries（dokku/dokploy/coolify/caprover/nginx-proxy-manager）由 /gitout 自然语言模式生成 · 2026-05-26 · 主题：一台 VPS 多站部署 + Claude Code 友好*
