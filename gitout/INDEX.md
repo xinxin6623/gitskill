@@ -1,12 +1,11 @@
 # gitout · 主题导航索引
 
 > 用 `/gitout` 累积的 GitHub 项目地图。每个 domain 一个目录，每条都有大白话简介 + 详细文档链接。
-<<<<<<< HEAD
-> 最后更新：2026-05-26 · stars 数据快照于同日
+> 最后更新：2026-06-02 · stars 数据快照于同日
 
 ---
 
-## 🧭 22 个 domain 一览
+## 🧭 23 个 domain 一览
 
 | Domain | 一句话 | 项目数 | 首推 |
 | --- | --- | --- | --- |
@@ -16,7 +15,7 @@
 | [💬 im-export](#im-export--聊天记录导出--个人数据归档) | 微信/iMessage/Discord 历史导出 | 5 | WeChatMsg (41.5k) |
 | [📚 personal-kb](#personal-kb--个人知识库--markdown-wiki) | 本地优先的 Markdown 笔记 + 互链 + 可发布 | 5 | logseq (43.0k) |
 | [🤖 ai-avatar](#ai-avatar--ai-虚拟角色--live2d-桌宠) | 给 AI 套个皮：能动嘴、有表情、能聊天 | 5 | airi (39.5k) |
-| [🖥️ server-ops](#server-ops--服务器搭建管理面板) | Web 面板鼠标点点搞定服务器 | 5 | 1Panel (35.5k) |
+| [🖥️ server-ops](#server-ops--服务器搭建管理面板) | Web 面板 + 轻量 PaaS + 反代（VPS 多站部署） | 10 | Dokku (32k) / Coolify (56k) |
 | [🌐 iot-platform](#iot-platform--物联网平台) | MQTT + 规则引擎 + Dashboard 完整 IoT 后台 | 4 | FastBee (2.2k) |
 | [🏠 personal-site](#personal-site--个人网站全栈模板) | 博客 + 项目展示 + Now 页一个 starter 搞定 | 4 | digital-garden (331) |
 | [🛠️ dev-productivity/claude-workflow](#dev-productivityclaude-workflow--claude-code-工作流工程化) | skill 工厂 / hook SDK / 自学习 harness | 5 | Continuous-Claude-v3 (3.8k) |
@@ -31,8 +30,9 @@
 | [📷 screen-vision-assistant](#screen-vision-assistant--mac-屏幕-ocr--截图理解--视觉助手) | Mac 桌面 OCR + 截图多模态 + 本地 VLM 屏幕记忆 | 5 | TRex (1.8k) |
 | [🗄️ git-self-host](#git-self-host--自建-git-仓库--依赖代理) | 自建 Git 服务器 + 国内依赖代理 + git push 部署网站 | 5 | piku (6.6k) |
 | [🏢 company-website](#company-website--公司展示站模板) | Next/Nuxt + Tailwind 公司官网脚手架，API/CLI 友好 | 5 | saasfly (2.9k) |
+| [📄 document-parsing](#document-parsing--文档结构化解析pdfdocx--markdown) | MinerU 同档位的复杂文档 → 结构化 md，Mac mini 友好 | 5 | docling (60.8k) / marker (35.6k) |
 
-**合计 114 个项目**
+**合计 124 个项目**
 
 ---
 
@@ -140,9 +140,11 @@
 
 ## server-ops — 服务器搭建管理面板
 
-**解决什么：** 你买了台 VPS 或家里有台小主机，但配 Nginx、装 MySQL、跑 Docker 一堆命令背不下来。这些项目让你浏览器点点就能搞定。
+**解决什么：** 你买了台 VPS 或家里有台小主机，但配 Nginx、装 MySQL、跑 Docker 一堆命令背不下来。这些项目让你浏览器点点就能搞定。第二批（2026-05-26）增加轻量 PaaS 方向：一台 VPS 跑 2-3 个小站、自动反代 + SSL、适合 Claude Code 操作。
 
-**⭐ 首推 `1Panel`（35.5k）：** 国产现代化全能面板、165+ 应用一键装、Docker 一体化，不知道选啥就用它。家用 NAS / 小主机用 `CasaOS`（33.9k），要轻量纯中文用 `AcePanel`，老牌邮件/DNS 服务管理用 `webmin`。
+**⭐ 面板首推 `1Panel`（35.5k）：** 不知道选啥就用它。**多站部署首推 `Dokku`（32k）：** 100% CLI、git push 就上线，Claude Code 友好度最高。要 Web UI + CLI 两手抓选 `Dokploy`（34k），功能最全选 `Coolify`（56k）。
+
+### 管理面板
 
 | Repo | ⭐ | 大白话 | 详细文档 |
 | --- | ---: | --- | --- |
@@ -151,6 +153,16 @@
 | [webmin/webmin](https://github.com/webmin/webmin) | 5.7k | 1997 年至今的"祖师爷"，传统 Linux 服务管理王者 | [📄](./server-ops/entries/webmin__webmin.md) |
 | [aaPanel/aaPanel](https://github.com/aaPanel/aaPanel) | 3.0k | 宝塔国际版，60M 内存就能跑，PHP 建站老朋友 | [📄](./server-ops/entries/aaPanel__aaPanel.md) |
 | [acepanel/panel](https://github.com/acepanel/panel) | 2.8k | Go 单文件运行、轻量不破坏系统的中文面板（耗子面板新版） | [📄](./server-ops/entries/acepanel__panel.md) |
+
+### 轻量 PaaS / 多站部署（Claude Code 友好）
+
+| Repo | ⭐ | 大白话 | CC 友好度 | 详细文档 |
+| --- | ---: | --- | --- | --- |
+| [coollabsio/coolify](https://github.com/coollabsio/coolify) | 56k | 最火自托管 PaaS，280+ 一键模板，有 API | 中高 | [📄](./server-ops/entries/coollabsio__coolify.md) |
+| [Dokploy/dokploy](https://github.com/Dokploy/dokploy) | 34k | 现代 PaaS，CLI + API + Traefik 自动路由 + Docker Compose 原生 | 高 | [📄](./server-ops/entries/Dokploy__dokploy.md) |
+| [NginxProxyManager/nginx-proxy-manager](https://github.com/NginxProxyManager/nginx-proxy-manager) | 33k | 最流行反代 GUI，自动 SSL，不懂 Nginx 也能用 | 低 | [📄](./server-ops/entries/NginxProxyManager__nginx-proxy-manager.md) |
+| [dokku/dokku](https://github.com/dokku/dokku) | 32k | 100% CLI 的 mini-Heroku，git push 就部署 | **极高** | [📄](./server-ops/entries/dokku__dokku.md) |
+| [caprover/caprover](https://github.com/caprover/caprover) | 15k | Docker+Nginx PaaS，600+ 一键应用商店 | 中 | [📄](./server-ops/entries/caprover__caprover.md) |
 
 ---
 
@@ -392,9 +404,25 @@
 
 ---
 
+## document-parsing — 文档结构化解析（PDF/DOCX → Markdown）
+
+**解决什么：** 把 PDF / 扫描件 / Office 文档变成保留结构（标题/表格/公式/图）的 Markdown 或 JSON，再喂给 RAG / LLM / 个人知识库。专挑 MinerU 同档位、Mac mini（Apple Silicon, 无 CUDA）能本地跑的方案。
+
+**⭐ 首推 `docling`（60.8k）：** IBM 出品、MIT 许可、Mac MPS 一等支持，多格式吃，模型轻 8GB 也能跑；要极致英文论文精度选 `marker`（GPL-3.0，准备好 16GB）；想跟 VLM 端到端前沿用 `olmocr`；要 LangChain 风的多格式管线框架走 `unstructured`；Mac mini 内存紧 / 中文为主选 `RapidDoc`（ONNX 无 PyTorch，反共识首选）。
+
+| Repo | ⭐ | 大白话 | 详细文档 |
+| --- | ---: | --- | --- |
+| [docling-project/docling](https://github.com/docling-project/docling) | 60.8k | IBM 出品多格式 → md，MIT，Mac MPS 一等支持 | [📄](./document-parsing/entries/docling-project__docling.md) |
+| [datalab-to/marker](https://github.com/datalab-to/marker) | 35.6k | MinerU 最直接对标，英文论文精度第一梯队 | [📄](./document-parsing/entries/datalab-to__marker.md) |
+| [allenai/olmocr](https://github.com/allenai/olmocr) | 17.4k | AllenAI 7B VLM 端到端读 PDF，前沿但吃硬件 | [📄](./document-parsing/entries/allenai__olmocr.md) |
+| [Unstructured-IO/unstructured](https://github.com/Unstructured-IO/unstructured) | 14.8k | LangChain 默认的多格式管线框架，25 种格式统一接口 | [📄](./document-parsing/entries/Unstructured-IO__unstructured.md) |
+| [RapidAI/RapidDoc](https://github.com/RapidAI/RapidDoc) | 163 | ONNX 轻量管线，无 PyTorch 依赖，Mac mini 反共识首选 | [📄](./document-parsing/entries/RapidAI__RapidDoc.md) |
+
+---
+
 ## 📊 整体统计
 
-- **总项目数**：114（cli-wrap 5 + voice-pipeline 5 + claude-skills 11 + im-export 5 + personal-kb 5 + ai-avatar 5 + server-ops 5 + iot-platform 4 + personal-site 4 + dev-productivity 20 + xiaozhi-ai 5 + personality-test 5 + local-llm-runtime 5 + rag-engine 5 + knowledge-graph 5 + mcp-servers 5 + screen-vision-assistant 5 + git-self-host 5 + company-website 5）
+- **总项目数**：124（cli-wrap 5 + voice-pipeline 5 + claude-skills 11 + im-export 5 + personal-kb 5 + ai-avatar 5 + server-ops 5 + iot-platform 4 + personal-site 4 + dev-productivity 20 + xiaozhi-ai 5 + personality-test 5 + local-llm-runtime 5 + rag-engine 5 + knowledge-graph 5 + mcp-servers 5 + screen-vision-assistant 5 + git-self-host 5 + company-website 5 + document-parsing 5）
 - **stars 总和**：约 206 万⭐ · 单条最高 modelcontextprotocol/servers 86.2k · 中位数约 2k
 - **已停更但仍收录**：3 个（WeChatMsg 41.5k、dendron 7.4k、DiscordChatExporter 维护模式）—— 思路或窗口期价值还在
 - **重型参考向（别整站 clone）**：jetlinks、kentcdodds.com、OpenHands —— 给你读架构的，不是拿来用的
@@ -403,7 +431,7 @@
 ## 🎯 跨域推荐路径
 
 1. **想搭个人产品起点：** personal-site/`thedevdavid/digital-garden` + Claude Code（配套 claude-skills/`awesome-claude-code` 入门）
-2. **想搞个 VPS 跑点东西：** server-ops/`1Panel`（万能） · 想轻量就 `AcePanel`
+2. **想搞个 VPS 跑点东西：** 管理面板选 server-ops/`1Panel`（万能） · 一台 VPS 跑多站选 `Dokku`（Claude Code 友好）或 `Dokploy`（Web UI + CLI）
 3. **想做 Agent 产品：** cli-wrap/`open-interpreter` + claude-skills/`anthropics-sdk` + dev-productivity/ai-coding-agent/`OpenHands`（读架构）
 4. **想升级 skill 工程：** dev-productivity/claude-workflow/`Continuous-Claude-v3` 是直接对照样板
 5. **想做微信记录归档：** im-export/`WeChatMsg` 趁能用赶紧研究 · 长线靠 `HPI` 的"个人数据包"思路立差异
@@ -437,3 +465,4 @@ gitout/
 *claude-skills 增补 6 entries（mattpocock/trailofbits/dianyike/slavingia/ComposioHQ/TheCraigHewitt）由 /gitout 自然语言模式生成 · 2026-05-26*
 *git-self-host 由 /gitout 自然语言模式生成 · 2026-05-26 · 主题：国内 4C4G 自建 Git + 依赖代理 + 网站部署*
 *company-website 由 /gitout 自然语言模式生成 · 2026-05-27 · 主题：轻量+展示为主+API/CLI 友好的公司官网脚手架*
+*document-parsing 由 /gitout 自然语言模式生成 · 2026-06-02 · 主题：MinerU 同档位 Mac mini 友好的开源 PDF→md 工具*

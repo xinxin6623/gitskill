@@ -1,0 +1,35 @@
+domain: document-parsing
+description: "复杂文档 → 结构化 Markdown / JSON。MinerU 同档位的开源工具，重点适配 Mac mini (Apple Silicon)。"
+last_updated: 2026-06-02
+status: active
+entries:
+  - repo: docling-project/docling
+    file: entries/docling-project__docling.md
+    stars: 60780
+    license: MIT
+    pushed_at: 2026-06-01
+    intent: "多格式 → md / JSON，Mac MPS 一等支持"
+  - repo: datalab-to/marker
+    file: entries/datalab-to__marker.md
+    stars: 35640
+    license: GPL-3.0
+    pushed_at: 2026-05-05
+    intent: "PDF → md，英文论文精度第一梯队"
+  - repo: allenai/olmocr
+    file: entries/allenai__olmocr.md
+    stars: 17366
+    license: Apache-2.0
+    pushed_at: 2026-03-25
+    intent: "VLM 端到端 PDF → md，科研论文前沿"
+  - repo: Unstructured-IO/unstructured
+    file: entries/Unstructured-IO__unstructured.md
+    stars: 14821
+    license: Apache-2.0
+    pushed_at: 2026-06-01
+    intent: "多格式文档管线框架，LangChain 默认推荐"
+  - repo: RapidAI/RapidDoc
+    file: entries/RapidAI__RapidDoc.md
+    stars: 163
+    license: Apache-2.0
+    pushed_at: 2026-05-24
+    intent: "ONNX 轻量管线，无 PyTorch 依赖，Mac mini 反共识首选"

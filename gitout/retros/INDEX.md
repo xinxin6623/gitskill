@@ -10,6 +10,7 @@
 
 | 日期 | 类型 | 文件 | 一句话摘要 |
 | --- | --- | --- | --- |
+| 2026-06-02 | retro | — | document-parsing 主题首跑：找 MinerU 同档位 Mac mini 友好替代；首轮 5 query 因带引号返空（gh CLI 行为差异），改用无引号重试 OK；最终入选 docling / marker / olmocr / unstructured / RapidDoc 五条 |
 | 2026-05-27 | retro | — | company-website 主题首跑：need 模式 9 query 中 4 个零返回（多词 AND 命中低），改单/双词后补足 5 entry；新建 domain 与 personal-site 区分（公司 brand/CTA vs 个人 portfolio/blog）；首次主动应用 SKILL v2.1 的"诉求覆盖广度"权重排序 |
 | 2026-05-26 | 阶段性修改 | — | SKILL.md v2.1：落地 git-self-host followup 的 5 项改进——intent 加 license_sensitivity / agent_friendly 字段、Step 2.1 GPL 强制追问、Step 5 加"诉求覆盖广度"权重、entry 模板加"📜 协议风险"强制段、汇报模板补两字段；文末加 ChangeLog |
 | 2026-05-26 | 阶段性修改 | — | 新增 `followups/` 目录承接 /gitout 搜索后的讨论 / 选型 / 反馈；CLAUDE.md 升级为三 INDEX 体系（gitout / retros / followups 互不混塞）；首份样板 followup = git-self-host（Gitea 选型 + 推飞书 + feedback 给出协议维度漏抽取等 5 项 SKILL 改进建议） |
@@ -30,7 +31,7 @@
 
 | 日期 | 动作 | 影响范围 |
 | --- | --- | --- |
-| 2026-05-26 | SKILL.md v2.1：吸收 git-self-host followup 反馈 | intent 加 2 字段（license/agent 友好）+ Step 2.1 GPL 主动追问 + Step 5 加"诉求覆盖广度"权重 + entry 模板加协议风险强制段 + ChangeLog |
+| 2026-05-30 | 结构性改造：关系索引 + 图谱 + 成长库 + 四 INDEX 体系 | relationships/ + insights/ + graph.json 配色 + _taxonomy.yaml 补全 + obout/ 重生成 + CLAUDE.md §2ter §3.4 |
 | 2026-05-26 | 新增 `followups/` 目录 + CLAUDE.md 三 INDEX 体系 | followups/ 承接搜索后讨论 / 选型 / 反馈；CLAUDE.md §1.3 / §2bis / §3.3 新规定；首份样板 git-self-host 落地（含飞书副本归档机制） |
 | 2026-05-24 | 17 项优化清单全部落实 | SKILL.md 由五段式升为七段式；新增 `_taxonomy.yaml` / batch subagent 模式 / `--quick` 子命令 / INDEX 自检 / 三句硬模板；radar v1.2 加"实施状态"段；symlink 到 ~/.claude/skills |
 | 2026-05-23 | gitout 目录由 misc 拆为 6 个一级 domain | 把早期 misc/ 下 30 个 entry 拆成 cli-wrap / voice-pipeline / claude-skills / im-export / personal-kb / ai-avatar 六个独立 domain |

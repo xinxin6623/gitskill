@@ -1,0 +1,86 @@
+[
+  {
+    "description": "Convert PDF to markdown + JSON quickly with high accuracy",
+    "fullName": "datalab-to/marker",
+    "language": "Python",
+    "license": {
+      "key": "gpl-3.0",
+      "name": "GNU General Public License v3.0",
+      "url": "https://api.github.com/licenses/gpl-3.0"
+    },
+    "owner": {
+      "id": "O_kgDOCocvlw",
+      "is_bot": false,
+      "login": "datalab-to",
+      "type": "Organization",
+      "url": "https://github.com/datalab-to"
+    },
+    "pushedAt": "2026-05-05T08:04:51Z",
+    "stargazersCount": 35640,
+    "updatedAt": "2026-06-01T16:57:57Z",
+    "url": "https://github.com/datalab-to/marker"
+  },
+  {
+    "description": "The terminal command palette",
+    "fullName": "pindexis/marker",
+    "language": "Python",
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "url": "https://api.github.com/licenses/mit"
+    },
+    "owner": {
+      "id": "MDQ6VXNlcjI1NTc5Njc=",
+      "is_bot": false,
+      "login": "pindexis",
+      "type": "User",
+      "url": "https://github.com/pindexis"
+    },
+    "pushedAt": "2024-04-06T14:43:45Z",
+    "stargazersCount": 2089,
+    "updatedAt": "2026-05-18T14:05:38Z",
+    "url": "https://github.com/pindexis/marker"
+  },
+  {
+    "description": "Easily deployable 🚀 API to convert PDF to markdown quickly with high accuracy.",
+    "fullName": "adithya-s-k/marker-api",
+    "language": "Python",
+    "license": {
+      "key": "gpl-3.0",
+      "name": "GNU General Public License v3.0",
+      "url": "https://api.github.com/licenses/gpl-3.0"
+    },
+    "owner": {
+      "id": "MDQ6VXNlcjI3OTU2NDI2",
+      "is_bot": false,
+      "login": "adithya-s-k",
+      "type": "User",
+      "url": "https://github.com/adithya-s-k"
+    },
+    "pushedAt": "2024-10-15T18:35:31Z",
+    "stargazersCount": 968,
+    "updatedAt": "2026-05-28T09:12:12Z",
+    "url": "https://github.com/adithya-s-k/marker-api"
+  },
+  {
+    "description": "Estimating pose using ArUCo Markers",
+    "fullName": "GSNCodes/ArUCo-Markers-Pose-Estimation-Generation-Python",
+    "language": "Python",
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "url": "https://api.github.com/licenses/mit"
+    },
+    "owner": {
+      "id": "MDQ6VXNlcjM3OTIyMjA4",
+      "is_bot": false,
+      "login": "GSNCodes",
+      "type": "User",
+      "url": "https://github.com/GSNCodes"
+    },
+    "pushedAt": "2025-04-27T17:27:16Z",
+    "stargazersCount": 318,
+    "updatedAt": "2026-05-25T05:02:24Z",
+    "url": "https://github.com/GSNCodes/ArUCo-Markers-Pose-Estimation-Generation-Python"
+  }
+]
