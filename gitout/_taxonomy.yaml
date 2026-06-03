@@ -118,3 +118,8 @@ domains:
     cn: Mac 屏幕 OCR / 截图理解 / 视觉助手
     aliases: [screen-ocr, screenshot, ocr, screen-vision, desktop-vision, text-grabber, screen-watcher]
     desc: Mac 桌面 OCR + 截图多模态 + 本地 VLM 屏幕记忆
+
+  - name: claude-code-launcher
+    cn: Claude Code 启动器 / 多账号切换器 / 一键安装包
+    aliases: [cc-switch, claude-code-installer, cc-launcher, claude-code-cli-setup, claude-code-windows, provider-switcher, multi-profile-launcher]
+    desc: Windows / 跨平台 Claude Code installer 与 cc-switch 类多 provider 切换工具

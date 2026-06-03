@@ -10,6 +10,7 @@
 
 | 日期 | 类型 | 文件 | 一句话摘要 |
 | --- | --- | --- | --- |
+| 2026-06-03 | retro | — | claude-code-launcher 主题首跑（mixed 模式）：5 路 query 全有效返回，9 候选进二轮 README，1 个因 macOS 专属 reject；新建 domain；首推 lxistired (Windows 中国版懒人包) + cc-switch 旗舰组合；发现 cc/cc- 前缀名容易混 Claude Code vs Claude Desktop |
 | 2026-06-02 | retro | — | document-parsing 主题首跑：找 MinerU 同档位 Mac mini 友好替代；首轮 5 query 因带引号返空（gh CLI 行为差异），改用无引号重试 OK；最终入选 docling / marker / olmocr / unstructured / RapidDoc 五条 |
 | 2026-05-27 | retro | — | company-website 主题首跑：need 模式 9 query 中 4 个零返回（多词 AND 命中低），改单/双词后补足 5 entry；新建 domain 与 personal-site 区分（公司 brand/CTA vs 个人 portfolio/blog）；首次主动应用 SKILL v2.1 的"诉求覆盖广度"权重排序 |
 | 2026-05-26 | 阶段性修改 | — | SKILL.md v2.1：落地 git-self-host followup 的 5 项改进——intent 加 license_sensitivity / agent_friendly 字段、Step 2.1 GPL 强制追问、Step 5 加"诉求覆盖广度"权重、entry 模板加"📜 协议风险"强制段、汇报模板补两字段；文末加 ChangeLog |

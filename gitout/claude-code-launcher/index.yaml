@@ -1,0 +1,47 @@
+domain: claude-code-launcher
+cn: Claude Code 启动器 / 多账号切换器 / 一键安装包
+desc: Windows / 跨平台 Claude Code installer 与 cc-switch 类多 provider 切换工具
+created: 2026-06-03
+capacity_limit: 30
+entries:
+  - repo: lxistired/claude-code-cn-installer
+    role: Windows 中国版安装包 (PowerShell + Inno Setup)
+    stars: 20
+    license: unknown
+    tags: [windows, installer, chinese, glm]
+  - repo: RRrrrrick/ClaudeCode-Windows-Installer
+    role: Windows 通用安装包 (PowerShell, 自定义 API)
+    stars: 3
+    license: MIT
+    tags: [windows, installer, mit]
+  - repo: farion1231/cc-switch
+    role: 跨平台桌面 GUI 多 agent 配置管理器 (旗舰)
+    stars: 90016
+    license: unknown
+    tags: [cross-platform, desktop-gui, tauri]
+  - repo: FullStackPlayer/claude-code-launcher
+    role: 国产模型专用 TUI launcher (GLM/MiniMax/DeepSeek/Kimi)
+    stars: 36
+    license: unknown
+    tags: [chinese, domestic-llm, tui]
+  - repo: op7418/ai-claude-start
+    role: 跨平台 npm launcher (OS keychain 安全存 token)
+    stars: 224
+    license: MIT
+    tags: [cross-platform, npm, keychain, mit]
+related_satellites:
+  - repo: SaladDay/cc-switch-cli
+    role: cc-switch CLI fork
+    stars: 3216
+    license: MIT
+  - repo: Laliet/cc-switch-web
+    role: cc-switch Web/Docker fork
+    stars: 366
+    license: unknown
+  - repo: zhukunpenglinyutong/jetbrains-cc-gui
+    role: JetBrains IDEA 插件版
+    stars: 3850
+    license: MIT
+unfit_for_intent:
+  - repo: orange2ai/claude-code-now
+    reason: macOS 专属（Dock + Finder Toolbar 启动），违反 Windows 11 硬约束

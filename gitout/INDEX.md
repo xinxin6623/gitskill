@@ -1,11 +1,11 @@
 # gitout · 主题导航索引
 
 > 用 `/gitout` 累积的 GitHub 项目地图。每个 domain 一个目录，每条都有大白话简介 + 详细文档链接。
-> 最后更新：2026-06-02 · stars 数据快照于同日
+> 最后更新：2026-06-03 · stars 数据快照于同日
 
 ---
 
-## 🧭 23 个 domain 一览
+## 🧭 24 个 domain 一览
 
 | Domain | 一句话 | 项目数 | 首推 |
 | --- | --- | --- | --- |
@@ -31,8 +31,9 @@
 | [🗄️ git-self-host](#git-self-host--自建-git-仓库--依赖代理) | 自建 Git 服务器 + 国内依赖代理 + git push 部署网站 | 5 | piku (6.6k) |
 | [🏢 company-website](#company-website--公司展示站模板) | Next/Nuxt + Tailwind 公司官网脚手架，API/CLI 友好 | 5 | saasfly (2.9k) |
 | [📄 document-parsing](#document-parsing--文档结构化解析pdfdocx--markdown) | MinerU 同档位的复杂文档 → 结构化 md，Mac mini 友好 | 5 | docling (60.8k) / marker (35.6k) |
+| [🪄 claude-code-launcher](#claude-code-launcher--claude-code-启动器--多账号切换器--一键安装包) | Windows 一键装 Claude Code / cc-switch 类多 provider 切换 | 5 | cc-switch (90k) / lxistired cn-installer (20) |
 
-**合计 124 个项目**
+**合计 129 个项目**
 
 ---
 
@@ -440,6 +441,25 @@
 
 ---
 
+## claude-code-launcher — Claude Code 启动器 / 多账号切换器 / 一键安装包
+
+**解决什么：** Claude Code 装起来要 Node + Git + 申请账号 + 配 API + 多 provider 切换；Windows 11 用户尤其痛苦。本 domain 收两类：**装 Claude Code 的 installer**（lxistired / RRrrrrick） + **管 Claude Code 配置的 GUI/CLI**（cc-switch / ccl / ai-claude-start）。
+
+**⭐ 首推搭配：** `lxistired/claude-code-cn-installer` 装好基础环境（默认 GLM）→ `farion1231/cc-switch` 桌面 GUI 切换多家供应商。要 MIT 协议干净就把第一步换成 `RRrrrrick/ClaudeCode-Windows-Installer`。
+
+| Repo | ⭐ | 大白话 | 详细文档 |
+| --- | ---: | --- | --- |
+| [lxistired/claude-code-cn-installer](https://github.com/lxistired/claude-code-cn-installer) | 20 | Windows 一键装 Node/Git/Claude Code，默认配智谱 GLM，可打包成 .exe | [📄](./claude-code-launcher/entries/lxistired__claude-code-cn-installer.md) |
+| [RRrrrrick/ClaudeCode-Windows-Installer](https://github.com/RRrrrrick/ClaudeCode-Windows-Installer) | 3 | Windows 一键装 + 自定义 API（不绑定特定模型），MIT 协议 | [📄](./claude-code-launcher/entries/RRrrrrick__ClaudeCode-Windows-Installer.md) |
+| [farion1231/cc-switch](https://github.com/farion1231/cc-switch) | 90k | 跨平台 Tauri 桌面 GUI，管理 Claude Code/Codex/Gemini 等 6+ agent 的供应商配置（旗舰） | [📄](./claude-code-launcher/entries/farion1231__cc-switch.md) |
+| [FullStackPlayer/claude-code-launcher (ccl)](https://github.com/FullStackPlayer/claude-code-launcher) | 36 | 专为国产模型（GLM/MiniMax/DeepSeek/Kimi）的轻量 TUI launcher | [📄](./claude-code-launcher/entries/FullStackPlayer__claude-code-launcher.md) |
+| [op7418/ai-claude-start](https://github.com/op7418/ai-claude-start) | 224 | 跨平台 npm launcher，用 OS keychain 安全存 token，多 profile 切换，MIT | [📄](./claude-code-launcher/entries/op7418__ai-claude-start.md) |
+
+> 周边（未单独列文档）：`SaladDay/cc-switch-cli`（CLI fork, 3.2k★, MIT）/ `Laliet/cc-switch-web`（Web/Docker fork, 366★）/ `zhukunpenglinyutong/jetbrains-cc-gui`（JetBrains 插件, 3.8k★, MIT）。
+> 排除：`orange2ai/claude-code-now`（macOS 专属，违反 Windows 11 硬约束）。
+
+---
+
 ## 🔗 目录约定
 
 ```
@@ -466,3 +486,4 @@ gitout/
 *git-self-host 由 /gitout 自然语言模式生成 · 2026-05-26 · 主题：国内 4C4G 自建 Git + 依赖代理 + 网站部署*
 *company-website 由 /gitout 自然语言模式生成 · 2026-05-27 · 主题：轻量+展示为主+API/CLI 友好的公司官网脚手架*
 *document-parsing 由 /gitout 自然语言模式生成 · 2026-06-02 · 主题：MinerU 同档位 Mac mini 友好的开源 PDF→md 工具*
+*claude-code-launcher 由 /gitout 自然语言模式生成 · 2026-06-03 · 主题：Windows 11 部署 Claude Code + cc-switch 多 provider 切换的懒人包*
