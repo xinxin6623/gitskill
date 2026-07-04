@@ -10,6 +10,9 @@
 
 | 日期 | 类型 | 文件 | 一句话摘要 |
 | --- | --- | --- | --- |
+| 2026-07-05 | 阶段性修改 | — | v2.4 项目与数据分离：skill 源码 + rubrics 迁到 ~/Documents/myskills/gitout/，本目录只存数据；rubrics 从数据目录移除，decisions.md 留总库 |
+| 2026-07-05 | 阶段性修改 | — | SKILL.md v2.3：Step 7.4 新增双写总库——每次跑完 entry 同步到 ~/Documents/gitskill/gitout/，跨项目汇总 |
+| 2026-07-04 | 阶段性修改 | [2026-07-04-airadar-merge-retro.md](./2026-07-04-airadar-merge-retro.md) | 合并 ai-radar（git search 项目）到 gitskill：判断规则外化为 gitout/rubrics/ 三份 rubric + decisions.md override 反哺；SKILL.md v2.2 瘦身为流程骨架；迁入 radar-system-v2.1.md；.claude/skills/gitout 改 symlink |
 | 2026-06-03 | retro | — | claude-code-launcher 主题首跑（mixed 模式）：5 路 query 全有效返回，9 候选进二轮 README，1 个因 macOS 专属 reject；新建 domain；首推 lxistired (Windows 中国版懒人包) + cc-switch 旗舰组合；发现 cc/cc- 前缀名容易混 Claude Code vs Claude Desktop |
 | 2026-06-02 | retro | — | document-parsing 主题首跑：找 MinerU 同档位 Mac mini 友好替代；首轮 5 query 因带引号返空（gh CLI 行为差异），改用无引号重试 OK；最终入选 docling / marker / olmocr / unstructured / RapidDoc 五条 |
 | 2026-05-27 | retro | — | company-website 主题首跑：need 模式 9 query 中 4 个零返回（多词 AND 命中低），改单/双词后补足 5 entry；新建 domain 与 personal-site 区分（公司 brand/CTA vs 个人 portfolio/blog）；首次主动应用 SKILL v2.1 的"诉求覆盖广度"权重排序 |
@@ -32,6 +35,9 @@
 
 | 日期 | 动作 | 影响范围 |
 | --- | --- | --- |
+| 2026-07-05 | v2.4 项目与数据分离 | skill 源码 + rubrics 迁到 myskills/gitout/；gitskill 只留数据；SKILL.md rubrics 路径改绝对路径 |
+| 2026-07-05 | SKILL.md v2.3：entry 双写 gitskill 总库 | Step 7.4 新增同步步骤；汇报模板加同步状态行 |
+| 2026-07-04 | 合并 ai-radar：Rubric-as-Interface 落地 | gitout/rubrics/ 三份 rubric + decisions.md；SKILL.md v2.2 瘦身为流程骨架；radar-system-v2.1.md 迁入根目录；.claude/skills/gitout 改 symlink；INDEX/AGENTS 目录约定更新 |
 | 2026-05-30 | 结构性改造：关系索引 + 图谱 + 成长库 + 四 INDEX 体系 | relationships/ + insights/ + graph.json 配色 + _taxonomy.yaml 补全 + obout/ 重生成 + CLAUDE.md §2ter §3.4 |
 | 2026-05-26 | 新增 `followups/` 目录 + CLAUDE.md 三 INDEX 体系 | followups/ 承接搜索后讨论 / 选型 / 反馈；CLAUDE.md §1.3 / §2bis / §3.3 新规定；首份样板 git-self-host 落地（含飞书副本归档机制） |
 | 2026-05-24 | 17 项优化清单全部落实 | SKILL.md 由五段式升为七段式；新增 `_taxonomy.yaml` / batch subagent 模式 / `--quick` 子命令 / INDEX 自检 / 三句硬模板；radar v1.2 加"实施状态"段；symlink 到 ~/.claude/skills |
