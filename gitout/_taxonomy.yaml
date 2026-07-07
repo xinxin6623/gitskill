@@ -123,3 +123,13 @@ domains:
     cn: Claude Code 启动器 / 多账号切换器 / 一键安装包
     aliases: [cc-switch, claude-code-installer, cc-launcher, claude-code-cli-setup, claude-code-windows, provider-switcher, multi-profile-launcher]
     desc: Windows / 跨平台 Claude Code installer 与 cc-switch 类多 provider 切换工具
+
+  - name: offline-ai-dev-env
+    cn: 离线 / 无网络 AI 开发环境部署
+    aliases: [offline, air-gapped, airgap, no-network, offline-deploy, offline-install, windows-offline, portable-dev-env, offline-coding-env, ai-dev-offline]
+    desc: Windows / WSL / Linux 无外网环境下打包部署 AI coding 开发环境（依赖镜像、虚拟环境、预装 Claude Code/Codex/OpenCode）
+
+  - name: feishu-bitable-flow
+    cn: 飞书 CLI + 多维表格自建业务流
+    aliases: [feishu, lark, lark-cli, bitable, lark-base, feishu-base, multi-dimensional-table, 飞书多维表格, 飞书业务流, lark-flow, feishu-automation]
+    desc: 用飞书/Lark CLI + 多维表格(Bitable)搭建的自动化业务流项目（非纯 SDK 包装，要有具体业务场景）

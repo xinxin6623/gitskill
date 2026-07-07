@@ -1,11 +1,11 @@
 # gitout · 主题导航索引
 
 > 用 `/gitout` 累积的 GitHub 项目地图。每个 domain 一个目录，每条都有大白话简介 + 详细文档链接。
-> 最后更新：2026-06-03 · stars 数据快照于同日
+> 最后更新：2026-07-07 · stars 数据快照于同日
 
 ---
 
-## 🧭 24 个 domain 一览
+## 🧭 25 个 domain 一览
 
 | Domain | 一句话 | 项目数 | 首推 |
 | --- | --- | --- | --- |
@@ -32,8 +32,9 @@
 | [🏢 company-website](#company-website--公司展示站模板) | Next/Nuxt + Tailwind 公司官网脚手架，API/CLI 友好 | 5 | saasfly (2.9k) |
 | [📄 document-parsing](#document-parsing--文档结构化解析pdfdocx--markdown) | MinerU 同档位的复杂文档 → 结构化 md，Mac mini 友好 | 5 | docling (60.8k) / marker (35.6k) |
 | [🪄 claude-code-launcher](#claude-code-launcher--claude-code-启动器--多账号切换器--一键安装包) | Windows 一键装 Claude Code / cc-switch 类多 provider 切换 | 5 | cc-switch (90k) / lxistired cn-installer (20) |
+| [📋 feishu-bitable-flow](#feishu-bitable-flow--飞书-cli--多维表格自建业务流) | 飞书 CLI + 多维表格自建业务流（外贸/PM/求职/内容/催办） | 5 | content-curation (123) |
 
-**合计 129 个项目**
+**合计 134 个项目**
 
 ---
 
@@ -460,6 +461,42 @@
 
 ---
 
+## offline-ai-dev-env — 离线 / 无网络 AI 开发环境部署
+
+**解决什么：** Windows / WSL / Linux 无外网环境下打包部署 AI coding 开发环境——依赖镜像、虚拟环境、预装 Claude Code / Codex / OpenCode。**没有银弹**：现有开源项目对"Windows 原生 + 彻底离线 + 预装三家"完整诉求覆盖空白，需组合方案。
+
+**⭐ 首推搭配：** Ubuntu/WSL2 彻底断网走 `AlharbiAbdullah/offline-env` 的 USB 供应链；WSL2 + 国内网络 + 预装 CC/Codex 走 `JunDaTang/ai-dev-stack --profile china-server`；跨平台 npm 依赖离线（含 Claude Code 本体 `@anthropic-ai/claude-code`）走 `ByteWavX/offline-npm-manager-cli`。
+
+| Repo | ⭐ | 大白话 | 详细文档 |
+| --- | ---: | --- | --- |
+| [AlharbiAbdullah/offline-env](https://github.com/AlharbiAbdullah/offline-env) | 0 | Ubuntu 离线 AI 环境完整脚本套件（docker save + pip download + USB 投喂 + ollama 模型） | [📄](./offline-ai-dev-env/entries/AlharbiAbdullah__offline-env.md) |
+| [JunDaTang/ai-dev-stack](https://github.com/JunDaTang/ai-dev-stack) | 0 | WSL/Ubuntu 一键 bootstrap Claude Code + Codex + cc-switch（含 china-server profile 走镜像） | [📄](./offline-ai-dev-env/entries/JunDaTang__ai-dev-stack.md) |
+| [ByteWavX/offline-npm-manager-cli](https://github.com/ByteWavX/offline-npm-manager-cli) | 0 | 跨平台 npm 离线包管理 CLI（联网缓存 .tgz + 断网 install），MIT 协议 | [📄](./offline-ai-dev-env/entries/ByteWavX__offline-npm-manager-cli.md) |
+| [XyzenSun/vibespace](https://github.com/XyzenSun/vibespace) | 87 | 可视化容器化开发环境生成器（国内镜像源 + Dockerfile 四件套） | [📄](./offline-ai-dev-env/entries/XyzenSun__vibespace.md) |
+| [aitorroma/devbox-ai](https://github.com/aitorroma/devbox-ai) | 4 | VPS/Linux 可移植 AI cockpit（Devbox/Nix + 预装 CC+Codex+OpenCode+Antigravity） | [📄](./offline-ai-dev-env/entries/aitorroma__devbox-ai.md) |
+
+> 排除：`dyndynjyxa/aio-coding-hub`（本质是本机网关代理，非离线部署）/ `GhostwheeI/Claude-Code-Windows-Installer`（需联网下载）/ `junghwaYang/claude-code-installer`（需联网下载）。
+
+---
+
+## feishu-bitable-flow — 飞书 CLI + 多维表格自建业务流
+
+**解决什么：** 用飞书/Lark CLI + 多维表格(Bitable)搭建的自动化业务流项目——不是纯 SDK 包装,要有具体业务场景(外贸报价/项目管理/求职 CRM/内容策展/催办)。**本域聚焦近 3 个月活跃项目**(pushedAt < 90 天)。
+
+**⭐ 首推：** 完整端到端业务流看 `peachgreenti/lark-cli-skill-auto-quotation`（外贸询价 10 步全自动);多团队产品化部署看 `Winfred1024/feishu-pm-kit`(共享引擎+多实例)。
+
+| Repo | ⭐ | 大白话 | 详细文档 |
+| --- | ---: | --- | --- |
+| [peachgreenti/lark-cli-skill-auto-quotation](https://github.com/peachgreenti/lark-cli-skill-auto-quotation) | 11 | 外贸询价全自动:IMAP监听→AI提取→多维表格→云文档报价单→群确认→邮件回复 | [📄](./feishu-bitable-flow/entries/peachgreenti__lark-cli-skill-auto-quotation.md) |
+| [Winfred1024/feishu-pm-kit](https://github.com/Winfred1024/feishu-pm-kit) | 24 | AI项目经理Agent+多实例部署套件,共享引擎+config驱动,22测试通过 | [📄](./feishu-bitable-flow/entries/Winfred1024__feishu-pm-kit.md) |
+| [cragiclin-cmyk/lark-jobpilot-skill](https://github.com/cragiclin-cmyk/lark-jobpilot-skill) | 9 | 求职CRM:Chrome插件提取JD→Coze AI解析→飞书多维表格入库 | [📄](./feishu-bitable-flow/entries/cragiclin-cmyk__lark-jobpilot-skill.md) |
+| [YiShu5/content-curation](https://github.com/YiShu5/content-curation) | 123 | 内容策展NoiseFilter:YouTube/B站/小宇宙→AI深度摘要→飞书多维表格+博客 | [📄](./feishu-bitable-flow/entries/YiShu5__content-curation.md) |
+| [MaxHou-infinity/feishu-bitable-reminder](https://github.com/MaxHou-infinity/feishu-bitable-reminder) | 1 | 多维表催办官:扫DDL缺口→3套模板选→草稿确认→lark-cli发消息 | [📄](./feishu-bitable-flow/entries/MaxHou-infinity__feishu-bitable-reminder.md) |
+
+> 排除：`autogame-17/feishu-skills`（36 模块化 API 包装,无单一业务流)/`SNSuperNova/feishu-bitable-skill`（Python RPA 工具库,非业务流)/`BlueSkyXN/XTF`（Excel→飞书同步工具,非 CLI 业务流)/`poliyka/lark-bitable`（bug triage CLI,场景偏 QA 非业务流)。
+
+---
+
 ## 🔗 目录约定
 
 ```
@@ -487,3 +524,5 @@ gitout/
 *company-website 由 /gitout 自然语言模式生成 · 2026-05-27 · 主题：轻量+展示为主+API/CLI 友好的公司官网脚手架*
 *document-parsing 由 /gitout 自然语言模式生成 · 2026-06-02 · 主题：MinerU 同档位 Mac mini 友好的开源 PDF→md 工具*
 *claude-code-launcher 由 /gitout 自然语言模式生成 · 2026-06-03 · 主题：Windows 11 部署 Claude Code + cc-switch 多 provider 切换的懒人包*
+*offline-ai-dev-env 由 /gitout 自然语言模式生成 · 2026-07-07 · 主题：Windows/WSL/Linux 离线 AI coding 开发环境部署*
+*feishu-bitable-flow 由 /gitout 自然语言模式生成 · 2026-07-07 · 主题：飞书 CLI + 多维表格自建业务流（近 3 个月活跃）*

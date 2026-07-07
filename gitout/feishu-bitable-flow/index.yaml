@@ -1,0 +1,21 @@
+entries:
+  - repo: peachgreenti/lark-cli-skill-auto-quotation
+    file: peachgreenti__lark-cli-skill-auto-quotation.md
+    intent_matched: "飞书 CLI + 多维表格自建业务流"
+    status: active
+  - repo: Winfred1024/feishu-pm-kit
+    file: Winfred1024__feishu-pm-kit.md
+    intent_matched: "飞书 CLI + 多维表格自建业务流"
+    status: active
+  - repo: cragiclin-cmyk/lark-jobpilot-skill
+    file: cragiclin-cmyk__lark-jobpilot-skill.md
+    intent_matched: "飞书 CLI + 多维表格自建业务流"
+    status: active
+  - repo: YiShu5/content-curation
+    file: YiShu5__content-curation.md
+    intent_matched: "飞书 CLI + 多维表格自建业务流"
+    status: active
+  - repo: MaxHou-infinity/feishu-bitable-reminder
+    file: MaxHou-infinity__feishu-bitable-reminder.md
+    intent_matched: "飞书 CLI + 多维表格自建业务流"
+    status: active
